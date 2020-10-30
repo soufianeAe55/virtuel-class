@@ -2,13 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
+  return ( JSX
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         THis is recette branch
+         im in recette branch
         </p>
+        <li> </li>
         <a
           className="App-link"
           href="https://reactjs.org"
