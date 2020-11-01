@@ -1,5 +1,5 @@
 import React from 'react'
-import './LoginPage.css'
+import './LogInPage.css'
 // import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 
 function SeConnecter() {
