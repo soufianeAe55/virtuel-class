@@ -2,4 +2,12 @@
 
 .App{
   font-family: 'montserrat' ;
+
+}
+body {
+	 background-color: #DCD2D2;
+}
+
+body a {
+	text-decoration: none ;
 }
