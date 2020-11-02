@@ -7,13 +7,12 @@ import password from './imagesLogin/password.svg'
 
 function SeConnecter() {
 return(
-
    <div className="container-fluide">
       <div className="row mx-0">
          <div class="col-lg-7">
             <div class="d-flex flex-column">
                <p className="text-center" id="SeConnecter_bienvenue">
-                  Bienvenue dans votre<br/>classe vertuelle
+                  Bienvenue dans votre<br/>classe virtuelle
                </p>
                <img id="SeConnecter__image" src={svgMain} alt="" />
             </div>
