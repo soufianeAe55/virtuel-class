@@ -1,0 +1,105 @@
+
+#ligne{
+    /* position: absolute; */
+    
+    
+  
+    
+ 
+}
+#card{
+    /* position: relative; */
+    
+    background-color: #126AA0;
+    
+    
+    
+}
+#seconnecter{
+    border: 1px solid white;
+    border-radius: 35px;
+    margin-top: 5px;
+    height: 40px;
+    background-color: white;
+   
+    
+    
+}
+#seconnecter p {
+    margin-top: 5px;
+    color: #126AA0;
+    text-decoration: none;
+}
+#inscri{
+    border: 1px solid white;
+    border-radius: 35px;
+    margin-top: 5px;
+    height: 40px;
+    
+    
+    
+   
+}
+
+#inscri p{
+    margin-top: 5px;
+}
+
+a:link{
+    text-decoration: none;
+}
+#inp{
+    
+    /* border: 1px solid black; */
+    margin-left: px;
+    
+}
+#sub{
+    border: 1px solid white;
+    outline: none;
+    border-radius: 20px;
+    color: #126AA0;
+    background-color:white;
+    text-align: center;
+    margin-top: 70px;
+    width: 100%;
+    height: 45px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+#inp input[type="text"],#inp input[type="password"]{
+    border: 1px solid white;
+    outline: none;
+    border-radius: 20px;
+    margin-top: 25px;
+    width: 100%;
+    height: 45px;
+   
+}
+::placeholder{
+    color: #126AA0;
+    padding-left: 20px;
+    padding-bottom: 2px;
+}
+#inp p{
+    
+    color: white;
+    margin-left: 6px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-family:;
+    
+
+}
+
+#rowd{
+    
+    margin-top:35px;
+    height: 40%;
+}
+#nn{
+    margin-top: 50px;
+}

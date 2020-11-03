@@ -1,24 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import {Switch, Route} from 'react-router-dom';
+import LoginPage from './Components/Login/LoginPage'
 
 function App() {
+
   return ( 
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         im in dev-zakaria branch
-        </p>
-        <li> </li>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path='/' component={LoginPage} />
+      </Switch>
+
     </div>
   );
 }
