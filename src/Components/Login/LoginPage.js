@@ -1,12 +1,17 @@
 import React from 'react';
-import Seconnecter from './Seconnecter';
+import {Switch, Route, Router} from 'react-router-dom';
+import './LoginPage'
+import SeConnecter from './SeConnecter';
+
 
 function LoginPage(){
 	return(
 		<div>
-			<Seconnecter/>
+		 <Switch>
+		 	<Route exact path='/' component={SeConnecter} />
+		 </Switch>
 		</div>
-		)
+	)
 }
 
 export default LoginPage

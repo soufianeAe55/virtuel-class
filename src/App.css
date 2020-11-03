@@ -1,4 +1,11 @@
-.App {
-  text-align: center;
-  
+*{  margin: 0;   }
+
+.App{
+  font-family: 'montserrat' ;
+
 }
+body {
+	 background-color: #DCD2D2;
+}
+
+

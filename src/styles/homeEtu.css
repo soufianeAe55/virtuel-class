@@ -1,0 +1,12 @@
+
+.app{
+	display: flex;
+}
+.sous-app{
+	flex-basis: 85%;
+}
+.sideNa{
+	background-color: white;
+	flex-basis: 15%;
+	height: 637px;
+}
