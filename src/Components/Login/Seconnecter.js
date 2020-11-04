@@ -3,12 +3,13 @@ import './LoginPage.css'
 import svgMain from './imagesLogin/svgMain.svg'
 import email from './imagesLogin/email.svg'
 import password from './imagesLogin/password.svg'
+import nom from './imagesLogin/nom.svg';
 // import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 
 function SeConnecter() {
 return(
    <div className="container-fluide">
-      <div className="row mx-0">
+      <div className="row mx-0" >
          <div class="col-lg-7">
             <div class="d-flex flex-column">
                <p className="text-center" id="SeConnecter_bienvenue">
@@ -31,6 +32,31 @@ return(
                      <h3 className="font-weight-bold my-3 text-white">S'inscrire</h3>
                   </a>
                </div>
+            </div>
+            <div className="row my-5 mx-2 ">
+            <div className="col my-2 mx-3 text-center" id="Seconnecter__signup_drop">
+            <div class="d-flex  p-1  bg-white rounded-pill" id="SeConnecter__Nom">
+                  <div class=" mt-2 flex-fill">
+                     <img src={nom} alt="" />
+                  </div>
+                  <div class=" p-1 mt-2 flex-fill bo">
+                     <input type="text" placeholder="Nom" />
+                  </div>
+               </div></div>
+            
+               <div className="col my-2 mx-3 text-center" id="Seconnecter__signup_drop">
+               
+                  <button type="button" class="btn btn-secondary  w-100 h-100 dropdown-toggle rounded-pill"  id="drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     type
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                     <button class="dropdown-item" type="button">Professeur</button>
+                     <button class="dropdown-item" type="button">Etudiant</button>
+                   
+                  </div>
+                  
+             </div>
+               
             </div>
             <form className="d-flex flex-column my-5 mx-2" id="SeConnecter__form">
                <div class="d-flex p-3 m-3 bg-white rounded-pill" id="SeConnecter__form__email">

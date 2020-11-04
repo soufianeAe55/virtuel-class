@@ -11,6 +11,7 @@
 #Seconnecter__signup{
    border: 2px solid white;
    border-radius: 35px;
+   
 }
 #SeConnecter_bienvenue{
    color: rgb(18, 106, 160);
@@ -67,3 +68,25 @@
    }
 }   
 
+
+.dropdown-toggle {
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.9em;
+  color: rgba(18, 106, 160, 0.95);
+  border: 0;
+  outline: 0;
+ }
+ #Seconnecter__signup_drop button :active{
+    background-color: white;
+ }
+#Seconnecter__signup_drop{
+   border: 2px solid white;
+   border-radius: 35px;
+   background-color: white;
+
+}
+#SeConnecter__Nom input{
+   border: 0px solid white;
+   outline: none;
+}
