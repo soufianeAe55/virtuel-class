@@ -19,23 +19,23 @@ return(
             </div>
          </div>
 
-         <div class="col-xl-5 vh-100" id="Seconnecter__carte">
+         <div class="col-xl-5 " id="Seconnecter__carte">
             <h1 className="text-center text-white m-4 font-weight-bold">My LoGo</h1>
             <div className="row mt-5 mx-2">
                <div className="col-lg my-2 mx-3 text-center" id="Seconnecter__signin">
                   <Link to={'/'} className="text-decoration-none" href="#">
-                     <h3 className="font-weight-bold my-3 ">Se connecter</h3>
+                     <p className=" h4 font-weight-bold my-3 ">Se connecter</p>
                   </Link>
                </div>
                <div className="col-lg my-2 mx-3 text-center" id="Seconnecter__signup">
                   <Link to={'/Sinscrire'} className="text-decoration-none" href="#">
-                     <h3 className="font-weight-bold my-3 text-white">S'inscrire</h3>
+                     <p className=" h4 font-weight-bold  my-3 text-white">S'inscrire</p>
                   </Link>
                </div>
             </div>
             <form className="d-flex flex-column my-3 mx-2" id="SeConnecter__form">
                <div class="d-flex p-3 m-3 bg-white rounded-pill" id="SeConnecter__form__email">
-                  <div class="py-1 px-3 flex-shrink-1">
+                  <div class=" py-1 px-3 flex-shrink-1">
                      <img src={email} alt="" />
                   </div>
                   <div class="p-1 w-100">

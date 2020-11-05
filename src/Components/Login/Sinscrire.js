@@ -21,41 +21,39 @@ return(
             </div>
          </div>
 
-         <div class="col-lg-5 vh-100 rounded border border-white pt-5" id="Sinscrire__carte">
+         <div class="col-lg-5  rounded border border-white pt-5" id="Sinscrire__carte">
             <h1 className="text-center text-white m-4 font-weight-bold">My LoGo</h1>
-            <div className="row my-3 mx-2">
-               <div className="col my-2 mx-3 text-center" id="Sinscrire__signin">
+            <div className="row  mt-5 mx-2">
+               <div className="col my-2 mx-2 text-center" id="Sinscrire__signin">
                   <Link to={'/'} className="text-decoration-none" href="#">
-                     <h3 className="font-weight-bold my-3 text-white">Se connecter</h3>
+                     <p className=" h4 font-weight-bold my-3 text-white">Se connecter</p>
                   </Link>
                </div>
                
-               <div className="col my-2 mx-3 text-center" id="Sinscrire__signup">
+               <div className="col my-2 mx-2 text-center" id="Sinscrire__signup">
                   <Link to={'/Sinscrire'} className="text-decoration-none" href="#">
-                     <h3 className="font-weight-bold my-3">S'inscrire</h3>
+                     <p className=" h4 font-weight-bold my-3">S'inscrire</p>
                   </Link>
                </div>
             </div>
-            <form className="d-flex flex-column my-1 mx-2" id="Sinscrire__form">
-            <div className="row my-1 mx-2 ">
-               <div className="col my-2 mx-3 text-center" id="Sinscrire__signup_drop">
+            <form className="d-flex flex-column mt-3 mx-2" id="Sinscrire__form">
+            <div className="row my-3 mx-2 ">
+               <div className="col  mx-2 my-2 text-center" id="Sinscrire__signup_drop">
                   <div class="d-flex  p-1  bg-white rounded-pill" id="Sinscrire__Nom">
                      <div class="mt-2 flex-fill">
                         <img src={nom} alt="" />
                      </div>
-                     <div class=" p-1 mt-2 flex-fill">
-                        <input type="text" placeholder="Nom et prenom" />
+                     <div class=" pt-2 pb-2 mt-1  flex-fill">
+                        <input  type="text" placeholder="Nom et prenom" />
                      </div>
                   </div>
                </div>
-               <div className="col my-2 text-center" id="Sinscrire__signup_drop">
-                  <button type="button" class="btn w-100 h-100 dropdown-toggle rounded-pill boder border-white"   data-toggle="dropdown">
-                     type
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-right">
-                     <button class="dropdown-item font-weight-bold h5" type="button">Professeur</button>
-                     <button class="dropdown-item font-weight-bold h5" type="button">Etudiant</button>
-                  </div>
+               <div className="col mx-2 my-2 text-center" id="Sinscrire__signup_drop">
+               <select name="Type" id="Type" >
+               <option value="Prof">Professeur</option>
+               <option value="etd">Etudiant</option>
+               Type
+             </select>
                </div>
             </div>
                   <div class="d-flex p-3 m-3 bg-white rounded-pill" id="Sinscrire__form__email">
