@@ -1,15 +1,17 @@
 import React from 'react';
-import {Switch, Route, Router} from 'react-router-dom';
+import {Switch, Route,BrowserRouter as Router} from 'react-router-dom';
 import './LoginPage'
 import SeConnecter from './SeConnecter';
+import Sinscrire from './Sinscrire';
 
 
 function LoginPage(){
 	return(
 		<div>
-		 <Switch>
-		 	<Route exact path='/' component={SeConnecter} />
-		 </Switch>
+		 <Router>
+		 	<Route path='/' exact component={SeConnecter} />
+		 	<Route path='/Sinscrire' component={Sinscrire} />
+		 </Router>
 		</div>
 	)
 }
