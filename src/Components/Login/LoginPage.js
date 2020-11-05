@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route,BrowserRouter as Router} from 'react-router-dom';
 import './LoginPage'
-import SeConnecter from './SeConnecter';
+import SeConnecter from './Seconnecter';
 import Sinscrire from './Sinscrire';
 
 
