@@ -2,6 +2,7 @@ import React from 'react'
 import './LoginPage.css'
 import svgMain from './imagesLogin/svgMain.svg'
 import email from './imagesLogin/email.svg'
+import { Link } from 'react-router-dom';
 import password from './imagesLogin/password.svg'
 // import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 
@@ -22,14 +23,14 @@ return(
             <h1 className="text-center text-white m-4 font-weight-bold">My LoGo</h1>
             <div className="row mt-5 mx-2">
                <div className="col-lg my-2 mx-3 text-center" id="Seconnecter__signin">
-                  <a className="text-decoration-none" href="#">
+                  <Link to={'/'} className="text-decoration-none" href="#">
                      <h3 className="font-weight-bold my-3 ">Se connecter</h3>
-                  </a>
+                  </Link>
                </div>
                <div className="col-lg my-2 mx-3 text-center" id="Seconnecter__signup">
-                  <a className="text-decoration-none" href="#">
+                  <Link to={'/Sinscrire'} className="text-decoration-none" href="#">
                      <h3 className="font-weight-bold my-3 text-white">S'inscrire</h3>
-                  </a>
+                  </Link>
                </div>
             </div>
             <form className="d-flex flex-column my-3 mx-2" id="SeConnecter__form">
