@@ -1,25 +1,29 @@
 #Seconnecter__carte{
    background-color: rgb(18, 106, 160);
-   padding-top: 90px;
+   padding-top: 80px;
 }
 #Seconnecter__signin{
    background-color: white;
    border: 2px solid white;
    color: rgb(18, 106, 160);
    border-radius: 35px;
-   
+   outline: none;
 }
+
 #Seconnecter__signup{
+   border-radius: 35px; 
+   background-color:  rgb(18, 106, 160);
    border: 2px solid white;
-   border-radius: 35px;
-   
+   outline: none;
+   color: white;
 }
+
 .SeConnecter_bienvenue{
    color: rgb(18, 106, 160);
    text-align: center;
    margin: 50px 10px;
    font-weight: bold;
-   font-size: 3em;
+   font-size: 2.7em;
 }
 
 #SeConnecter__image{
@@ -46,121 +50,52 @@
    border-radius: 35px;
 }
 
-.SeConnecter__form a{
-   text-decoration: none;
-   color: white;
-}
-
 .SeConnecter__form input[type="submit"]{
    background-color: white;
-   color: rgba(18, 106, 160, 1);
+   color: rgb(18, 106, 160);
    border-radius: 30px;
 }
 
-/* ------------------------------------------------------------------ */
 
-@media screen and (max-width: 767px) {
-   #SeConnecter__image{
-      display: none;
-   }
-   .SeConnecter_bienvenue{
-      margin: 20px 0px;
-      font-size: 1.8em;
-   }
-}   
+/* -------------------------- S'INSCRIRE ---------------------------------- */
 
-
-
-
-/* 
-
-#Seconnecter__carte{
-   background-color: rgb(18, 106, 160);
+#Sinscrire__signin{
+   border: 2px solid white;
+   border-radius: 35px;
+   color: rgb(18, 106, 160);
+   background-color: white;
 }
-#Seconnecter__signin{
+#Sinscrire__signup{ 
    background-color: white;
    border: 2px solid white;
-   color: rgb(18, 106, 160);
    border-radius: 35px;
-   
-}
-#Seconnecter__signup{
-   border: 2px solid white;
-   border-radius: 35px;
-   
-}
-#SeConnecter_bienvenue{
-   color: rgb(18, 106, 160);
-   margin: 50px 0px 0px 0px;
-   font-weight: bold;
-   font-size: 3em;
 }
 
-#SeConnecter__image{
-   width: 97%;
-   margin: 0px 10px 10px 10px;
-}
-
-.SeConnecter__form{
-   display: flex;
-   flex-direction: column;
-}
-#SeConnecter__form input{
+#Sinscrire__form input{
    outline: none;
    width: 90%;
    border: 1px solid white; 
 }
-::placeholder{
+
+#Sinscrire__signup_drop{
+   border: 2px solid white;
+   border-radius: 35px;
+   background-color: white;
+}
+
+#Type{
+   width: 100%;
+   height: 100%;
+   border: 0;
    color: rgba(18, 106, 160, 0.95);
    font-weight: bold;
    font-family: 'montserrat';
+   outline: none;
 }
-#SeConnecter__form_email, #SeConnecter__form_password{
-   border: 1px solid white;
-   border-radius: 35px;
-}
-
-.SeConnecter__form a{
-   text-decoration: none;
-   color: white;
-}
-
-.SeConnecter__form input[type="submit"]{
-   background-color: white;
-   color: rgba(18, 106, 160, 0.95);
-   border-radius: 30px;
-}
-
-
+/* ------------------------------------------------------------------ */
 @media screen and (max-width: 767px) {
    #SeConnecter__image{
       display: none;
    }
-   #SeConnecter_bienvenue{
-      margin: 50px 0px;
-      font-size: 1.8em;
-   }
 }   
 
-
-.dropdown-toggle {
-  background-color: white;
-  font-weight: bold;
-  font-size: 1.9em;
-  color: rgba(18, 106, 160, 0.95);
-  border: 0;
-  outline: 0;
- }
- #Seconnecter__signup_drop button :active{
-    background-color: white;
- }
-#Seconnecter__signup_drop{
-   border: 2px solid white;
-   border-radius: 35px;
-   background-color: white;
-
-}
-#SeConnecter__Nom input{
-   border: 0px solid white;
-   outline: none;
-} */
