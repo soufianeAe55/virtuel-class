@@ -6,17 +6,18 @@ import '../../styles/homeEtu.css'
 function Myclass(){
 
 	return(
-		
+		 <React.Fragment>
 			
-			<div className="sous-app" >
-				<Menu />
-				<div className="row cont">
+				<SideNav />
+				<div className="sous-app" >
+					<Menu />
+					<div className="row cont">
 
-					<h2> Myclass page for etudiants </h2>
+						<h2> Myclass page for etudiants </h2>
+					</div>
 				</div>
-			</div>
-
-		
+			
+		 </React.Fragment>
 
 		)
 }

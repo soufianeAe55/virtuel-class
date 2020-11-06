@@ -6,8 +6,8 @@ import '../../styles/homeEtu.css'
 function HomeEtu(){
 
 	return(
-		
-			
+		 <React.Fragment>
+			<SideNav />
 			<div className="sous-app" >
 				<Menu />
 				<div className="row cont">
@@ -16,8 +16,8 @@ function HomeEtu(){
 					</div>
 				</div>
 			</div>
-
 		
+		</React.Fragment>
 		)
 }
 

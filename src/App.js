@@ -9,7 +9,7 @@ function App() {
 
   return ( 
     <div className="container-fluid">
-    <SideNav />
+       
       <Switch>
          <Route exact path='/' component={LoginPage} />
          <Route  path='/homeEtu' component={HomeEtu} />
