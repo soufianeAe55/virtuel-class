@@ -21,7 +21,7 @@ return(
             </div>
          </div>
 
-         <div class="col-lg-5  rounded border border-white pt-5" id="Sinscrire__carte">
+         <div class="col-xl-5  rounded border border-white pt-5" id="Sinscrire__carte">
             <h1 className="text-center text-white m-4 font-weight-bold">My LoGo</h1>
             <div className="row  mt-5 mx-2">
                <div className="col my-2 mx-2 text-center" id="Sinscrire__signin">
@@ -49,7 +49,7 @@ return(
                   </div>
                </div>
                <div className="col mx-2 my-2 text-center" id="Sinscrire__signup_drop">
-               <select name="Type" id="Type" >
+               <select name="Type" id="Type" value="type">
                <option value="Prof">Professeur</option>
                <option value="etd">Etudiant</option>
                Type
