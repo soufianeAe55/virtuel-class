@@ -56,14 +56,7 @@ return(
                      </select>
                   </div>
                </div>
-               <div className="col mx-2 my-2 text-center" id="Sinscrire__signup_drop">
-               <select name="Type" id="Type" value="type">
-               <option value="Prof">Professeur</option>
-               <option value="etd">Etudiant</option>
-               Type
-             </select>
-               </div>
-            </div>
+           
                   <div class="d-flex p-3 m-3 bg-white rounded-pill" id="Sinscrire__form__email">
                      <div class="py-1 px-3 flex-shrink-1">
                         <img src={email} alt="" />
