@@ -6,17 +6,18 @@ import '../../styles/homeEtu.css'
 function HomeEtu(){
 
 	return(
-		<div className="app" >
-			<SideNav />
+		
+			
 			<div className="sous-app" >
 				<Menu />
-				<div className="container">
-
-					<h2> Home page for etudiants </h2>
+				<div className="row cont">
+					<div className="col-2 col-sm-4 col-md-6 col-lg-10" >
+					  <h2 > Home page for etudiants </h2>
+					</div>
 				</div>
 			</div>
 
-		</div>
+		
 		)
 }
 

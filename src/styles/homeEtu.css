@@ -2,11 +2,19 @@
 .app{
 	display: flex;
 }
+.container-fluid{
+	display: flex;
+}
 .sous-app{
-	flex-basis: 85%;
+	flex-basis: 100%;
 }
 .sideNa{
 	background-color: white;
 	flex-basis: 15%;
 	height: 637px;
+	
+}
+.cont{
+	margin: 0px 0px 0px 20px !important;
+
 }

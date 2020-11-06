@@ -6,17 +6,17 @@ import '../../styles/homeEtu.css'
 function Myclass(){
 
 	return(
-		<div className="app" >
-			<SideNav />
+		
+			
 			<div className="sous-app" >
 				<Menu />
-				<div className="container">
+				<div className="row cont">
 
 					<h2> Myclass page for etudiants </h2>
 				</div>
 			</div>
 
-		</div>
+		
 
 		)
 }
