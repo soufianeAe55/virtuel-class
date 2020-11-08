@@ -11,20 +11,20 @@ function Menu(){
 		<ul className="nav NavHead justify-content-end row" >
 		  
 		  <li className="nav-item notif ">
-		   <img src={Notif} className="img-fluid"  />
+		   <img src={Notif} className="img-fluid" alt=""  />
 		  </li>
 		   <div class="dropdown">
 		  <li className="nav-item Username ">
-		     <img src={Avatar} className="avatar img-fluid" />
+		     <img src={Avatar} className="avatar img-fluid" alt="" />
 		     <div className="userInfo">
 		     <p className="hello"> Hello </p>
 		     <p className="Name">Unknown user </p>
 		     </div>
 		    
-		     <img src={Arrow} className="arrow img-fluid dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+		     <img src={Arrow} className="arrow img-fluid dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt=""/>
 			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			    <a class="dropdown-item" href="#">Profil</a>
-			    <a class="dropdown-item" href="#">Deconnxion</a>
+			    <a className="dropdown-item" href="#">Profil</a>
+			    <a className="dropdown-item" href="#">Deconnxion</a>
 			  </div>
 		      
 		  </li>
