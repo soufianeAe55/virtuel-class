@@ -7,7 +7,7 @@ import nom from './imagesLogin/nom.svg';
 function FormSinscrire() {
    const [dropDown, setdropDown] = useState("Etudient");
    const [valide,setValide]=useState(false);
-   const [caption,setCaption]=useState();
+   const [caption,setCaption]=useState('');
 
 const valider =()=>{
    const regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
@@ -24,12 +24,10 @@ const valider =()=>{
 }
 const verifieEmail=(e)=>{
   
-   setCaption(e.target.value);
+setCaption(e.target.value);
 valider();
- console.log(caption);
-// if(valide){
-   
-// }
+console.log(caption);
+
 
 }
 
