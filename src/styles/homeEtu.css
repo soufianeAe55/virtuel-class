@@ -11,10 +11,13 @@
 .sideNa{
 	background-color: white;
 	flex-basis: 15%;
-	height: 637px;
+	padding-left: 5px;
+	padding-right: 5px;
+	
 	
 }
 .cont{
+<<<<<<< HEAD
 	margin: 20px 0px 0px 20px !important;
 	
 }
@@ -38,3 +41,7 @@ font-family: 'montserrat';
 
  }   
  
+=======
+	margin: 0px 0px 0px 20px !important;
+}
+>>>>>>> 458e180c85cc8c8cc8cb749a0c65050eba7d5153
