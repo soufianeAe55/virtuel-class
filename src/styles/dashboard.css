@@ -1,0 +1,114 @@
+.sideItem{
+	color: #126AA0;
+	font-family: montserrat;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 5px;
+	display: flex;
+}
+
+.logo,.logo2{
+	margin-bottom: 30px; 
+	width: max-content;
+
+}
+.logo2{
+	height: 48px;
+}
+
+.logoHide{
+	display: none;
+}
+.ItemNav{
+	display: flex;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+.ItemEX{
+	margin-left: -4px !important;
+}
+
+.Collapse{
+	margin-top: 180px;
+}
+.collapseText{
+	margin-top: 0px !important;
+}
+
+.notif{
+	display: flex;
+	margin-top: 7px;
+	justify-content: flex-end;
+}
+.Username{
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 20px;
+	margin-left: 14px;
+}
+.avatar {
+	margin-right: 8px;
+	margin-top: 4px;
+}
+.hello{
+	margin-top: 20px;
+	color: #B7B7B7;
+	font-size: 10px;
+	font-weight: bold;
+}
+.Name{
+	font-weight: bold;
+	color: black;
+	font-size: 13px;
+}
+p{
+	margin-bottom: 0rem !important;
+}
+.userInfo{
+	margin-top: -10px;
+}
+.arrow{
+	margin-left: 10px;
+}
+.NavHead{
+	margin-top: 10px;
+}
+
+.Donthide{
+ 
+ width: auto;
+ transition: width 5s;
+}
+
+.hide{
+	width: 48px;
+	overflow: hidden;
+	 transition: width 5s;
+}
+
+
+
+.hideIcon{
+	display: none;
+}
+.showIcon{
+	transform: rotate(180deg);
+	margin-left: 14px;
+}
+.hideLink{
+	display: none;
+}
+.Icons{
+	margin-right: 10px;
+}
+.Actu,.Supp,.Conta{
+	margin-right: 15px !important;
+}
+
+.dropdown-menu{
+	margin-left: -150px;
+}
+
+.dropdown-toggle{
+	background-color: #fff0;
+}
