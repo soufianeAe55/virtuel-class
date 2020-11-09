@@ -94,11 +94,13 @@ p{
 }
 
 .Donthide{
- 
- width: auto;
- transition: width 5s;
- height: 100vh !important;
- position: fixed;
+	width: auto;
+	transition: width 5s;
+	height: 100vh !important;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	left: 0;
 }
 
 .hide{

@@ -5,7 +5,6 @@ import '../../styles/SupportEtu.css'
 import settings from '../Dashboard/imgs/settings.svg'
 import AddFile from '../Dashboard/imgs/AddFile.svg'
 import SupportCard from './SupportCard'
-// import Arrow  from '../Dashboard/imgs/arrowDown.svg'
 
 
 function Support() {
@@ -14,14 +13,15 @@ function Support() {
       <SideNav />
       <div className="sous-app" >
          <Menu />
-         <div className="row cont d-flex flex-column ">
+         <div className="row d-flex flex-column m-4 border border-dark ">
             <div className="m-3 d-flex flex-row-reverse">
                <div className="mx-2 p-2  d-flex flex-column flex-lg-row justify-content-around">
+                  
                   <img className="px-4 py-2" src={settings} alt="settings" />
                   <img className="px-4 py-2" src={AddFile} alt="AddFile" />
                </div>
                <div className="flex-grow-1 py-2 d-flex align-items-center  ">
-                  <div className="row w-100 d-flex flex-column flex-xl-row" id="Support__filtrage">
+                  <div className="row w-100 d-flex flex-column flex-xl-row ml-5" id="Support__filtrage">
                         <p className="text-center"> Filtrez selon un</p> 
                         <select className="Support__dropdown">
                            <option value="semestre">semestre</option>
@@ -41,7 +41,7 @@ function Support() {
                   </div>
                </div>
             </div>
-            <div className="row mx-3  p-2 d-flex justify-content-center ">
+            <div className="row mx-3 p-2 d-flex justify-content-center">
                <SupportCard />
                <SupportCard />
                <SupportCard />
