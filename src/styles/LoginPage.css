@@ -91,6 +91,7 @@
    font-weight: bold;
    font-family: 'montserrat';
    outline: none;
+   text-align-last: center;
 }
 /* ------------------------------------------------------------------ */
 @media screen and (max-width: 767px) {

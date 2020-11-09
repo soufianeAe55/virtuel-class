@@ -1,8 +1,8 @@
-import React , {useState}from 'react'
-import './LoginPage.css'
+import React , {useState} from 'react'
 import svgMain from './imagesLogin/svgMain.svg'
 import FormSeconnecter from './FormSeconnecter';
 import FormSinscrire from './FormSinscrire';
+import '../../styles/LoginPage.css'
 
 function SeConnecter() {
    const [formSignIn, setformSignIn] = useState(true);

@@ -1,0 +1,27 @@
+#Support__filtrage{
+   font-weight: bold;
+   color:#8E7D7D;
+   padding: 15px 35px;
+   font-size: 1.5em;
+   margin: 3px;
+}
+.Support__dropdown{
+   color:  rgb(18, 106, 160);
+   font-weight: bold;
+   margin: 0px 10px;
+   outline: none;
+   border: 0;
+   border-radius: 10px;
+   text-align-last: center;
+   padding: 0px 12px;
+}
+#SupportCard{
+   width: 18rem;
+   margin: 25px;
+   border-radius: 10px;
+}
+#SupportCard:hover{
+   width: 19rem;
+   margin: 18px;
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
