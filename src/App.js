@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 import LoginPage from './Components/Login/LoginPage'
 import HomeEtu from './Components/Etudiant/Home'
 import Myclass from './Components/Etudiant/Myclass'
+import Actualite from './Components/Etudiant/Actualite'
 import Support from './Components/Etudiant/Support'
 // import SideNav from './Components/Dashboard/sideNav'
 
@@ -14,6 +15,7 @@ function App() {
          <Route  path='/homeEtu' component={HomeEtu} />
          <Route  path='/Myclass' component={Myclass} />
          <Route  path='/support' component={Support} />
+         <Route  path='/actu' component={Actualite} />
       </Switch>
     </div>
   );
