@@ -37,10 +37,12 @@ return(
          <div className="col-xl-5" id="Seconnecter__carte">
             <h1 className="text-center text-white m-4 font-weight-bold">MY LOGO</h1>
             <div className="row mt-5 mx-2">
-               <button onClick={ Seconnecter } className="col-lg my-2 mx-3 p-3 text-center h4 font-weight-bold" id={idSeconecter}>
+               <button onClick={ Seconnecter } className="col-lg my-2 mx-3 p-3 text-center h4 font-weight-bold"
+                id={idSeconecter}>
                   Se connecter
                </button>
-               <button onClick={ Sinscrire } className="col-lg my-2 mx-3 p-3 text-center h4 font-weight-bold" id={idSinscrire} >
+               <button onClick={ Sinscrire } className="col-lg my-2 mx-3 p-3 text-center h4 font-weight-bold"
+                id={idSinscrire} >
                   S'inscrire
                </button>
             </div>

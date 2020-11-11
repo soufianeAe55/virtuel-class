@@ -1,6 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import '../../styles/SupportEtu.css'
-import File from '../Dashboard/imgs/File.svg'
+import UploadFile from '../Dashboard/imgs/UpLoadFile.svg'
 
 function ModalEditSupport() {
    const [fileName, setfileName] = useState("Choisir un fichier")
@@ -21,32 +20,29 @@ function ModalEditSupport() {
    }
 
    return (
-   <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div className="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div className="modal-dialog" role="document">
          <form className="modal-content">
             <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">Modifier un support</h5>
-            <button type="button" className="close" id="close" data-dismiss="modal" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-            </button>
+            <h4 className="modal-title mx-auto px-5 font-weight-bold" id="exampleModalLabel">Modifier un support</h4>
             {console.log(fileName)}
             </div>
-            <div className="modal-body border border-dark ModalEditSupport">
-               <div className="d-flex flex-row py-2 justify-content-around border border-dark">
+            <div className="modal-body  ModalEditSupport">
+               <div className="d-flex flex-row py-2 justify-content-around ">
                   <input type="text" className="col-5 py-3 " placeholder="Module" />
                   <input type="text" className="col-5 py-3 " placeholder="Semestre"/>
                </div>
-               <div className="d-flex flex-row p-2 border border-dark">
+               <div className="d-flex flex-row p-2 ">
                   <input type="text" className="w-100 mx-2 px-3 py-3 " placeholder="Nouveau Titre du support" />
                </div>
-               <div className="d-flex flex-row p-2 border border-dark">
+               <div className="d-flex flex-row p-2 ">
                   <textarea type="text" className="w-100 mx-2 px-3 py-3 " placeholder="Ajouter une nouvelle discription" />
                </div>
             </div>
             <div className="modal-footer d-flex flex-row justify-content-around ModalEditSupport__footer">
                <input onChange={handleChange}  type="file" id="upload btn" hidden/>
                <label className="d-flex" for="upload btn">
-                  <img src={File} alt="" />
+                  <img src={UploadFile} alt="" />
                   <p id="file-chosen"> { fileName }  </p>
                </label>
                <button type="submit">Enregistrer</button>
