@@ -43,15 +43,9 @@
    height: 45px;
 }
 .SupportRow__title{
-   /* margin: 0px 80px; */
-}
-.SupportRow__title{
    font-weight: bold;
    color:  rgb(18, 106, 160);
    padding: 5px 10px;
-}
-.SupportRow__moduleName{
-   /* margin: 0px 80px; */
 }
 .SupportRow__moduleName{
    color: rgba(142, 125, 125, 1);
@@ -62,8 +56,32 @@
    height: 40px;
    margin: 5px 10px;
 }
-/* .SupportRow__EditImages{
-   margin-left: 150px;
-} */
 
+/* ----------------------------------------------------------------------- */
 
+.ModalEditSupport input,.ModalEditSupport textarea{
+   outline: none;
+   color:#8E7D7D;
+   font-weight: bold;
+   background-color: #F4EDED;
+   border: 0;
+}
+.ModalEditSupport__footer label{
+   cursor: pointer;
+}
+.ModalEditSupport__footer label p{
+   color: #8E7D7D;
+   font-weight: bold;
+   margin: 10px 10px;
+}
+.ModalEditSupport__footer button{
+   background-color: rgb(18, 106, 160);
+   color: white;
+   font-weight: bold;
+   outline: none;
+   font-size: 1.2em;
+   padding: 15px 30px;
+   border: 0;
+   border-radius: 10px;
+ 
+}
