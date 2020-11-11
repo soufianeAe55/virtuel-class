@@ -4,7 +4,6 @@ import File from '../Dashboard/imgs/File.svg'
 
 function ModalEditSupport() {
    const [fileName, setfileName] = useState("Choisir un fichier")
-   const [file, setfile] = useState(null)
 
    useEffect(() => {
       // const actualBtn = document.getElementById('upload btn');
@@ -19,7 +18,6 @@ function ModalEditSupport() {
    }, [])
    const handleChange = e => {
       setfileName(e.target.files[0].name);
-      setfile(e.target.files[0]) 
    }
 
    return (
@@ -28,7 +26,7 @@ function ModalEditSupport() {
          <form className="modal-content">
             <div className="modal-header">
             <h5 className="modal-title" id="exampleModalLabel">Modifier un support</h5>
-            <button onClick={() => { setfileName("Choisir un fichier"); setfile(null) }} type="button" className="close" id="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" className="close" id="close" data-dismiss="modal" aria-label="Close">
                <span aria-hidden="true">&times;</span>
             </button>
             {console.log(fileName)}
