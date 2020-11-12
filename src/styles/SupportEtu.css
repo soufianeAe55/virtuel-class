@@ -113,5 +113,37 @@
 }
 
 /* --------------------------------------------------------------------------- */
+.SupportAdd input,.SupportAdd textarea{
+   outline: none;
+   color:#8E7D7D;
+   font-weight: bold;
+   border: 0;
+}
+.SupportAdd__footer{
+   padding: 10px;
+}
+.SupportAdd__footer label{
+   cursor: pointer;
+   padding: 7px 10px;
+}
+.SupportAdd__footer label:hover{
+   border: 1.5px solid #8E7D7D;
+   border-radius: 10px;
+}
+.SupportAdd__footer label p{
+   color: #8E7D7D;
+   font-weight: bold;
+   margin: 10px 10px;
+}
+.SupportAdd__footer button{
+   background-color: rgb(18, 106, 160);
+   color: white;
+   font-weight: bold;
+   font-size: 1.2em;
+   padding: 15px 30px;
+   border: 0;
+   border-radius: 10px;
+   outline: none;
+}
 
 
