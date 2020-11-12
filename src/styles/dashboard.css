@@ -98,13 +98,15 @@ p{
 }
 
 .Donthide{
-	width: auto;
-	transition: width 5s;
-	height: 100vh !important;
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	left: 0;
+
+ 
+ width: auto;
+ transition: width 5s;
+ height: 100vh !important;
+ position: fixed;
+ border: 1px solid #CBC2C2;
+ border-left-width: 0px !important;
+
 }
 
 .hide{
@@ -112,7 +114,9 @@ p{
 	overflow: hidden;
 	 transition: width 5s;
 }
-
+.respoMenu{
+	display: none;
+}
 
 
 .hideIcon{
@@ -154,6 +158,11 @@ p{
 #active{
 	
 	background-color: #126AA0 !important;
+	color: white;
+}
+#active-1{
+	
+	color: white;
 }
 .active{
 	
@@ -168,3 +177,45 @@ p{
 #activeicon{
 	filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(234deg) brightness(103%) contrast(180%) !important;	
 }
+
+@media(max-width: 450px){
+
+	.Donthide{
+		display: none;
+	}
+
+	.respoMenu{
+		display: block;
+		align-self: flex-start;
+		margin-right: -55px;
+		margin-top: 20px;
+		z-index: 5;
+		width: 35px;
+	}
+	.logoHide2{
+	display: none;
+     }
+	.hideMenu{
+	display: none;
+}
+.showMenu{
+	display: flex;
+	z-index: 4;
+}
+.logo3{
+	display: block !important;
+	height: 48px ;
+	margin-bottom: 19px; 
+}
+}
+
+@media(min-width: 450px){
+
+	
+	.respoMenu{
+		display: none;
+
+	}
+}
+
+
