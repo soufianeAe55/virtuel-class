@@ -1,4 +1,119 @@
-.cont{
-	margin: 20px 0px 0px 150px !important;
-	
+
+/*------------------------------partie de la photo-----------------------------------------*/
+.ligne1_col1{
+	background-image: url('../Components/Etudiant/Imageactu/photo1.png');
+	background-size:  100% 100%;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	}
+.actu {
+bottom: 70px;
+background-color:#F24140;
+left: 30px;
+color: white;
+position:absolute;
+padding:5px 20px 5px 20px;
 }
+.titre{
+	bottom :37px;
+	background-color: rgb(19, 22, 27,79%) ;
+	color: white;
+	font-weight: bold;
+	left: 30px;
+	position:absolute;
+	padding:5px 20px 5px 20px;
+
+}
+
+/*--------------------------------------------------------------*/
+/*----------------------------partie de pagination---------------------------------*/
+.div-name h6{
+
+font-weight: bold;
+color: #126AA0;
+
+}
+.div-name p{
+	font-size: 0.9em;
+	cursor:pointer;
+	color: #8E7D7D;
+}
+.page-link{
+color: #126AA0;
+}
+/* .div-contenu :hover{
+	background-color: rgb(209,209,209,50%);
+	display: block;
+} */
+
+@media screen and (min-width:700px) and (max-width: 1223px) {
+	.div-contenu p{
+		font-size: 0.4em;
+		
+	}
+	.div-name h6{
+		font-size: 0.6em;
+	}
+	.div-image{
+		width: 50%;
+		/* height: 50%; */
+	}
+	.actu {
+		font-size: 0.7em;
+	}
+	.titre{
+		font-size: 0.7em;
+		bottom :47px;
+ 	} 
+
+} 
+@media screen and (min-width:427px) and (max-width:699px){
+	.ligne1_col1{
+		display: none;
+		
+	}
+	.div-contenu p{
+		font-size: 0.4em;
+		
+	}
+	.div-name h6{
+		font-size: 0.6em;
+	}
+	.div-image{
+		width: auto;
+		/* height: 50%; */
+	}
+	.div-contenu{
+		width: auto;
+	}
+
+
+}
+
+@media screen and (max-width:426px){
+	.ligne1_col1{
+		display: none;
+		
+	}
+	.div-contenu p{
+		font-size: 0.3em;
+		
+	}
+	.div-name h6{
+		font-size: 0.2em;
+	}
+	.div-image{
+		width: auto;
+		/* height: 50%; */
+	}
+	.div-contenu{
+		width: auto;
+		padding: 1px;
+	}
+
+
+}
+
+
+ 

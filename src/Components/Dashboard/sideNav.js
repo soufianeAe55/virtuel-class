@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, NavLink, withRouter} from 'react-router-dom'
 import '../../styles/dashboard.css'
 import HomeIcon from './imgs/home.svg'
 import ActuaIcon from './imgs/ActualitesSvg.svg'
@@ -9,72 +9,78 @@ import Support from './imgs/support.svg'
 import Contact  from './imgs/svgContact.svg'
 import Collapse  from './imgs/collapse.svg'
 
-function SideNav(){
+function SideNav(props){
 
 	let [hide,setHide]=useState(false)
+	const { location } = props;
 
-    useEffect(() => {
-	  const script = document.createElement('script');
-	  script.src = "./js-files/side.js";
-	  script.async = true;
-	  document.body.appendChild(script);
-	  return () => {
-	    document.body.removeChild(script);
-	  }
-	}, []);
+	const homeEtuId = location.pathname.match(/^\/homeEtu/) ? "active" : "";
+    const actsId = location.pathname.match(/^\/acts/) ? "active" : "";
+    const MyclassId = location.pathname.match(/^\/Myclass/) ? "active" : "";
+    const supportId = location.pathname.match(/^\/support/) ? "active" : "";
+    const contactId = location.pathname.match(/^\/contact/) ? "active" : "";
+    const hideId = location.pathname.match(/^\/contact/) ? "activeicon" : "";
+
+    const homeIcon = location.pathname.match(/^\/homeEtu/) ? "activeicon" : "";
+    const actsIcon = location.pathname.match(/^\/acts/) ? "activeicon" : "";
+    const MyclassIcon = location.pathname.match(/^\/Myclass/) ? "activeicon" : "";
+    const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
+    const contactIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
+    const hideIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
+
 
 	return(
 	  <div className={`row Donthide ${hide ? "hide" : ""}`} >
 		<ul id="NavId" className="nav flex-column sideNa col-12 col-sm-12 col-md-12 col-lg-12 ">
 		<h2 className={`${hide ? "logoHide" : "logo"}`} >My logo </h2>
 		<h2 className={`${hide ? "logo2" : "logoHide"}`} ></h2>
-		  <li id="active" className="nav-item ItemNav row "   >
-		    <Link id="activelink" className="nav-link sideItem  active" to="/homeEtu">
-			    <img  id="activeicon" alt="Responsive image" className="Icons img-fluid Hom" src={HomeIcon} />
+		  <li id={homeEtuId}  className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`} >
+		    <NavLink activeClassName="active10"  className="nav-link sideItem" to="/homeEtu">
+			    <img id={homeIcon}   alt="Responsive image"  className={`Icons img-fluid Hom active11 ${hide?" Icons2": ""}`} src={HomeIcon} />
 			    Home
-		    </Link>
+		    </NavLink>
 		  </li>
 
-		   <li className="nav-item ItemNav"   >
-		    <Link className="nav-link sideItem active " to="/homeEtu" >
-			    <img  alt="Responsive image" className="Icons img-fluid Actu" src={ActuaIcon} />
+		   <li id={actsId} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+		    <NavLink activeClassName="active10" className="nav-link sideItem" to="/acts"  >
+			    <img id={actsIcon}  alt="Responsive image" className={`Icons img-fluid Actu active11 ${hide?" Icons2": ""}`} src={ActuaIcon} />
 			    Actualites
-		    </Link>
+		    </NavLink>
 		  </li>
 
-		  <li className="nav-item ItemNav" >
-		    <Link className="nav-link sideItem" to="/Myclass" >
-			    <img  alt="Responsive image" className="Icons img-fluid Use" src={UserIcon} />
+		  <li id={MyclassId} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+		    <NavLink activeClassName="active10" className="nav-link sideItem" to="/Myclass" >
+			    <img id={MyclassIcon}  alt="Responsive image" className={`Icons img-fluid Use active11 ${hide?" Icons2": ""}`} src={UserIcon} />
 			    Myclass 
-		    </Link>
+		    </NavLink>
 		  </li>
-		  <li className="nav-item ItemNav" >
-		    <a className="nav-link sideItem">
-			    <img  alt="Responsive image" className="Icons img-fluid Supp" src={Support} />
+		  <li id={supportId} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+		    <NavLink activeClassName="active10" className="nav-link sideItem" to="/support" >
+			    <img id={supportIcon}  alt="Responsive image" className={`Icons img-fluid Supp active11 ${hide?" Icons2": ""}`} src={Support} />
 			    Support
-		    </a>
+		    </NavLink>
 		  </li>
-		  <li className="nav-item ItemNav ItemEX " >
-		    <a className="nav-link sideItem" >
-			    <img  alt="Responsive image" className="Icons img-fluid Conta" src={Contact} />
+		  <li id={contactId}  className={`nav-item ItemEX ItemNav ${hide ? "ItemNav2" : ""}`}  >
+		    <NavLink activeClassName="active10" className="nav-link sideItem" to="/contact">
+			    <img id={contactIcon}  alt="Responsive image" className={`Icons img-fluid Conta active11 ${hide?" Icons2": ""}`} src={Contact} />
 			    Contact
-		    </a>
+		    </NavLink>
 		  </li>
-		  <li className="nav-item ItemNav Collapse"  >
+		  <li  className={`nav-item ItemEX ItemNav Collapse ${hide ? "ItemNav2 Collapse2" : ""}`} >
 		  	
-		    <img  alt="Responsive image" 
+		    <img id=""  alt="Responsive image" 
 		  	      className={`img-fluid ${hide?" showIcon": "Icons hideIcon"}`}
 		  		  src={Collapse}
 		  		  onClick={()=> { setHide(false)}}
 		  		   />
-		    <a className={` ${hide?"nav-link sideItem collapseText hideLink":"nav-link sideItem collapseText"}`}
+		    <Link activeClassName="active10" to="#" className={` ${hide?"nav-link sideItem collapseText hideLink":"nav-link sideItem collapseText"}`}
 		       onClick={()=> { setHide(true)}} >
-		       <img  alt="Responsive image" 
+		       <img id=""  alt="Responsive image" 
 		  	      className={`img-fluid ${hide?"Icons hideIcon": "Icons"}`}
 		  		  src={Collapse}
 		  		   />
 		       Hide
-		     </a>
+		     </Link>
 
 		  </li>
 		</ul>
@@ -82,4 +88,4 @@ function SideNav(){
 		)
 }
 
-export default SideNav
+export default withRouter(SideNav)
