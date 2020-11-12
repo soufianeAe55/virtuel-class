@@ -40,7 +40,7 @@
    width: 90%;
    border: 1px solid white; 
 }
-::placeholder{
+#SeConnecter__form ::placeholder,#Sinscrire__form ::placeholder{
    color: rgba(18, 106, 160, 1);
    font-weight: bold;
    font-family: 'montserrat';

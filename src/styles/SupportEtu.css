@@ -15,13 +15,103 @@
    text-align-last: center;
    padding: 0px 12px;
 }
-#SupportCard{
-   width: 18rem;
+.SupportCard{
+   width: 15.5rem;
+   height: 24rem;
    margin: 25px;
    border-radius: 10px;
 }
-#SupportCard:hover{
-   width: 19rem;
-   margin: 18px;
-   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.SupportCard:hover{
+   width: 16rem;
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 }
+/* ----------------------------------------------------------------------------- */
+.SupportEdit__container{
+   background-color: white;
+   margin: 10px 50px;
+   border: 1px solid #CBC2C2;
+   box-sizing: border-box;
+   border-radius: 5px;
+}
+.SupportRow{
+   margin: 10px 40px;
+   padding: 25px 25px 15px 25px;
+   border-bottom: 2px solid rgba(203, 194, 194, 1); 
+   /* width: 100%; */
+}
+.SupportRow__img{
+   width: 45px;
+   height: 45px;
+}
+.SupportRow__title{
+   font-weight: bold;
+   color:  rgb(18, 106, 160);
+   padding: 5px 10px;
+}
+.SupportRow__moduleName{
+   color: rgba(142, 125, 125, 1);
+   padding: 5px 10px;
+}
+.SupportRow__EditImages img{
+   width: 40px;
+   height: 40px;
+   margin: 5px 10px;
+}
+
+/* ----------------------------------------------------------------------- */
+
+.ModalEditSupport input,.ModalEditSupport textarea{
+   outline: none;
+   color:#8E7D7D;
+   font-weight: bold;
+   background-color: #F4EDED;
+   border: 0;
+}
+.ModalEditSupport__footer label{
+   cursor: pointer;
+   padding: 7px 10px;
+}
+.ModalEditSupport__footer label:hover{
+   border: 1.5px solid #8E7D7D;
+   border-radius: 10px;
+}
+.ModalEditSupport__footer label p{
+   color: #8E7D7D;
+   font-weight: bold;
+   margin: 10px 10px;
+}
+.modal-footer button{
+   outline: none;
+}
+.ModalEditSupport__footer button{
+   background-color: rgb(18, 106, 160);
+   color: white;
+   font-weight: bold;
+   font-size: 1.2em;
+   padding: 15px 30px;
+   border: 0;
+   border-radius: 10px;
+}
+.ModalDeleteSupport__btnAnnuler{
+   background: #F4EDED;
+   border: 2px solid #126AA0;
+   box-sizing: border-box;
+   border-radius: 10px;
+   color: #126AA0;
+   font-weight: bold;
+   padding: 15px 30px;
+   font-size: 1.2em;
+}
+.ModalDeleteSupport__btnSupprimer{
+   background: #D80000;
+   border-radius: 10px;
+   color: white;
+   border: 0;
+   font-weight: bold;
+   padding: 15px 30px;
+   font-size: 1.2em;
+}
+
+/* --------------------------------------------------------------------------- */
+
+

@@ -6,6 +6,8 @@ import Actualites from './Components/Etudiant/Actualites'
 import Myclass from './Components/Etudiant/Myclass/Myclass'
 import MyclassModules from './Components/Etudiant/Myclass/Myclass-modules'
 import Support from './Components/Etudiant/Support'
+import SupportEdit from './Components/Etudiant/SupportEdit';
+// import SideNav from './Components/Dashboard/sideNav'
 import Contact from './Components/Etudiant/contact'
 import ModuleOptions from './Components/Etudiant/Myclass/ModuleOptions'
 import Annonce from './Components/Etudiant/Myclass/annonce'
