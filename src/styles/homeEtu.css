@@ -10,11 +10,11 @@
 .sideNa{
 	background-color: white;
 	flex-basis: 15%;
-	height: 637px;
+	height: 100vh;
 	
 }
 .cont{
-	margin: 20px 0px 0px 20px !important;
+	margin: 20px 0px 0px 200px !important;
 	
 }
 

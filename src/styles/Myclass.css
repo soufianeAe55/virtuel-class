@@ -1,0 +1,140 @@
+
+.cont{
+	margin: 20px 0px 0px 165px !important;
+	
+}
+ @media(max-width: 450px){
+ 	.cont{
+	margin: 20px 0px 0px 20px !important;
+	
+}
+ }
+.sous-app{
+	flex-basis: 100%;
+}
+
+.Scard{
+	background-color: white;
+	height: 140px;
+	width: 10px;
+	margin-bottom: 70px;
+	margin-right: 20px;
+}
+ @media (max-width: 576px) {
+ 	.Scard{
+ 		margin-left: 10px;
+ 		margin-right: 0px;
+ 	}
+ }
+
+.Sname{
+	height: 80px;
+	background-color: #126AA0;
+	margin-top: -25px;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	
+}
+.Sname-name{
+	color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	text-align: center;
+}
+.Sclass{
+	text-align: center;
+	font-family: montserrat;
+	font-weight: bolder;
+	padding-top: 15px;
+	font-size: 23px;
+	color: #8E7D7D;
+
+}
+.header{
+	height: 120px;
+}
+.Smodules{
+	background-color: white !important;
+	text-align: end;
+	margin-bottom: 12px;
+	margin-left: 10px;
+	font-size: 13px;
+	font-weight: bolder;
+}
+
+.moduleHeader{
+	height: 120px;
+}
+.module{
+	background-color: white;
+	height: 51px;
+	display: flex;
+	margin-bottom: 17px;
+}
+.blueLine{
+	background-color: #126AA0;
+	height: 51px;
+    flex-basis: 1%;
+    margin-left: -20px;
+
+}
+.moduleName{
+	align-self: center;
+	margin-left: 15px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	color: #126AA0;
+}
+
+ @media (max-width: 767px) {
+
+ 	.moduleName{
+ 		font-size: 16px;
+ 	}
+ 	.module{
+ 		margin-left: 20px;
+ 	}
+ }
+
+ .ModuleSearch{
+ 	background: rgba(255, 255, 255, 0.7) !important;
+ 	border: 1px;
+ 	padding-left: 10px;
+ 	border-radius: 3px;
+ 	height: 40px;
+ }
+ .search{
+    max-width: 5%;
+    margin-top: -80px;
+    margin-left: -50px;
+ }
+
+ .CardOptions{
+ 	background-color: white;
+ 	height: 400px;
+ 	margin-right: 0px;
+ 	margin-bottom: 30px;
+ 	border-radius: 4px;
+ 	border: 1px solid #CBC2C2;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+ .OptionsImg{
+ 	height: 225px;
+ }
+
+.CardOptions p{
+  color: #8E7D7D;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.linkOption{
+  text-align: end;
+  font-weight: bold;
+}
+.headerOptions{
+	margin-bottom: 90px;
+}
