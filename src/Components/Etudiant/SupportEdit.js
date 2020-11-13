@@ -4,8 +4,6 @@ import SupportRow from './SupportRow'
 import '../../styles/SupportEtu.css'
 import {Link} from 'react-router-dom'
 
-
-
 function SupportEdit() {
    return (
       <div className="row d-flex flex-column m-4 border border-dark">

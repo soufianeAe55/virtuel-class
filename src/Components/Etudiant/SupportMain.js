@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import settings from '../Dashboard/imgs/settings.svg'
 import AddFile from '../Dashboard/imgs/AddFile.svg'
 import SupportCard from './SupportCard'
 import '../../styles/SupportEtu.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+// import Support from './Support'
 
 
-function SupportMain() {
+function SupportMain(props) {
+   const [Supports] = useState(props.Supports);
    return (
       <div className="row d-flex flex-column m-4 border border-dark ">
       <div className="m-3 d-flex flex-row-reverse">
@@ -40,13 +42,13 @@ function SupportMain() {
          </div>
       </div>
       <div className="row mx-3 p-2 d-flex justify-content-center">
-         <SupportCard />
-         <SupportCard />
-         <SupportCard />
-         <SupportCard />
-         <SupportCard />
-         <SupportCard />
-         <SupportCard />
+      {
+         // Supports.map( ({id,Support}) => (
+         //    console.log(Support)
+         // ))
+         console.log(Supports)
+      }
+      <SupportCard />
       </div>
    </div>
 )
