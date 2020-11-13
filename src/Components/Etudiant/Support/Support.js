@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import SideNav from '../Dashboard/sideNav'
-import Menu from '../Dashboard/Menu'
+import SideNav from '../../Dashboard/sideNav'
+import Menu from '../../Dashboard/Menu'
 import {Route, Switch} from "react-router-dom"
 import SupportEdit from './SupportEdit'
 import SupportMain from './SupportMain'
 import SupportAdd from './SupportAdd'
-import '../../styles/SupportEtu.css'
+import '../../../styles/SupportEtu.css'
+
 
 function Support() {
    const [Supports] = useState([
@@ -13,28 +14,42 @@ function Support() {
          titre:"Java playlist",
          nomPrenom:"mouad aouane",
          module:"java poo",
+         semestre:"S3",
+         description:"lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      },
+      {
+         titre:"Cpp pdf",
+         nomPrenom:"mouad aouane",
+         module:"cpp poo",
+         semestre:"S2",
          description:"lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
       },
       {
          titre:"les videos xml",
          nomPrenom:"mouad aouane",
          module:"xml et les framworks",
+         semestre:"S3",
          description:"lotxeu lotxeu lotxeu lotxeu lotxeu lotxeu lotxeu lotxeu lotxeu lotxeu"
-      }]
-   )
+      }
+   ])
    return(
       <React.Fragment>
          <SideNav />
          <div className="sous-app" >
             <Menu />
             <Switch>
-               <Route exact path="/support"> <SupportMain Supports={Supports} /> </Route>
-               <Route path="/support/supportEdit" component={SupportEdit} />
+               <Route exact path="/support"> 
+                  <SupportMain Supports={Supports} />
+               </Route>
+
+               <Route path="/support/supportEdit">
+                <SupportEdit Supports={Supports} />
+               </Route>
+
                <Route path="/support/supportAdd" component={SupportAdd} />
             </Switch>
          </div>
       </React.Fragment>
    )
 }
-
 export default Support

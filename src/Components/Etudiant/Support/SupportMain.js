@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import settings from '../Dashboard/imgs/settings.svg'
-import AddFile from '../Dashboard/imgs/AddFile.svg'
+import settings from '../../Dashboard/imgs/settings.svg'
+import AddFile from '../../Dashboard/imgs/AddFile.svg'
 import SupportCard from './SupportCard'
-import '../../styles/SupportEtu.css'
+import '../../../styles/SupportEtu.css'
 import { Link } from 'react-router-dom'
 // import Support from './Support'
 
@@ -43,12 +43,10 @@ function SupportMain(props) {
       </div>
       <div className="row mx-3 p-2 d-flex justify-content-center">
       {
-         // Supports.map( ({id,Support}) => (
-         //    console.log(Support)
-         // ))
-         console.log(Supports)
+         Supports.map( (Support) => (
+            <SupportCard Support={Support} />
+         ))
       }
-      <SupportCard />
       </div>
    </div>
 )

@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import UploadFile from '../Dashboard/imgs/UpLoadFile.svg'
+import UploadFile from '../../Dashboard/imgs/UpLoadFile.svg'
 
 function ModalEditSupport() {
    const [fileName, setfileName] = useState("Choisir un fichier")

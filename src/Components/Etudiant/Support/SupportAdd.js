@@ -1,9 +1,9 @@
 import React,{ useState } from 'react'
-import backLink from '../Dashboard/imgs/backLink.svg'
-import AddSupport from '../Dashboard/imgs/AddSupport.svg'
+import backLink from '../../Dashboard/imgs/backLink.svg'
+import AddSupport from '../../Dashboard/imgs/AddSupport.svg'
 import { Link } from 'react-router-dom'
-import UploadFile from '../Dashboard/imgs/UpLoadFile.svg'
-import '../../styles/SupportEtu.css'
+import UploadFile from '../../Dashboard/imgs/UpLoadFile.svg'
+import '../../../styles/SupportEtu.css'
 
 
 function SupportAdd() {
