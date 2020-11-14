@@ -51,10 +51,7 @@ function Support() {
                   <SupportAdd />
                </Route>
 
-               <Route path="/support/supportDisplay">
-                  <SupportDisplay />
-               </Route>
-
+               <Route path="/support/supportDisplay" component={SupportDisplay} />
             </Switch>
          </div>
       </React.Fragment>

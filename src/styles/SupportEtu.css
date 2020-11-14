@@ -175,6 +175,44 @@
       display: none;
    }
 }   
-
+/* ------------------------------------------------------------------------ */
+.SupportDisplay__card{
+   background-color: white;
+   text-align: center;
+}
+.SupportDisplay__card img{
+   width: 85px;
+   height: 85px;
+   transform: translate(-45px,-30px);
+}
+.SupportDisplay__card h2{
+   font-weight: bold;
+   text-decoration-line: underline;
+   color: #8E7D7D;
+   margin:30px 40px 0px 40px;
+   font-size: 35px;
+}
+.SupportDisplay__card .nomPrenom{
+   font-size: 31px;
+   color: #126AA0;
+   margin-top: 30px;
+}
+.SupportDisplay__card h4{
+   font-size: 25px;
+   color: #126AA0;
+   margin-top: 30px;
+}
+.SupportDisplay__card p h3{
+   font-size: 23px;
+   color: #8E7D7D;
+   margin-top: 30px;
+   font-weight: bold;
+}
+.SupportDisplay__card p{
+   font-size: 21px;
+   color: #8E7D7D;
+   margin: 30px;
+   /* font-weight: bold; */
+}
 
 
