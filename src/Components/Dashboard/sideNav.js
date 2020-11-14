@@ -26,11 +26,15 @@ function SideNav(props){
     const actsId = location.pathname.match(/^\/acts/) ? "active" : "";
     const MyclassId = location.pathname.match(/^\/Myclass/) ||
     				  location.pathname.match(/^\/ModuleOptions/) ||
-    				  location.pathname.match(/^\/annonce/) ? "active" : "";
+    				  location.pathname.match(/^\/annonce/) ||
+    				  location.pathname.match(/^\/devoirs/) ||
+    				  location.pathname.match(/^\/devoirContent/) ? "active" : "";
 
  	const MyclassIdM = location.pathname.match(/^\/MyclassModules/) ||
  					   location.pathname.match(/^\/ModuleOptions/) || 
- 					   location.pathname.match(/^\/annonce/) ? "active-1" : ""; 
+ 					   location.pathname.match(/^\/annonce/)  || 
+ 					   location.pathname.match(/^\/devoirs/) ||
+    				   location.pathname.match(/^\/devoirContent/) ? "active-1" : ""; 
 
     const supportId = location.pathname.match(/^\/support/) ? "active" : "";
     const contactId = location.pathname.match(/^\/contact/) ? "active" : "";
@@ -40,7 +44,10 @@ function SideNav(props){
     const actsIcon = location.pathname.match(/^\/acts/) ? "activeicon" : "";
     const MyclassIcon = location.pathname.match(/^\/Myclass/) ||
     				    location.pathname.match(/^\/ModuleOptions/) ||
-    				    location.pathname.match(/^\/annonce/) ? "activeicon" : "";
+    				    location.pathname.match(/^\/annonce/) ||
+    				    location.pathname.match(/^\/devoirs/) ||
+    				    location.pathname.match(/^\/devoirContent/) ? "activeicon" : "";
+
 
     const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
     const contactIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";

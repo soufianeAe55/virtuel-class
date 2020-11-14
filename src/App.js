@@ -7,10 +7,11 @@ import Myclass from './Components/Etudiant/Myclass/Myclass'
 import MyclassModules from './Components/Etudiant/Myclass/Myclass-modules'
 import Support from './Components/Etudiant/Support'
 import SupportEdit from './Components/Etudiant/SupportEdit';
-// import SideNav from './Components/Dashboard/sideNav'
 import Contact from './Components/Etudiant/contact'
 import ModuleOptions from './Components/Etudiant/Myclass/ModuleOptions'
 import Annonce from './Components/Etudiant/Myclass/annonce'
+import Devoirs from './Components/Etudiant/Myclass/devoirs'
+import DevoirContent from './Components/Etudiant/Myclass/DevoirContent'
 
 
 
@@ -25,6 +26,8 @@ function App() {
          <Route  path='/MyclassModules' component={MyclassModules} />
          <Route  path='/ModuleOptions' component={ModuleOptions} />
          <Route  path='/annonce' component={Annonce} />
+         <Route  path='/devoirs' component={Devoirs} />
+         <Route  path='/devoirContent' component={DevoirContent} />
          <Route  path='/support' component={Support} />
          <Route  path='/contact' component={Contact} />
       </Switch>

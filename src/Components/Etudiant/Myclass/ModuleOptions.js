@@ -35,7 +35,7 @@ function ModuleOptions(){
 						<div className="row CardOptions col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">	
 							<img className="OptionsImg col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"  src={Devoir} />
 							<p className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">Consulter les devoirs de ce module  </p>
-							<Link className=" linkOption col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" to="">Voir...</Link>
+							<Link className=" linkOption col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" to="/devoirs">Voir...</Link>
 						</div>
 						
 					</div>
