@@ -5,6 +5,7 @@ import {Route, Switch} from "react-router-dom"
 import SupportEdit from './SupportEdit'
 import SupportMain from './SupportMain'
 import SupportAdd from './SupportAdd'
+import SupportDisplay from './SupportDisplay'
 import '../../../styles/SupportEtu.css'
 
 
@@ -22,7 +23,7 @@ function Support() {
          nomPrenom:"mouad aouane",
          module:"cpp poo",
          semestre:"S2",
-         description:"lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+         description:"lojrwe lojrwe lojrwe lojrwe lojrwe lojrwe lojrwe lojrwe lojrwe lojrwe lorem"
       },
       {
          titre:"les videos xml",
@@ -43,10 +44,17 @@ function Support() {
                </Route>
 
                <Route path="/support/supportEdit">
-                <SupportEdit Supports={Supports} />
+                  <SupportEdit Supports={Supports} />
                </Route>
 
-               <Route path="/support/supportAdd" component={SupportAdd} />
+               <Route path="/support/supportAdd">
+                  <SupportAdd />
+               </Route>
+
+               <Route path="/support/supportDisplay">
+                  <SupportDisplay />
+               </Route>
+
             </Switch>
          </div>
       </React.Fragment>
