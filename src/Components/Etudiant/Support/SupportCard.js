@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import IconSupportPc from '../../Dashboard/imgs/IconSupportPc.svg';
-import SupportDisplay from './SupportDisplay';
 
 
 function SupportCard({Support}) {
