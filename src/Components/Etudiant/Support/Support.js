@@ -3,13 +3,16 @@ import SideNav from '../../Dashboard/sideNav'
 import Menu from '../../Dashboard/Menu'
 import {Route, Switch} from "react-router-dom"
 import SupportEdit from './SupportEdit'
+import RespoSupportEdit from './RespoSupportEdit'
 import SupportMain from './SupportMain'
 import SupportAdd from './SupportAdd'
 import SupportDisplay from './SupportDisplay'
 import '../../../styles/SupportEtu.css'
 
 
-function Support() {
+function Support() { 
+   const [etudientType] = useState("respo");
+
    const [Supports] = useState([
       {
          titre:"Java playlist",
@@ -42,15 +45,14 @@ function Support() {
                <Route exact path="/support"> 
                   <SupportMain Supports={Supports} />
                </Route>
-
                <Route path="/support/supportEdit">
-                  <SupportEdit Supports={Supports} />
+                  {
+                     ( etudientType === "etudient") ?
+                     <SupportEdit Supports={Supports} />
+                     : <RespoSupportEdit Supports={Supports} />
+                  }
                </Route>
-
-               <Route path="/support/supportAdd">
-                  <SupportAdd />
-               </Route>
-
+               <Route path="/support/supportAdd" component={SupportAdd}/>
                <Route path="/support/supportDisplay" component={SupportDisplay} />
             </Switch>
          </div>

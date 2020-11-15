@@ -6,7 +6,7 @@ import ModalEditSupport from './ModalEditSupport';
 import ModalDeleteSupport from './ModalDeleteSupport';
 
 
-function SupportRow({Support}) {
+function SupportRowForClass({Support}) {
    return (
       <div className="d-flex SupportRow">
          <div className="col-9 d-flex mx-5">
@@ -17,7 +17,6 @@ function SupportRow({Support}) {
             </div>
          </div>
          <div className="col-3 d-flex mx-auto my-auto SupportRow__EditImages">
-            <img data-toggle="modal" data-target="#EditModal" src={Pen} alt="" />
             <img data-toggle="modal" data-target="#DeleteModal" src={Delete} alt="" />
          </div>
          <ModalEditSupport />
@@ -26,4 +25,4 @@ function SupportRow({Support}) {
    )
 }
 
-export default SupportRow
+export default SupportRowForClass
