@@ -15,7 +15,29 @@
 }
 /* .cont{
 	
+<<<<<<< HEAD
 	margin: 20px 0px 0px 20px !important;
 	
 	
 } */
+=======
+}
+
+#ligne1_para p{
+font-family: 'montserrat';
+}
+
+
+@media screen and (max-width: 450px) {
+	.h51 {
+		font-size: 1.2em;
+	}
+	.para1{
+		font-size: 0.75em;
+	}
+	.h5{
+		text-align: center;
+	}
+
+ }   
+>>>>>>> 325173567ed970e7b75a018f71f3789e6720fdc9
