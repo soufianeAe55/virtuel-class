@@ -1,7 +1,10 @@
 
 /*------------------------------partie de la photo-----------------------------------------*/
+.conter{
+	margin: 20px 0px 0px 20px;
+}
 .ligne1_col1{
-	background-image: url('../Components/Etudiant/Imageactu/photo1.png');
+	background-image: url('../Components/Etudiant/Actualite/Imageactu/photo1.png');
 	background-size:  100% 100%;
 	-webkit-background-size: 100% 100%;
 	-moz-background-size: cover;
@@ -66,6 +69,7 @@ color: #126AA0;
 		font-size: 0.7em;
 		bottom :47px;
  	} 
+	
 
 } 
 @media screen and (min-width:427px) and (max-width:699px){
@@ -100,6 +104,10 @@ color: #126AA0;
 		font-size: 0.3em;
 		
 	}
+	.imageActu{
+		height: 20vh;
+		
+	}
 	.div-name h6{
 		font-size: 0.2em;
 	}
@@ -111,9 +119,33 @@ color: #126AA0;
 		width: auto;
 		padding: 1px;
 	}
-
+	.rowActu{
+		height: auto;
+	
+	 }
 
 }
 
+/*--------------------------page2---------------------------*/
+ .actu_left p{
 
- 
+	color: #8E7D7D;
+	font-size: 0.8em;
+	
+ }
+ .actu_left h5{
+	color: #126AA0;
+	font-weight: bold;
+	
+
+ }
+ .rowActu{
+	height: 50vh;
+
+ }
+ .trait{
+	 background-color: #126AA0;
+	 width: 7%;
+	 height: 1.5%;
+	
+ }

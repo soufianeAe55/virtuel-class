@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../styles/Actualite.css'
+import '../../../../styles/Actualite.css'
 const Pagination = ({postsPerPage , totalPosts , paginate}) => {
     const pageNumbers=[];
     for(let i=1 ; i<=Math.ceil(totalPosts / postsPerPage);i++){

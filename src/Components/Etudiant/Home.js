@@ -14,7 +14,7 @@ const [Unkown, setUnkown] = useState("Zakariaa");
 			<SideNav />
 			<div className="sous-app" >
 			<Menu />
-			<div className="row cont " >
+			<div className="row conter" >
 				<div className="row  mx-3  w-100    " id="ligne1">
 					<div className=" mx-0 col-md-12    " id="ligne1_para">
 						<div className=" mx-0 w-100 bg-white  row rounded">
@@ -24,7 +24,7 @@ const [Unkown, setUnkown] = useState("Zakariaa");
 							</div>
 						
 							<div className=" col-md-5  cont-img mb-sm-4 ligne1_img">
-								<img className=" w-100 h-100 ml-lg-3 ml-2 img1"src={welcome} ></img>
+								<img className=" w-100 h-100 ml-lg-3 ml-2 img1" src={welcome} ></img>
 							</div>
 						</div>
 					</div>
