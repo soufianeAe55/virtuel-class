@@ -17,7 +17,7 @@ function RespoSupportEdit({Supports}) {
       setactif2("actif")
    }
    return (
-      <div className="row d-flex flex-column m-4 border border-dark">
+      <div className="row d-flex flex-column m-4">
          <Link to="/support" className="p-3 svgBack">
             <img src={backLink} alt="" />
          </Link>
@@ -31,10 +31,11 @@ function RespoSupportEdit({Supports}) {
          </div>
          <div className="RespoSupportEdit__container">
          {
-            (actif1==="actif") ?
+            ( actif1==="actif" ) ?
             Supports.map( (Support) => (
                <SupportRowForClass Support={Support} />
-            )) :
+            )) 
+            :
             Supports.map( (Support) => (
                <SupportRow Support={Support} />
             ))
