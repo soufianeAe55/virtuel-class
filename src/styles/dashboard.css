@@ -103,10 +103,15 @@ p{
  width: auto;
  transition: width 5s;
  height: 100vh !important;
- position: fixed;
+ /* position: fixed; */
+ position: sticky;
+ position: -webkit-sticky;
+ top: 0;
+ bottom: 0;
+ right: 0;
+ /* ----------------------- */
  border: 1px solid #CBC2C2;
  border-left-width: 0px !important;
-
 }
 
 .hide{

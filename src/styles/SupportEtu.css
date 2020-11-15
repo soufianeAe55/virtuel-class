@@ -113,5 +113,68 @@
 }
 
 /* --------------------------------------------------------------------------- */
+.SupportAdd h1{
+   color:#126AA0;
+   text-align: center;
+   font-weight: bold;
+}
+/* .SupportAdd select{
+   width:50%;
+} */
+
+.SupportAdd select,.SupportAdd input,.SupportAdd textarea{
+   outline: none;
+   color:#8E7D7D;
+   font-weight: bold;
+   border: 0;
+   border-radius: 10px;
+   padding: 20px 0px;
+}
+.SupportAdd__footer{
+   padding: 10px;
+}
+.SupportAdd__footer label{
+   cursor: pointer;
+   padding: 7px 10px;
+}
+.SupportAdd__footer label:hover{
+   border: 1.5px solid #8E7D7D;
+   border-radius: 10px;
+}
+.SupportAdd__footer label p{
+   color: #8E7D7D;
+   font-weight: bold;
+   margin: 10px 10px;
+}
+.SupportAdd__footer button{
+   background-color: rgb(18, 106, 160);
+   color: white;
+   font-weight: bold;
+   font-size: 1.2em;
+   padding: 15px 30px;
+   border: 0;
+   border-radius: 10px;
+   outline: none;
+}
+.SupportAdd__dropdown{
+   color:#8E7D7D;
+   font-weight: bold;
+   margin: 0px 10px;
+   outline: none;
+   border: 0;
+   border-radius: 10px;
+   text-align-last: center;
+   padding: 0px 12px;
+}
+
+.SupportAdd__img img{
+   width: 100%;
+}
+@media screen and (max-width: 1199px) {
+   .SupportAdd__img{
+      display: none;
+   }
+}   
+
 
 
