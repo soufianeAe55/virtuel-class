@@ -103,14 +103,6 @@ p{
  width: auto;
  transition: width 5s;
  height: 100vh !important;
-<<<<<<< HEAD
- position: -webkit-sticky;
- position: sticky;
- top: 0;
- bottom: 0;
- left: 0;
- /* position: fixed; */
-=======
  /* position: fixed; */
  position: sticky;
  position: -webkit-sticky;
@@ -118,7 +110,6 @@ p{
  bottom: 0;
  right: 0;
  /* ----------------------- */
->>>>>>> 325173567ed970e7b75a018f71f3789e6720fdc9
  border: 1px solid #CBC2C2;
  border-left-width: 0px !important;
 }
