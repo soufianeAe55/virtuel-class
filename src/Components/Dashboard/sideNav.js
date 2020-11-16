@@ -1,9 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import {Link, NavLink, withRouter} from 'react-router-dom'
 import '../../styles/dashboard.css'
 import HomeIcon from './imgs/home.svg'
 import ActuaIcon from './imgs/ActualitesSvg.svg'
-import {useEffect} from 'react'
 import UserIcon from './imgs/peopleuser.svg'
 import Support from './imgs/support.svg'
 import Contact  from './imgs/svgContact.svg'
@@ -16,12 +15,30 @@ function SideNav(props){
 	let [show,setShow]=useState(false)
 	const { location } = props;
 	const DisplayMenu = () => {
-		if(!show){
+		if(!show ){
 		setShow(true);
 		}else{
 			setShow(false)
 		}
 	}
+	useEffect(() => {
+		window.addEventListener("resize",()=> {
+			if(window.innerWidth < 750){
+				console.log('test')
+				setHide(true);
+				if(show ){
+					setHide(false);
+				}
+			}else{
+				setHide(false)
+			}
+		})
+		
+	});
+	/*if(window.innerWidth < 750){
+		setShow(false);
+	}*/
+	
 	const homeEtuId = location.pathname.match(/^\/homeEtu/) ? "active" : "";
     const actsId = location.pathname.match(/^\/acts/) ? "active" : "";
     const MyclassId = location.pathname.match(/^\/Myclass/) ||

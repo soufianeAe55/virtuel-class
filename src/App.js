@@ -2,7 +2,7 @@ import './App.css';
 import {Switch, Route} from 'react-router-dom';
 import LoginPage from './Components/Login/LoginPage'
 import HomeEtu from './Components/Etudiant/Home'
-import Actualites from './Components/Etudiant/Actualites'
+import Actualites from './Components/Etudiant/Actualite/Actualites'
 import Myclass from './Components/Etudiant/Myclass/Myclass'
 import MyclassModules from './Components/Etudiant/Myclass/Myclass-modules'
 import Support from './Components/Etudiant/Support/Support'
@@ -29,6 +29,7 @@ function App() {
          <Route  path='/devoirContent' component={DevoirContent} />
          <Route  path='/support' component={Support} />
          <Route  path='/contact' component={Contact} />
+
       </Switch>
     </div>
   );

@@ -1,0 +1,192 @@
+.Chat{
+	display: flex;
+}
+
+.ChatList{
+	background-color:  #126AA0;
+	height: 540px;
+	padding: 0px;
+	overflow-y: scroll;
+}
+.ChatForm{
+	background-color:  white;
+	display: flex;
+	flex-direction: column;
+	padding-left: 0px;
+	padding-right: 0px;
+	
+}
+.ChatHeader{
+	border:1px #E1D5D5 solid;
+	flex-basis: 11.5%;
+	
+
+}
+.ChatBody{
+	border-left:1px #E1D5D5 solid;
+	border-right:1px #E1D5D5 solid;
+	flex-basis: 76%;
+}
+.ChatFooter{
+	border:1px #E1D5D5 solid;
+	flex-basis: 12.5%;
+}
+.ChatList-Header{
+	display: flex;
+	padding-top: 10px;
+	margin-bottom: 40px;
+}
+.ChatList-Header h2{
+	display: flex;
+	color: white;
+	font-weight: 620;
+	margin-left: -19px;
+	margin-top: 5px;
+}
+
+.Contact{
+	display: flex;
+	padding-left: 15px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.Contact:hover{
+	background: rgba(31, 30, 91, 0.21);
+}
+.Actif{
+	margin-top: 18px;
+	margin-left: -5px;
+	margin-right: 14px;
+}
+
+.ContactName{
+	
+	font-weight: 600;
+	color: white;
+	margin-top: 6px;
+	font-size: 17px;
+}
+.ChatHeader{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.ChatHeader .H-1,.ChatHeader .H-2{
+	display: flex;
+}
+
+.ChatHeader .H-1 #NumberConts{
+	font-size: 14px;
+	font-family: Montserrat;
+	font-weight: 600;
+	color: #126AA0;
+	margin-top: 7px;
+	margin-left: 6px
+	
+}
+.ChatHeader .H-1 .img-2{
+	
+	margin-left: 8px
+	
+}
+.ChatHeader .H-2 h2{
+	font-family: Montserrat;
+	font-style: italic;
+	font-weight: 800;
+	font-size: 28px;
+	line-height: 24px;
+	color: #126AA0;
+
+
+}
+
+.ChatHeader .H-2 p{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 11px;
+	color: #8E7D7D;
+	margin-left: 4px;
+	align-self: center;
+}
+.ActifHeader{
+	margin-left: 6px;
+}
+.ChatFooter{
+	display: flex;
+	justify-content: space-between;
+}
+.ChatFooter div{
+	flex-basis: 95%;
+	align-self: center;
+}
+.ChatFooter div input{
+	background-color: white;
+	border: none;
+	padding-left: 30px;
+}
+.ChatFooter button{
+	flex-basis: 5%;
+	border: none;
+	background-color: white;
+}
+.imgChat{
+	width: 23px;
+}
+@media (max-width: 990px){
+	.ChatList{
+		flex-basis: 0%;
+	}
+	.ChatList-Header{
+		display: none;
+	}
+	.Contact{
+		display: none;
+	}
+	.ChatForm{
+		flex-basis: 100%;
+	}
+}
+
+@media (min-width: 990px){
+	.ChatHeader .H-1 .img-1,.ChatHeader .H-1 #NumberConts ,
+	.ChatHeader .H-1 .img-2 {
+		display: none;
+	}
+	.drp-2{
+		display: none !important;
+	}
+
+}
+
+
+@media (max-width: 650px){
+	.ChatHeader .H-2 h2{
+		font-size: 18px;
+	}
+	.ChatHeader .H-1 span{
+		font-size: 12px;
+	}
+}
+@media (max-width: 620px){
+	
+	.ChatHeader .H-1 #NumberConts{
+		display: none;
+	}
+	.drp-2 {
+	    
+	    left: 100px !important;
+	}
+}
+
+.ContactName2 {
+    font-weight: 600;
+    color: black;
+    margin-top: 6px;
+    font-size: 17px;
+}
+.dropdown-menu.show {
+	overflow-y: scroll;
+}

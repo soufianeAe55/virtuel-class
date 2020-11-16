@@ -6,8 +6,8 @@ import {Link} from 'react-router-dom'
 
 function SupportEdit({Supports}) {
    return (
-      <div className="row d-flex flex-column m-4 border border-dark">
-         <Link to="/support" className="p-3">
+      <div className="row d-flex flex-column m-4">
+         <Link to="/support" className="p-3 svgBack">
             <img src={backLink} alt="" />
          </Link>
          <div className="SupportEdit__container">

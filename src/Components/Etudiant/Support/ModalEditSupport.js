@@ -29,8 +29,19 @@ function ModalEditSupport() {
             </div>
             <div className="modal-body  ModalEditSupport">
                <div className="d-flex flex-row py-2 justify-content-around ">
-                  <input type="text" className="col-5 py-3 " placeholder="Module" />
-                  <input type="text" className="col-5 py-3 " placeholder="Semestre"/>
+                  <select className="col-5 py-3  ">
+                     <option value="Semestre">Semestre</option>
+                     <option value="1">S1</option>
+                     <option value="2">S2</option>
+                     <option value="3">S3</option>
+                     <option value="4">S4</option>
+                  </select>
+                  <select className="col-5 py-3 ">
+                     <option value="Modules">Modules</option>
+                     <option value="1">Java</option>
+                     <option value="2">xml et les framworks</option>
+                  </select>
+
                </div>
                <div className="d-flex flex-row p-2 ">
                   <input type="text" className="w-100 mx-2 px-3 py-3 " placeholder="Nouveau Titre du support" />

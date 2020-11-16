@@ -13,13 +13,13 @@ function SupportAdd() {
    }
 
    return (
-      <div className="row d-flex flex-column m-4 border border-dark SupportAdd">
-         <Link to="/support" className="p-3">
+      <div className="row d-flex flex-column m-4 SupportAdd">
+         <Link to="/support" className="p-3 svgBack">
             <img src={backLink} alt="" />
          </Link>
-         <h1>Ajouter un support</h1>
-         <div className="d-flex flex-column flex-xl-row" >
-            <form className="flex-grow-1 py-4 mx-2 border border-dark">
+         <h1 className="mt-4">Ajouter un support</h1>
+         <div className="d-flex flex-column flex-xl-row mt-3">
+            <form className="flex-grow-1 py-4 mx-2">
                <div className="d-flex flex-column flex-md-row p-2 justify-content-around">
                   <select className="w-100 mx-auto my-1 w-md-50 mx-md-4 SupportAdd__dropdown">
                      <option value="Semestre">Semestre</option>
@@ -49,7 +49,7 @@ function SupportAdd() {
                   <button className="mx-auto my-2 m-md-0" type="submit">Enregistrer</button>
                </div>
             </form>
-            <div className="SupportAdd__img m-auto border border-dark">
+            <div className="SupportAdd__img m-auto">
                <img className="" src={AddSupport} alt="" style={{opacity: "0.7"}} />
             </div>
          </div>

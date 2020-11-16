@@ -196,6 +196,7 @@ p{
 		margin-top: 20px;
 		z-index: 5;
 		width: 35px;
+		position: fixed;
 	}
 	.logoHide2{
 	display: none;
@@ -206,6 +207,8 @@ p{
 .showMenu{
 	display: flex;
 	z-index: 4;
+	position: fixed;
+    left: 15px;
 }
 .logo3{
 	display: block !important;
