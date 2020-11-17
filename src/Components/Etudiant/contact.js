@@ -2,6 +2,8 @@ import React from 'react'
 import SideNav from '../Dashboard/sideNav'
 import Menu from '../Dashboard/Menu'
 import '../../styles/homeEtu.css'
+import '../../styles/Chat.css'
+import Chat from '../Chat/Chat'
 
 function Contact(){
 
@@ -10,10 +12,8 @@ function Contact(){
 			<SideNav />
 			<div className="sous-app" >
 				<Menu />
-				<div className="row cont">
-					<div className="col-2 col-sm-4 col-md-6 col-lg-10" >
-					  <h2 > Contact page for etudiants </h2>
-					</div>
+				<div className="row cont contV2">
+					<Chat />
 				</div>
 			</div>
 		

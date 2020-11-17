@@ -8,7 +8,7 @@ function MyclassCard(){
 	return(
 		 
 				
-			<div className="col-lg-4 col-12  col-md-4 col-sm-5 col-xl-3 row Scard" >
+			<div className="col-lg-4 col-10  col-md-4 col-sm-5 col-xl-3 row Scard" >
 					<div className="col-4 col-sm-4 col-md-4 col-lg-4 Sname " >
 							<span className="Sname-name  align-self-center"> S2 </span>
 					</div>

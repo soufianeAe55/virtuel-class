@@ -1,9 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import {Link, NavLink, withRouter} from 'react-router-dom'
 import '../../styles/dashboard.css'
 import HomeIcon from './imgs/home.svg'
 import ActuaIcon from './imgs/ActualitesSvg.svg'
-import {useEffect} from 'react'
 import UserIcon from './imgs/peopleuser.svg'
 import Support from './imgs/support.svg'
 import Contact  from './imgs/svgContact.svg'
@@ -16,21 +15,43 @@ function SideNav(props){
 	let [show,setShow]=useState(false)
 	const { location } = props;
 	const DisplayMenu = () => {
-		if(!show){
+		if(!show ){
 		setShow(true);
 		}else{
 			setShow(false)
 		}
 	}
+	useEffect(() => {
+		window.addEventListener("resize",()=> {
+			if(window.innerWidth < 750){
+				console.log('test')
+				setHide(true);
+				if(show ){
+					setHide(false);
+				}
+			}else{
+				setHide(false)
+			}
+		})
+		
+	});
+	/*if(window.innerWidth < 750){
+		setShow(false);
+	}*/
+	
 	const homeEtuId = location.pathname.match(/^\/homeEtu/) ? "active" : "";
     const actsId = location.pathname.match(/^\/acts/) ? "active" : "";
     const MyclassId = location.pathname.match(/^\/Myclass/) ||
     				  location.pathname.match(/^\/ModuleOptions/) ||
-    				  location.pathname.match(/^\/annonce/) ? "active" : "";
+    				  location.pathname.match(/^\/annonce/) ||
+    				  location.pathname.match(/^\/devoirs/) ||
+    				  location.pathname.match(/^\/devoirContent/) ? "active" : "";
 
  	const MyclassIdM = location.pathname.match(/^\/MyclassModules/) ||
  					   location.pathname.match(/^\/ModuleOptions/) || 
- 					   location.pathname.match(/^\/annonce/) ? "active-1" : ""; 
+ 					   location.pathname.match(/^\/annonce/)  || 
+ 					   location.pathname.match(/^\/devoirs/) ||
+    				   location.pathname.match(/^\/devoirContent/) ? "active-1" : ""; 
 
     const supportId = location.pathname.match(/^\/support/) ? "active" : "";
     const contactId = location.pathname.match(/^\/contact/) ? "active" : "";
@@ -40,7 +61,10 @@ function SideNav(props){
     const actsIcon = location.pathname.match(/^\/acts/) ? "activeicon" : "";
     const MyclassIcon = location.pathname.match(/^\/Myclass/) ||
     				    location.pathname.match(/^\/ModuleOptions/) ||
-    				    location.pathname.match(/^\/annonce/) ? "activeicon" : "";
+    				    location.pathname.match(/^\/annonce/) ||
+    				    location.pathname.match(/^\/devoirs/) ||
+    				    location.pathname.match(/^\/devoirContent/) ? "activeicon" : "";
+
 
     const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
     const contactIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";

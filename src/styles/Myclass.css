@@ -1,6 +1,6 @@
 
 .cont{
-	margin: 20px 0px 0px 165px !important;
+	margin: 20px 0px 0px 20px !important;
 	
 }
  @media(max-width: 450px){
@@ -118,7 +118,7 @@
  .CardOptions{
  	background-color: white;
  	height: 400px;
- 	margin-right: 0px;
+ 	
  	margin-bottom: 30px;
  	border-radius: 4px;
  	border: 1px solid #CBC2C2;
@@ -141,4 +141,434 @@
 }
 .headerOptions{
 	margin-bottom: 90px;
+}
+.headerAnnonce{
+	display: flex;
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+.annonceTitle{
+	margin-left: 15px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 45px;
+	line-height: 55px;
+	color: #126AA0;
+
+
+}
+.AnnoceCard{
+	background-color: white;
+	border: 1px solid #CBC2C2;
+	height: auto;
+	padding: 15px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+}
+.AnnoceCard2{
+	background-color: white;
+	height: auto;
+	padding: 15px;
+	border-left: 1px solid #CBC2C2;
+	border-right: 1px solid #CBC2C2;
+}
+.AnnoceCard3{
+	background-color: white;
+	border: 1px solid #CBC2C2;
+	height: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	display: flex;
+	margin-bottom: 30px;
+}
+.DevoirComing{
+	background-color: white;
+	border: 1px solid #CBC2C2;
+	height: min-content;
+	border-radius: 10px;
+	padding: 10px;
+/*	position: fixed;
+	
+	margin-top: 130px;*/
+
+}
+/*.Ann{
+	margin-right: 240px;
+}*/
+@media(max-width: 770px){
+	.DevoirComing{
+		display: none;
+	}
+	.Ann{
+		margin-right: 0px !important;
+	}
+}
+.AvatarProf{
+	display: flex;
+	margin-bottom:7px;
+}
+.AvatarEtu{
+	display: flex;
+	margin-top: 6px;
+}
+.AvatarName{
+	margin-left: 10px;
+	padding-top: 5px;
+}
+
+.AvatarName span{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 22px;
+	color: #000000;
+
+}
+.AvatarName p{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 22px;
+	color: #8E7D7D;
+	margin-top: -6px;
+}
+.AvatarEtu span{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 22px;
+	color: #000000;
+	margin-left: 10px;
+}
+.AvatarEtu p{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 22px;
+	color: #8E7D7D;
+	margin-top: 0px;
+	margin-left: 10px;	
+}
+
+
+.AnnonceContent p {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 20px;
+	color: #8E7D7D;
+
+
+}
+.MoreComments{
+	margin-bottom: 20px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 23px;
+	color: #8E7D7D;
+
+}
+
+.comment{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 20px;
+	color: #8E7D7D;
+	margin-left: 40px;
+	margin-top: -10px;	
+}
+.inputComment{
+	border-radius: 45px;
+	height: 36px;
+	border: 1.5px solid #CBC2C2;
+	padding-left: 19px;
+	font-size: 14px;
+}
+.UserComment{
+	margin-top: 0px;
+}
+.SendButtonComment
+{
+ background-color: white;
+ border:0px white;
+ margin-left: 0px;
+}
+.SendButtonComment{
+	margin-left: 9px;
+}
+.Avenir{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	color: #126AA0;
+	margin-left: -15px;
+}
+.Exam{
+	display: flex;
+	align-items: end;
+	margin-bottom: 15px;
+}
+
+.Exam p{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 23px;
+	color: #8E7D7D;
+	margin-left: 10px;
+}
+.AfficheExams{
+	text-align: end;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 600;
+	margin-left: 200px;
+	color: #126AA0;
+}
+@media(max-width: 1110px){
+	.AfficheExams{
+	
+		margin-left: 50px ;
+	}
+}
+
+.devoirsCard{
+	background-color: white;
+	height: auto;
+	padding: 30px;
+}
+.devoirsCard div img{
+	width: 22px;
+}
+.VoirDevs{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 27px;
+	color: #126AA0;
+	margin-left: 10px;
+
+
+}
+.VoirRow{
+	margin-bottom: 30px;
+}
+
+.DevoirLink{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #F4EDED;;
+    padding-bottom: 13px;
+    padding-top: 13px;
+
+}
+.DevoirLink:hover{
+	background-color: #F4EDED;
+}
+
+.DevoirLink div {
+	display: flex;
+	align-items: center;
+}
+.DevoirLink div img {
+	margin-right: 25px;
+}
+
+.DevoirLink div p {
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 30px;
+color: #126AA0;
+
+}
+
+.DevoirLink  p {
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+color: #126AA0;
+}
+@media(max-width: 765px){
+	#devoirLimite {
+		padding-left: 80px;
+	}
+	.devoirsCard {
+		padding-right: 5px !important;
+		padding-left: 5px !important;
+	}
+
+}
+.DevoirIcon{
+	width: 38px !important;
+}
+.devoirTitle{
+	margin-left: 15px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	color: #126AA0;
+	margin-top: 12px;
+}
+.devoirIcon{
+	width: 40px;
+}
+.DevoirContent{
+	height: auto;
+	background-color: white;
+	display: flex;
+}
+.TitleDev{
+	display: flex;
+}
+.NameDev{
+	margin-top: 22px;
+	margin-left: 18px;
+
+}
+.NameDev h2{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: #126AA0;
+}
+
+.NameDev p{
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	color: #8E7D7D;
+	margin-left: 3px;
+
+}
+
+.LimiteDev {
+	display: flex;
+}
+
+.LimiteDev p{
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	color: #8E7D7D;
+	margin-left: 5px;
+	margin-top: 2px; 
+
+	
+}
+
+.ContentDev p{
+	margin-top: 30px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 22px;
+	color: #8E7D7D;
+	padding-left: 25px;
+
+
+}
+
+.buttons
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.ajouter{
+	background: #126AA0;
+	border-radius: 3px;
+	color: white;
+	border: none;
+	margin-right: 10px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 22px;
+}
+.retour{
+	background: white;
+	border-radius: 3px;
+	color: #126AA0;;
+	border: 1px solid #126AA0;
+	margin-left: 10px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 22px;
+}
+.annuler{
+	background: red;
+	border-radius: 3px;
+	color: white;
+	border: none;
+	margin-right: 10px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 22px;
+}
+
+.devCont{
+	margin-top: 80px;
+}
+.upload{
+	margin-top: 20px;
+	padding-left: 60px;
+}
+.upload label{
+	display: flex;
+}
+.uploadConditions{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 17px;
+	color: #8E7D7D;
+	margin-top: 3px;
+}
+@media(max-width: 765px){
+	.LimiteDev img {
+		padding-top: 10px;
+		padding-left: 60px;
+	}
+	.LimiteDev p {
+		padding-top: 10px;
+		
+	}
+}
+a {
+	text-decoration: none !important;
 }
