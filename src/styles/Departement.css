@@ -1,0 +1,75 @@
+.conterDepart{
+    margin: 10px 0px 0px 20px;
+
+}
+ .filtrer{
+      visibility: hidden;
+  }
+.entete{
+  
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #126AA0;
+    text-align: center; 
+    color: white;
+    font-weight: bold;
+    height: 100%;
+   
+
+}
+.departement_header{
+    height: 80%;
+    /* width: 100vw; */
+}
+
+.nombre{
+margin-top: 10px;
+
+}
+
+.departement_header #actif{
+    
+    background-color: white;
+    color: #126AA0;
+   
+    /* border-radius: 5px 5px 0px 0px; */
+ }
+ 
+
+ /* .departement_header #actif>div{
+    position: relative;
+    background: white;
+    color: #126AA0;
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 0px;
+ }
+  */
+ 
+  @media screen and (max-width:426px){
+	.entete{
+  
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: #126AA0;
+        text-align: center; 
+        color: white;
+        font-weight: bold;
+        font-size: 0.3em;
+        
+       
+    
+    }
+    .hhhh{
+        visibility: hidden;
+    }
+.conterDepart{
+    margin: 50px 0px 0px 20px;
+    font-size: 0.6em;
+    
+}
+.filtrer{
+   visibility: visible;
+}
+}

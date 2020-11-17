@@ -10,7 +10,7 @@ import Support from './Components/Etudiant/Support/Support'
 import Contact from './Components/Etudiant/contact'
 import ModuleOptions from './Components/Etudiant/Myclass/ModuleOptions'
 import Annonce from './Components/Etudiant/Myclass/annonce'
-
+import Departement from './Components/Admin/Departement'
 
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
          <Route  path='/annonce' component={Annonce} />
          <Route  path='/support' component={Support} />
          <Route  path='/contact' component={Contact} />
+         <Route  path='/depart'  component={Departement}/>
 
       </Switch>
     </div>
