@@ -6,11 +6,14 @@ import Actualites from './Components/Etudiant/Actualite/Actualites'
 import Myclass from './Components/Etudiant/Myclass/Myclass'
 import MyclassModules from './Components/Etudiant/Myclass/Myclass-modules'
 import Support from './Components/Etudiant/Support/Support'
-// import SideNav from './Components/Dashboard/sideNav'
 import Contact from './Components/Etudiant/contact'
 import ModuleOptions from './Components/Etudiant/Myclass/ModuleOptions'
 import Annonce from './Components/Etudiant/Myclass/annonce'
 import Departement from './Components/Admin/Departement'
+import professeur from './Components/Professeur/professeur';
+import Devoirs from './Components/Etudiant/Myclass/devoirs'
+import DevoirContent from './Components/Etudiant/Myclass/DevoirContent'
+
 
 
 function App() {
@@ -24,9 +27,13 @@ function App() {
          <Route  path='/MyclassModules' component={MyclassModules} />
          <Route  path='/ModuleOptions' component={ModuleOptions} />
          <Route  path='/annonce' component={Annonce} />
+         <Route  path='/devoirs' component={Devoirs} />
+         <Route  path='/devoirContent' component={DevoirContent} />
          <Route  path='/support' component={Support} />
          <Route  path='/contact' component={Contact} />
          <Route  path='/depart'  component={Departement}/>
+
+         <Route  path='/professeur' component={professeur} />
 
       </Switch>
     </div>

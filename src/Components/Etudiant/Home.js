@@ -8,7 +8,7 @@ import home2 from './ImageEtd/home2.svg'
 import home3 from './ImageEtd/home3.svg'
 
 function HomeEtu(){
-const [Unkown, setUnkown] = useState("Zakariaa");
+const [Unkown] = useState("Zakariaa");
 	return(
 		 <React.Fragment>
 			<SideNav />
