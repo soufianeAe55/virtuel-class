@@ -5,6 +5,7 @@ import SideNav from '../Dashboard/sideNav'
 import Jenseigne from './Jenseigne'
 import ProfesseurAccueil from './ProfesseurAccueil'
 import '../../styles/Prof.css'
+import Modules from './Modules'
 
 function professeur() {
    return(
@@ -14,9 +15,10 @@ function professeur() {
             <Menu />
             <Switch>
                <Route exact path="/professeur" component={ProfesseurAccueil} /> 
-               <Route path="/professeur/Jenseigne">
-                  <Jenseigne />
+               <Route exact path="/professeur/Jenseigne">
+                <Jenseigne />
                </Route> 
+               <Route path="/professeur/Jenseigne/Modules" component={Modules} /> 
             </Switch>
          </div>
       </React.Fragment>

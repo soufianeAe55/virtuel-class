@@ -40,3 +40,28 @@
 
 
 /* ---------------------------------------------------------- */
+
+.Modules h2{
+   color: #8E7D7D;
+   font-weight: bold;
+   padding: 10px 20px 10px 20px;
+   /* border-bottom: 4px solid #C4C4C4; */
+   border-radius: 2px;
+}
+.Modules__carte{
+   border: 1px solid #CBC2C2;
+   box-sizing: border-box;
+   border-radius: 10px;
+   background-color: white;
+}
+.Modules__carte h3{
+   color: #126AA0;
+   font-size: 25px;
+   font-weight: 700;
+   padding-top: 20px;
+   padding-bottom: 50px;
+}
+.Modules__carte h4{
+   color: #8E7D7D;
+   font-weight: 800;
+}
