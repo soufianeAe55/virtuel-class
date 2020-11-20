@@ -2,7 +2,7 @@
     margin: 10px 0px 0px 20px;
 
 }
- .filtrer{
+ .filtrer_input{
       visibility: hidden;
   }
 .entete{
@@ -18,7 +18,7 @@
 
 }
 .departement_header{
-    height: 80%;
+    height: 100%;
     /* width: 100vw; */
 }
 
@@ -56,20 +56,88 @@ margin-top: 10px;
         text-align: center; 
         color: white;
         font-weight: bold;
-        font-size: 0.3em;
+        font-size: 0.8em;
         
        
     
     }
-    .hhhh{
+    .departement_header{
+        height: 100%;
+        /* width: 100vw; */
+    }
+    
+    .filter_case{
         visibility: hidden;
     }
 .conterDepart{
     margin: 50px 0px 0px 20px;
-    font-size: 0.6em;
+    font-size: 0.8em;
     
 }
-.filtrer{
+.filtrer_input{
    visibility: visible;
 }
+.btn{
+    font-size: 0.5em;
+}
+}
+@media screen and (min-width:428px) and (max-width:850px){
+	.entete{
+  
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: #126AA0;
+        text-align: center; 
+        color: white;
+        font-weight: bold;
+       
+        
+       
+    
+    }
+    .departement_header{
+        height: 100%;
+        /* width: 100vw; */
+    }
+    
+.filter_case{
+        visibility: hidden;
+}
+.conterDepart{
+    margin: 50px 0px 0px 20px; 
+}
+.filtrer_input{
+   visibility: visible;
+}
+}
+.tableau{
+    color: #126AA0;
+}
+.table thead{
+    color: #126AA0;
+}
+
+.table >tbody{
+    color: #8E7D7D;
+}
+.gerer{
+    color: #126AA0;
+}
+.filtrer-text{
+    color: #126AA0;
+}
+.filter_case{
+  position: absolute;
+  right: 0;
+  margin-top: 69px;
+  margin-right: 2px;
+  width: 15%;
+}
+
+.btn {
+    background-color: #126AA0;
+    color: white;
+}
+.nom_depart{
+    color: #8E7D7D;
 }
