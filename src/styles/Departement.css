@@ -1,0 +1,143 @@
+.conterDepart{
+    margin: 10px 0px 0px 20px;
+
+}
+ .filtrer_input{
+      visibility: hidden;
+  }
+.entete{
+  
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #126AA0;
+    text-align: center; 
+    color: white;
+    font-weight: bold;
+    height: 100%;
+   
+
+}
+.departement_header{
+    height: 100%;
+    /* width: 100vw; */
+}
+
+.nombre{
+margin-top: 10px;
+
+}
+
+.departement_header #actif{
+    
+    background-color: white;
+    color: #126AA0;
+   
+    /* border-radius: 5px 5px 0px 0px; */
+ }
+ 
+
+ /* .departement_header #actif>div{
+    position: relative;
+    background: white;
+    color: #126AA0;
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 0px;
+ }
+  */
+ 
+  @media screen and (max-width:426px){
+	.entete{
+  
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: #126AA0;
+        text-align: center; 
+        color: white;
+        font-weight: bold;
+        font-size: 0.8em;
+        
+       
+    
+    }
+    .departement_header{
+        height: 100%;
+        /* width: 100vw; */
+    }
+    
+    .filter_case{
+        visibility: hidden;
+    }
+.conterDepart{
+    margin: 50px 0px 0px 20px;
+    font-size: 0.8em;
+    
+}
+.filtrer_input{
+   visibility: visible;
+}
+.btn{
+    font-size: 0.5em;
+}
+}
+@media screen and (min-width:428px) and (max-width:850px){
+	.entete{
+  
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: #126AA0;
+        text-align: center; 
+        color: white;
+        font-weight: bold;
+       
+        
+       
+    
+    }
+    .departement_header{
+        height: 100%;
+        /* width: 100vw; */
+    }
+    
+.filter_case{
+        visibility: hidden;
+}
+.conterDepart{
+    margin: 50px 0px 0px 20px; 
+}
+.filtrer_input{
+   visibility: visible;
+}
+}
+.tableau{
+    color: #126AA0;
+}
+.table thead{
+    color: #126AA0;
+}
+
+.table >tbody{
+    color: #8E7D7D;
+}
+.gerer{
+    color: #126AA0;
+}
+.filtrer-text{
+    color: #126AA0;
+}
+.filter_case{
+  position: absolute;
+  right: 0;
+  margin-top: 69px;
+  margin-right: 2px;
+  width: 15%;
+}
+
+.btn {
+    background-color: #126AA0;
+    color: white;
+}
+.nom_depart{
+    color: #8E7D7D;
+}
