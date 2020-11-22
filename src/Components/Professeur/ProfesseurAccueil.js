@@ -9,7 +9,7 @@ function ProfesseurAccueil() {
    const [User] = useState("Zakariaa");
    return (
       <div className="row conter" >
-      <div className="row  mx-3  w-100    " id="ligne1">
+      <div className="row  mx-3  w-100" id="ligne1">
          <div className=" mx-0 col-md-12    " id="ligne1_para">
             <div className=" mx-0 w-100 bg-white  row rounded">
                <div className="col-md-7   my-lg-5 my-lg-4 mt-3 p-lg-3 ">
