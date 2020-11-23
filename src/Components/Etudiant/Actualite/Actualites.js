@@ -3,56 +3,15 @@ import SideNav from '../../Dashboard/sideNav'
 import Menu from '../../Dashboard/Menu'
 import '../../../styles/Actualite.css'
 import '../../../styles/homeEtu.css'
-
 import Actu from './actu_comp/Actu'
 import Pagination from './actu_comp/Pagination'
 import photo2 from './Imageactu/image_98.png'
+import axios from 'axios'
 
 function Actualites(){
-const [posts, setposts] = useState([{
-	
-	"name" : "Titre du contenu ",
-	"image" : photo2,
-
-},
-{
-	"name" : "Titre du contenu 2",
-	"image" : photo2,
-
-},
-{
-	"name" : "Titre du contenu 3",
-	"image" : photo2,
-},
-{
-	"name" : "Titre du contenu 4",
-	"image" : photo2,
-
-},
-{
-	
-	"name" : "Titre du contenu 5",
-	"image" : photo2,
-
-},
-{
-	"name" : "Titre du contenu 6",
-	"image" : photo2,
-
-},
-{
-	"name" : "Titre du contenu 7",
-	"image" : photo2,
-
-},
-{
-	"name" : " titre du contenu 8",
-	"image" : photo2,
-
-},
+const [posts, setposts] = useState();
 
 
-]);
 /*----------------------Pour l'affichage de l'actualite et pagination-------------------------*/
 const [loading, setloading] = useState(false);
 const [currentPage, setcurrentPage] = useState(1);
@@ -78,6 +37,19 @@ useEffect(() => {
     return () => {
         SwitchPage()
     }
+        let token= 'Bearer '+localStorage.token
+        let headers={
+            headers : {Authorization: token}
+        }
+
+        axios.get('http://localhost:8000/api/getActus',headers)
+        .then(res => {
+            console.log(res)
+        })
+        .catch(err => {
+            console.log(err)
+        })  
+
 }, [GetPost]);
 
 useMemo(() => {}, [GetPost]);
@@ -102,17 +74,18 @@ useMemo(() => {}, [GetPost]);
                         {currentPosts.map(post=> (
                         <div className=" d-flex mb-2  " onClick={ ()=>setGetPost({
                             name :post.name,
-                            image :post.image
+                            image :post.image,
+                            contenu: post.contenu
                         })
                         
                        
                         
                     }> 
-                            <div key={post.id} className="col-sm-4 col-5  div-image" style={{backgroundImage:"url("+post.image+")",backgroundSize:" 100% 100% " }} >
+                            <div key={post.id} className="col-sm-4 col-5  div-image" style={{backgroundImage:"url(http://localhost:8000/images/Actualites/"+post.image+")",backgroundSize:" 100% 100% " }} >
                             </div>
                             <div key={post.id} className="col-sm-8 col-7 bg-white div-name mx-0   p-1 ">
                                 <h6 className="mx-2 my-2" >{post.name}</h6> 
-                                <p className="mx-2 my-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+                            <p className="mx-2 my-1">{post.contenu}</p>
                             </div>
                         </div>
                         ))

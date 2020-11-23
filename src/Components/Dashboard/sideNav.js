@@ -8,6 +8,7 @@ import Support from './imgs/support.svg'
 import Contact  from './imgs/svgContact.svg'
 import Collapse  from './imgs/collapse.svg'
 import MenuTog  from './imgs/menuTog.svg'
+import decode from "jwt-decode"
  
 function SideNav(props){
 
@@ -30,55 +31,19 @@ function SideNav(props){
 					setHide(false);
 				}
 			}else{
-				setHide(false)
+					setHide(false)
 			}
 		})
 		
 	});
-	/*if(window.innerWidth < 750){
-		setShow(false);
-	}*/
-	
-	const homeEtuId = location.pathname.match(/^\/homeEtu/) ? "active" : "";
-    const actsId = location.pathname.match(/^\/acts/) ? "active" : "";
-    const MyclassId = location.pathname.match(/^\/Myclass/) ||
-    				  location.pathname.match(/^\/ModuleOptions/) ||
-    				  location.pathname.match(/^\/annonce/) ||
-    				  location.pathname.match(/^\/devoirs/) ||
-    				  location.pathname.match(/^\/devoirContent/) ? "active" : "";
-
- 	const MyclassIdM = location.pathname.match(/^\/MyclassModules/) ||
- 					   location.pathname.match(/^\/ModuleOptions/) || 
- 					   location.pathname.match(/^\/annonce/)  || 
- 					   location.pathname.match(/^\/devoirs/) ||
-    				   location.pathname.match(/^\/devoirContent/) ? "active-1" : ""; 
-
-    const supportId = location.pathname.match(/^\/support/) ? "active" : "";
-    const contactId = location.pathname.match(/^\/contact/) ? "active" : "";
-    const hideId = location.pathname.match(/^\/contact/) ? "activeicon" : "";
-
-    const homeIcon = location.pathname.match(/^\/homeEtu/) ? "activeicon" : "";
-    const actsIcon = location.pathname.match(/^\/acts/) ? "activeicon" : "";
-    const MyclassIcon = location.pathname.match(/^\/Myclass/) ||
-    				    location.pathname.match(/^\/ModuleOptions/) ||
-    				    location.pathname.match(/^\/annonce/) ||
-    				    location.pathname.match(/^\/devoirs/) ||
-    				    location.pathname.match(/^\/devoirContent/) ? "activeicon" : "";
-
-
-    const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
-    const contactIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
-    const hideIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
-
-
-	return(
-	<React.Fragment>	
-	<img src={MenuTog} className="respoMenu"  onClick={DisplayMenu} />
-	  <div className={`row Donthide ${show ? "showMenu" : "hideMenu"} ${hide ? "hide" : ""}`} >
-		<ul id="NavId" className="nav flex-column sideNa col-12 col-sm-12 col-md-12 col-lg-12 ">
-		<h2 className={`${show ? "logoHide2" : "logo"} ${hide? "logoHide" : "logo"}`} >My logo </h2>
-		<h2 className={`logo3 ${hide ? "logo2" : "logoHide"}`} ></h2>
-		  <li id={homeEtuId}  className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`} >
+	const EtudiantNav = () =>{
+		
+		let data= decode(localStorage.token)
+		
+		if(data.type== 'Etudiant'){
+		return (
+			<React.Fragment >
+				<li id={homeEtuId}  className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`} >
 		    <NavLink activeClassName="active10"   className="nav-link sideItem" to="/homeEtu">
 			    <img id={homeIcon}   alt="Responsive image"  className={`Icons img-fluid Hom active11 ${hide?" Icons2": ""}`} src={HomeIcon} />
 			    Home
@@ -127,6 +92,53 @@ function SideNav(props){
 		     </Link>
 
 		  </li>
+			</React.Fragment>
+		)
+		}else{
+			return ;
+		}
+	} 
+	
+	const homeEtuId = location.pathname.match(/^\/homeEtu/) ? "active" : "";
+    const actsId = location.pathname.match(/^\/acts/) ? "active" : "";
+    const MyclassId = location.pathname.match(/^\/Myclass/) ||
+    				  location.pathname.match(/^\/ModuleOptions/) ||
+    				  location.pathname.match(/^\/annonce/) ||
+    				  location.pathname.match(/^\/devoirs/) ||
+    				  location.pathname.match(/^\/devoirContent/) ? "active" : "";
+
+ 	const MyclassIdM = location.pathname.match(/^\/MyclassModules/) ||
+ 					   location.pathname.match(/^\/ModuleOptions/) || 
+ 					   location.pathname.match(/^\/annonce/)  || 
+ 					   location.pathname.match(/^\/devoirs/) ||
+    				   location.pathname.match(/^\/devoirContent/) ? "active-1" : ""; 
+
+    const supportId = location.pathname.match(/^\/support/) ? "active" : "";
+    const contactId = location.pathname.match(/^\/contact/) ? "active" : "";
+    const hideId = location.pathname.match(/^\/contact/) ? "activeicon" : "";
+
+    const homeIcon = location.pathname.match(/^\/homeEtu/) ? "activeicon" : "";
+    const actsIcon = location.pathname.match(/^\/acts/) ? "activeicon" : "";
+    const MyclassIcon = location.pathname.match(/^\/Myclass/) ||
+    				    location.pathname.match(/^\/ModuleOptions/) ||
+    				    location.pathname.match(/^\/annonce/) ||
+    				    location.pathname.match(/^\/devoirs/) ||
+    				    location.pathname.match(/^\/devoirContent/) ? "activeicon" : "";
+
+
+    const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
+    const contactIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
+    const hideIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
+
+
+	return(
+	<React.Fragment>	
+	<img src={MenuTog} className="respoMenu"  onClick={DisplayMenu} />
+	  <div className={`row Donthide ${show ? "showMenu" : "hideMenu"} ${hide ? "hide" : ""}`} >
+		<ul id="NavId" className="nav flex-column sideNa col-12 col-sm-12 col-md-12 col-lg-12 ">
+		<h2 className={`${show ? "logoHide2" : "logo"} ${hide? "logoHide" : "logo"}`} >My logo </h2>
+		<h2 className={`logo3 ${hide ? "logo2" : "logoHide"}`} ></h2>
+		  {EtudiantNav()}
 		</ul>
 		</div>
 	</React.Fragment>	

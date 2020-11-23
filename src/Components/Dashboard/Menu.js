@@ -1,11 +1,39 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import {withRouter} from 'react-router-dom'
 import '../../styles/dashboard.css'
 import Notif  from './imgs/notif.svg'
 import Avatar  from './imgs/Avatar.svg'
 import Arrow  from './imgs/arrowDown.svg'
+import jwtdecode from 'jwt-decode'
+import axios from 'axios'
 
 
-function Menu(){
+function Menu(props){
+	
+
+	let data=jwtdecode(localStorage.token)
+	let str=data.userEmail
+	let firstName=str.split('-',1)[0].split('.')[0]
+	let lastName=str.split('-',1)[0].split('.')[1]
+
+	const Deconnexion= () => {
+		axios.get('http://localhost:8000/api/deconnecter')
+		.then(res => {
+			localStorage.removeItem('token')
+			props.history.push('/')
+			console.log(res)
+		})
+		.catch(err => {
+			console.log(err)
+		})
+	}
+
+	useEffect(() => {
+		if(!localStorage.token){
+			props.history.push('/')
+		}
+		
+	})
 
 	return(
 		<ul className="nav NavHead justify-content-end row" >
@@ -18,13 +46,13 @@ function Menu(){
 		     <img src={Avatar} className="avatar img-fluid" alt="" />
 		     <div className="userInfo">
 		     <p className="hello"> Hello </p>
-		     <p className="Name">Unknown user </p>
+		     <p className="Name">{lastName} {firstName} </p>
 		     </div>
 		    
 		     <img src={Arrow} className="arrow img-fluid dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt=""/>
 			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 			    <a className="dropdown-item" href="#">Profil</a>
-			    <a className="dropdown-item" href="#">Deconnxion</a>
+			    <a className="dropdown-item" onClick={Deconnexion} >Deconnxion</a>
 			  </div>
 		      
 		  </li>
@@ -33,4 +61,4 @@ function Menu(){
 		)
 }
 
-export default Menu
+export default withRouter(Menu)
