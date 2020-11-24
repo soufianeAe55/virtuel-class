@@ -7,6 +7,8 @@ import ProfesseurAccueil from './ProfesseurAccueil'
 import '../../styles/Prof.css'
 import Modules from './Modules'
 import DetailModule from './DetailModule'
+import AnnoceProf from './AnnoceProf'
+import AnnonceAdd from './AnnonceAdd'
 
 function professeur() {
    return(
@@ -21,6 +23,8 @@ function professeur() {
                </Route> 
                <Route exact path="/professeur/Jenseigne/Modules" component={Modules} /> 
                <Route exact path="/professeur/Jenseigne/Modules/DetailModule" component={DetailModule} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf" component={AnnoceProf} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/addannonce" component={AnnonceAdd} /> 
             </Switch>
          </div>
       </React.Fragment>

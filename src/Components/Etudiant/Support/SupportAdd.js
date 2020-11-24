@@ -35,10 +35,10 @@ function SupportAdd() {
                   </select>
                </div>
                <div className="d-flex flex-row p-2 ">
-                  <input type="text" className="w-100 mx-2 px-3 py-3" placeholder="Nouveau Titre du support" />
+                  <input type="text" className="w-100 mx-2 px-3 py-3" placeholder="Titre du support" />
                </div>
                <div className="d-flex flex-row p-2 ">
-                  <textarea type="text" rows="5" className="w-100 mx-2 px-3 py-3 " placeholder="Ajouter une nouvelle discription" />
+                  <textarea type="text" rows="5" className="w-100 mx-2 px-3 py-3 " placeholder="Ajouter une discription..." />
                </div>
                <div className="d-flex flex-md-row flex-column justify-content-around SupportAdd__footer">
                   <input onChange={handleChange}  type="file" id="upload btn" hidden/>

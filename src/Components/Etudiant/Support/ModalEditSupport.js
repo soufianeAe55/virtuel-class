@@ -1,20 +1,8 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import UploadFile from '../../Dashboard/imgs/UpLoadFile.svg'
 
 function ModalEditSupport() {
    const [fileName, setfileName] = useState("Choisir un fichier")
-
-   useEffect(() => {
-      // const actualBtn = document.getElementById('upload btn');
-
-      // const fileChosen = document.getElementById('file-chosen');
-
-      // const close = document.querySelector('#close');
-      // console.log(close)
-      // actualBtn.addEventListener('change', function(){
-      // fileChosen.textContent = this.files[0].name
-      // })
-   }, [])
    const handleChange = e => {
       setfileName(e.target.files[0].name);
    }
