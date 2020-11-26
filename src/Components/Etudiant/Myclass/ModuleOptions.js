@@ -21,11 +21,11 @@ function ModuleOptions(){
 					<div className="row justify-content-around cont ">
 						<div className=" col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 headerOptions" >
 							<nav className=" col-lg-12 col-xl-12 col-sm-12 col-md-12 col-12 " aria-label="breadcrumb">
-									  <ol class="breadcrumb">
-									    <li class="breadcrumb-item " ><Link to="MyClass">Semsters </Link></li>
-									    <li class="breadcrumb-item"><Link to="MyClassMOdules">Modules</Link></li>
-									    <li class="breadcrumb-item " aria-current="page">Modules Options</li>
-									  </ol>
+								<ol className="breadcrumb">
+									<li className="breadcrumb-item " ><Link to="MyClass">Semsters </Link></li>
+									<li className="breadcrumb-item"><Link to="MyClassMOdules">Modules</Link></li>
+									<li className="breadcrumb-item " aria-current="page">Modules Options</li>
+								</ol>
 							</nav>
 						</div>
 

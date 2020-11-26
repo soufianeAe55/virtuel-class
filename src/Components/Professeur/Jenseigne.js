@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import arrowDown from './ImageProf/arrowDown.svg'
 import arrowUp from './ImageProf/arrowUp.svg'
 
@@ -13,12 +14,11 @@ function Jenseigne() {
       e.target.childNodes[2].src = arrowUp
    }
    return(
-      <div className="row justify-content-center border border-dark Jenseigne">
-         <div className="col-12">
-            <h2 className="text-center">Département / Filiere</h2>
+      <div className="row justify-content-center Jenseigne">
+         <div className="col-12 mt-5">
+            <h2 className="text-center ">Département / Filiere</h2>
          </div>
-
-         <div onClick={DisplayAndHide} className="d-flex col-10 col-lg-8 col-md-8 col-xl-8 col-sm-12 Departement">
+         <div onClick={DisplayAndHide} className="d-flex col-10 col-lg-8 col-md-8 col-xl-8 col-sm-12 Departement mt-5">
             <div className="blueLine"></div>
             <div className="DepartementName">
                Génie Mécanique
@@ -26,8 +26,12 @@ function Jenseigne() {
             <img src={arrowDown} className="ml-auto"  alt="" />
          </div>	
          <div className="Filiere col-6 col-md-5 col-lg-5" hidden>
-            <h3 className="text-center py-2 font-weight-bold">GIL</h3>
-            <h3 className="text-center py-2 font-weight-bold">GEMSI</h3>
+            <Link to="/professeur/Jenseigne/Modules">
+               <h3 className="text-center py-2 font-weight-bold">GIL</h3>
+            </Link>
+            <Link to="/professeur/Jenseigne/Modules">
+               <h3 className="text-center py-2 font-weight-bold">GEMSI</h3>
+            </Link>
          </div>
          <div onClick={DisplayAndHide} className="d-flex col-10 col-lg-8 col-md-8 col-xl-8 col-sm-12 Departement">
             <div className="blueLine"></div>
@@ -37,8 +41,12 @@ function Jenseigne() {
             <img src={arrowDown} className="ml-auto" alt="" />
          </div>	
          <div className="Filiere col-6 col-md-5 col-lg-5" hidden>
-            <h3 className="text-center py-2 font-weight-bold">BDCC</h3>
-            <h3 className="text-center py-2 font-weight-bold">GLSID</h3>
+            <Link to="/professeur/Jenseigne/Modules">
+               <h3 className="text-center py-2 font-weight-bold">BDCC</h3>
+            </Link>
+            <Link to="/professeur/Jenseigne/Modules">
+               <h3 className="text-center py-2 font-weight-bold">GLSID</h3>
+            </Link>
          </div>
       </div>
    )
