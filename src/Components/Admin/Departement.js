@@ -5,6 +5,7 @@ import {Route, Switch} from "react-router-dom"
 // import '../../../styles/SupportEtu.css'
 import DepartementMain from './DepartementMain'
 
+
 function Departement() {
    const [departement, setdepartement] = useState([{
       nom:"math-info",
@@ -29,7 +30,7 @@ function Departement() {
    },
 
 ]);
-const [Filiere, setFiliere] = useState([{
+const [Filiere] = useState([{
    nom:"Glsid",
    CoordinateurFi :"Qbadou", 
    nbEtd:100,
@@ -110,6 +111,7 @@ prof:"DAAIF AZIZ"
                <Route exact path="/depart"> 
                   <DepartementMain departement={departement} Filiere={Filiere} Classes={Classes} Module={Module}/>
                </Route>
+             
               
             </Switch>
          </div>

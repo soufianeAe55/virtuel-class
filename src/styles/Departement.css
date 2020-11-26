@@ -141,3 +141,21 @@ margin-top: 10px;
 .nom_depart{
     color: #8E7D7D;
 }
+
+.col-form-label{
+    color: #8E7D7D;
+}
+.form-control:invalid {
+    border: 1px solid red;
+  }
+  
+  .form-control:valid {
+    border: 1px solid green;
+  }
+  .inpt{
+    border: 1px solid #8E7D7D;
+    outline: none;
+}
+.btn1{
+    background-color: #D34012;
+}
