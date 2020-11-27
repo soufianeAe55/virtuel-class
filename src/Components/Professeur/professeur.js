@@ -9,6 +9,8 @@ import Modules from './Modules'
 import DetailModule from './DetailModule'
 import AnnoceProf from './AnnoceProf'
 import AnnonceAdd from './AnnonceAdd'
+import DevoirProf from './DevoirProf'
+import DevoirProfListEtd from './DevoirProfListEtd'
 
 function professeur() {
    return(
@@ -25,6 +27,8 @@ function professeur() {
                <Route exact path="/professeur/Jenseigne/Modules/DetailModule" component={DetailModule} /> 
                <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf" component={AnnoceProf} /> 
                <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/addannonce" component={AnnonceAdd} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof" component={DevoirProf} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof/devoirproflistetd" component={DevoirProfListEtd} /> 
             </Switch>
          </div>
       </React.Fragment>

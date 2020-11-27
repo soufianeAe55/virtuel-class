@@ -15,11 +15,11 @@ function AnnoceProf() {
             </Link>
                <div className="col-12 col-lg-10 col-md-10 col-sm-10 col-xl-10 headerAnnonce" >
                   <img src={AnnonceIcon} className="annonceIcon" alt="" /> 
-                  <h1 className="annonceTitle">Annonces  </h1>
-                  </div>
-               <Link to="/professeur/Jenseigne/Modules/DetailModule/annonceProf/addannonce">
-                  <img src={AddAnnonce} className="mx-auto" alt="" />
-               </Link>
+                  <h1 className="annonceTitle ">Annonces  </h1>
+                  <Link className="ml-auto" to="/professeur/Jenseigne/Modules/DetailModule/annonceProf/addannonce">
+                     <img src={AddAnnonce}  alt="" />
+                  </Link>
+               </div>
          </div>
          <AnnonceProfCard />
          <AnnonceProfCard />

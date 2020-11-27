@@ -14,7 +14,7 @@ function AnnonceAdd() {
 
    return (
       <div className="row d-flex flex-column m-4 SupportAdd">
-         <Link to="/support" className="p-3 svgBack">
+         <Link to="/professeur/Jenseigne/Modules/DetailModule/annonceProf/" className="p-3 svgBack">
             <img src={backLink} alt="" />
          </Link>
          <h1 className="mt-4">Ajouter une annonce</h1>

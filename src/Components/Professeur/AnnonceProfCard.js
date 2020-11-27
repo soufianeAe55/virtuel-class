@@ -45,7 +45,9 @@ function AnnonceProfCard() {
             </form>
          </div>
       </div>
-   </React.Fragment>
+      <ModalDeleteAnnonce />
+      <ModalEditAnnonce />
+      </React.Fragment>
    )
 }
 

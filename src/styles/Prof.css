@@ -99,3 +99,12 @@
  text-align: end;
  font-weight: bold;
 }
+/* ------------------------------------------------------------------- */
+.headerDevoir p{
+   color: #126AA0;
+}
+.headerDevoir{
+   display: flex;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}

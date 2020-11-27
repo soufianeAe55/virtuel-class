@@ -8,7 +8,7 @@ function Jenseigne() {
       e.target.nextElementSibling.hidden  ?
       e.target.nextElementSibling.hidden = false  :
       e.target.nextElementSibling.hidden = true 
-      // Change the image arrow : 
+      // Change the arrow image : 
       e.target.nextElementSibling.hidden   ?
       e.target.childNodes[2].src = arrowDown :
       e.target.childNodes[2].src = arrowUp
