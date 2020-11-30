@@ -1,5 +1,5 @@
 import React ,{useState}from 'react'
-import '../../../styles/Departement.css'
+import '../../../../styles/Departement.css'
 import ModalAdd from '../AdminModals/ModalAddDepart'
 import ModalEdit from '../AdminModals/ModalEditDepart'
 function Filieretab({Filiere,actif}) {

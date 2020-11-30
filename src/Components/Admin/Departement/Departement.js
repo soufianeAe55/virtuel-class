@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import SideNav from '../Dashboard/sideNav'
-import Menu from '../Dashboard/Menu'
+import SideNav from '../../Dashboard/sideNav'
+import Menu from '../../Dashboard/Menu'
 import {Route, Switch} from "react-router-dom"
 // import '../../../styles/SupportEtu.css'
 import DepartementMain from './DepartementMain'

@@ -1,10 +1,10 @@
 import React ,{useState}from 'react'
-import '../../styles/Departement.css'
+import '../../../styles/Departement.css'
 import Departementtab from './page1_composant/DepartementTab'
 import FiliereTab from './page1_composant/FiliereTab'
 import ClasseTab from './page1_composant/ClasseTab'
 import ModuleTab from './page1_composant/ModulesTab'
-import filtrer from './Admin_Img/filtrer.svg'
+import filtrer from '../Admin_Img/filtrer.svg'
 
 
 function DepartementMain({departement , Filiere ,Classes ,Module} ) {
@@ -12,9 +12,7 @@ function DepartementMain({departement , Filiere ,Classes ,Module} ) {
    const [FiltrerDepart, setFiltrerDepart] = useState('');
    
   const [departv2, setdepartv2] = useState(departement);
-  const [FiliereTabFil, setFiliereTabFil] = useState(Filiere);
-  const [ModuleTabFil, setModuleTabFil] = useState(Module);
-  const [ClassesTabFil, setClassesTabFil] = useState(Classes);
+
 
 
   const [actif1, setactif1] = useState("actif")
@@ -53,15 +51,11 @@ const Appliquer =()=>{
 
   if(FiltrerDepart!=''){
    setdepartv2(departement.filter(depart =>(depart.nom===FiltrerDepart)));
-   setFiliereTabFil(Filiere.filter(fil=>(fil.depart===FiltrerDepart)));
-   setClassesTabFil(Classes.filter(classe=>(classe.depart===FiltrerDepart)));
-   setModuleTabFil(Module.filter(mod=>(mod.depart===FiltrerDepart)));
+
    }
    else{
       setdepartv2(departement);
-      setClassesTabFil(Classes);
-      setFiliereTabFil(Filiere);
-      setModuleTabFil(Module);
+    
    }
    
  
@@ -91,15 +85,15 @@ const Appliquer =()=>{
                 <p>Departement</p>
                 </div>
                 <div className=" col-lg-2  entete mx-1" onClick={handleLinkTwo} id={actif2}>
-                <p className="nombre"> {FiliereTabFil.length}</p>
+                <p className="nombre"> {Filiere.length}</p>
                 <p>Filière</p>
                 </div>
                 <div className=" col-lg-2  entete mx-1" onClick={handleLinkThree} id={actif3}>
-                <p className="nombre"> {ClassesTabFil.length}</p>
+                <p className="nombre"> {Classes.length}</p>
                 <p>Classes</p>
                 </div>
                 <div className=" col-lg-2  entete mx-1"   onClick={handleLinkfour} id={actif4} >
-                <p className="nombre"> {ModuleTabFil.length}</p>
+                <p className="nombre"> {Module.length}</p>
                 <p>Modules</p>
                 </div>
                
@@ -111,9 +105,9 @@ const Appliquer =()=>{
                   <div className=" col-lg-10 col-md-11 col-12   ">
                   {
                   (actif1==="actif")?(<Departementtab departement={departv2} actif={actif1}/>) 
-                   :(actif2==="actif")?(<FiliereTab Filiere={FiliereTabFil} actif={actif2}/>)
-                   :(actif3==="actif")?<ClasseTab Classes={ClassesTabFil} actif={actif3}/>
-                   :<ModuleTab Module={ModuleTabFil} actif={actif4}/>
+                   :(actif2==="actif")?(<FiliereTab Filiere={Filiere} actif={actif2}/>)
+                   :(actif3==="actif")?<ClasseTab Classes={Classes} actif={actif3}/>
+                   :<ModuleTab Module={Module} actif={actif4}/>
                   
 
                   }

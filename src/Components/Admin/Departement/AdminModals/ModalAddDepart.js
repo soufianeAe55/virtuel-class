@@ -1,6 +1,6 @@
 import React ,{useState}from 'react'
-import '../../../styles/Departement.css'
-import '../../../styles/SupportEtu.css'
+import '../../../../styles/Departement.css'
+import '../../../../styles/SupportEtu.css'
 
 function ModalAdd(props) {
 const [element] = useState(props.departement);

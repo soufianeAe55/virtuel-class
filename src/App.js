@@ -9,11 +9,12 @@ import Support from './Components/Etudiant/Support/Support'
 import Contact from './Components/Etudiant/contact'
 import ModuleOptions from './Components/Etudiant/Myclass/ModuleOptions'
 import Annonce from './Components/Etudiant/Myclass/annonce'
-import Departement from './Components/Admin/Departement'
+import Departement from './Components/Admin/Departement/Departement'
 import professeur from './Components/Professeur/professeur';
 import Devoirs from './Components/Etudiant/Myclass/devoirs'
 import DevoirContent from './Components/Etudiant/Myclass/DevoirContent'
-
+import Etudiant from './Components/Admin/Etudiant_Admin/Etudiant'
+import ProfesseurAdmin from './Components/Admin/Prof_Admin/ProfesseurAdmin'
 
 
 function App() {
@@ -32,8 +33,9 @@ function App() {
          <Route  path='/support' component={Support} />
          <Route  path='/contact' component={Contact} />
          <Route  path='/depart'  component={Departement}/>
-
          <Route  path='/professeur' component={professeur} />
+         <Route path='/AdminEtudiant' component={Etudiant}/>
+         <Route path='/AdminProf' component={ProfesseurAdmin}/>
 
       </Switch>
     </div>

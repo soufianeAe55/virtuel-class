@@ -159,3 +159,16 @@ margin-top: 10px;
 .btn1{
     background-color: #D34012;
 }
+/*--------------------------Partie Etudiant---------------------------------*/
+.titre_etu{
+    color: #126AA0;
+}
+.row_table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.btn2{
+    background: #D34012;
+ 
+ }
