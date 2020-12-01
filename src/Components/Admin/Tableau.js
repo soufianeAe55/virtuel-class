@@ -6,7 +6,9 @@ import Valider from './Admin_Img/Valider.svg'
 import ModalSupprimer from "./ModalSupprimer.js"
 import ModalApprouver from "./ModalApprouver.js"
 import ModalEdit from "./ModalEdit.js"
-function Tableau({Tab,verife}) {
+import ModalApprouverProf from './Prof_Admin/ModalApprouverProf'
+import ModalEditProf from './Prof_Admin/ModalEditProf'
+function Tableau({Tab,Tab2,verife}) {
 
 
 
@@ -27,15 +29,21 @@ function Tableau({Tab,verife}) {
             <th scope="col">Approuver</th>
           </tr>
       
-      :<tr>
+      :(verife==="Etudiant")?<tr>
       <th scope="col"> </th>
       <th scope="col">Nom</th>
       <th scope="col">Prenom</th>
-      <th scope="col">Classe </th>
-      <th scope="col">Filiere </th>
+      <th scope="col">Classe</th>
+      <th scope="col">Filiere</th>
       <th scope="col">Approuver</th>
     </tr>
-      
+      :<tr>
+      <th scope="col"> </th>
+      <th scope="col">Titre</th>
+      <th scope="col">Date</th>
+      <th scope="col">Description</th>
+ 
+    </tr>
       }
           
         </thead>
@@ -49,13 +57,13 @@ function Tableau({Tab,verife}) {
             <td>{tab1.DepartNb}</td>
             <td className="mx-4">{tab1.status}</td>  
             <td>{(tab1.status==="non")?
-            (<ModalApprouver/>):(<ModalEdit/>)}</td>
+            (<ModalApprouverProf Tab2={Tab2} verife={verife}/>):(<ModalEditProf Tab2={Tab2}/>)}</td>
             <td><ModalSupprimer verife={verife}/></td>
           
           </tr>
         ))
         )
-         :(Tab.map(tab1=>(<tr key={tab1.id}>
+         :verife==="Etudiant"?(Tab.map(tab1=>(<tr key={tab1.id}>
             <th scope="row"><img src={tab1.avatar}/></th>
             <td>{tab1.Nom}</td>
             <td>{tab1.Prenom}</td>
@@ -63,12 +71,21 @@ function Tableau({Tab,verife}) {
             <td>{tab1.Filiere}</td>
             <td className="mx-4">{tab1.status}</td>  
             <td>{(tab1.status==="non")?
-            (<ModalApprouver/>):(<ModalEdit/>)}</td>
+            (<ModalApprouver Tab2={Tab2} verife={verife}/>):(<ModalEdit Tab2={Tab2}/>)}</td>
             <td><ModalSupprimer verife={verife}/></td>
           
           </tr>
         ))
-        ) }
+        ) :(Tab.map(tab1=>(<tr key={tab1.id}>
+          <th scope="row"><img src={tab1.avatar}/></th>
+          <td>{tab1.Titre}</td>
+          <td>{tab1.Date}</td>
+          <td>{tab1.Description}</td>
+          <td><ModalEdit Tab2={Tab2} verife={verife}/></td>
+          <td><ModalSupprimer verife={verife}/></td>
+        </tr>
+      ))
+      )}
 
 
         

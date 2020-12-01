@@ -52,6 +52,12 @@ const changeEtu =useCallback(
  );
 
 const [VerifeEtd, setVerifeEtd] = useState("Etudiant");
+const [Etudiantchamp]=useState({
+   champ1:"Le departement",
+   champ2:"La filiere",
+   champ3:"La classe"
+
+})
 
     return (
        
@@ -71,7 +77,7 @@ const [VerifeEtd, setVerifeEtd] = useState("Etudiant");
                   <div className="row mx-1 "> 
                   <div className="col-lg-9 col-md-8 col-8 bg-white rounded overflow-x-scroll ">
                 
-                  <Tableau Tab={EtudiantsInfoV2} verife={VerifeEtd}/>
+                  <Tableau Tab={EtudiantsInfoV2} Tab2={Etudiantchamp}verife={VerifeEtd}/>
                   </div>
                   <div className="col-lg-3 col-md-4 col-4  ">
                   <FiltrerCase verife={VerifeEtd} func={changeEtu}/>

@@ -172,3 +172,19 @@ margin-top: 10px;
     background: #D34012;
  
  }
+ .text-add{
+     color: #126AA0;
+ }
+ .modal-title{
+     color: #126AA0;
+ }
+ .textapp{
+     white-space: normal;
+ }
+ .Departement2{
+     background-color: #F2EDED;
+     height: 51px;
+     display: flex;
+    margin-bottom: 17px;
+    border-radius: 0px 10px 10px 0px;
+ }

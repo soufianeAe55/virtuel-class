@@ -15,6 +15,7 @@ import Devoirs from './Components/Etudiant/Myclass/devoirs'
 import DevoirContent from './Components/Etudiant/Myclass/DevoirContent'
 import Etudiant from './Components/Admin/Etudiant_Admin/Etudiant'
 import ProfesseurAdmin from './Components/Admin/Prof_Admin/ProfesseurAdmin'
+import ActualiteAdmin from './Components/Admin/Actu_Admin/ActualiteAdmin'
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
          <Route  path='/professeur' component={professeur} />
          <Route path='/AdminEtudiant' component={Etudiant}/>
          <Route path='/AdminProf' component={ProfesseurAdmin}/>
-
+         <Route path='/AdminActu' component={ActualiteAdmin}/>
       </Switch>
     </div>
   );

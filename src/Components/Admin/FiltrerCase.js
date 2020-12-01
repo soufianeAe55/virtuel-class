@@ -26,21 +26,30 @@ function FiltrerCase({func,verife}) {
             type="text"/>
            </div>
            <div className=" mx-1 my-3  "> 
-           <p className="nom_depart font-weight-bold">Classe</p>
+           <p className="nom_depart font-weight-bold">{verife==="Actualite"?"Date":"Classe"}</p>
            <input className="w-100 inpt rounded " name="Classe"  type="text" onChange={(e)=>setNvTab2(e.target.value)    
            }/>
            </div>
-           <div className=" mx-1 my-3  "> 
+           {verife!="Actualite"?  <div className=" mx-1 my-3  "> 
            <p className="nom_depart font-weight-bold">Filiere</p>
            <input className="w-100 inpt rounded " name="Filiere"  type="text" onChange={(e)=>setNvTab3(e.target.value)    
            }/>
-           </div>
-        
-         <div className="  mx-1 my-2 text-right "> 
+           </div>:<div className=" invisible "> 
+           <p className="nom_depart font-weight-bold">Filiere</p>
+           <input className="w-100 inpt rounded " name="Filiere"  type="text" onChange={(e)=>setNvTab3(e.target.value)    
+           }/>
+           </div>}
+         
+        {verife!="Actualite"?  <div className="  mx-1 my-2 text-right "> 
            <button className="btn" type="submit" onClick={
         ()=>func(NvTab,NvTab2,NvTab3)
         }> Appliquer</button>
-           </div>
+           </div>:<div className="  mx-1 my-2 text-right "> 
+           <button className="btn" type="submit" onClick={
+        ()=>func(NvTab,NvTab2)
+        }> Appliquer</button>
+           </div> }
+       
        
         </div>
            
