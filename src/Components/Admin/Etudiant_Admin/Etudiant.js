@@ -8,7 +8,7 @@ import Avatar from '../../Dashboard/imgs/Avatar.svg'
 
 function Etudiant() {
    
-const [EtudiantsInfo, setEtudiantsInfo] = useState([{
+const [EtudiantsInfo] = useState([{
 avatar:Avatar,
 Nom:"Mhb",
 Prenom:"zak",
@@ -51,7 +51,7 @@ const changeEtu =useCallback(
    [EtudiantsInfoV2],
  );
 
-const [VerifeEtd, setVerifeEtd] = useState("Etudiant");
+const [VerifeEtd] = useState("Etudiant");
 const [Etudiantchamp]=useState({
    champ1:"Le departement",
    champ2:"La filiere",

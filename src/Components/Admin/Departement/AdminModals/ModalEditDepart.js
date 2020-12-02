@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 function ModalEdit(props) {
-    const [Gererdepart, setGererdepart] = useState(props.departement);
+    const [Gererdepart] = useState(props.departement);
     
     return (
         <div >

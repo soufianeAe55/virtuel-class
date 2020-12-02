@@ -22,15 +22,15 @@ function ModalEdit({Tab2,verife}) {
         <div className="form-group text-left mx-3 my-2">
        
                 <label  className="col-form-label">{Tab2.champ1}</label>
-                <input type="text " className="form-control w-75" id={"recipient-name1"} required/>
+                <input type="text " className="form-control w-75" id={"recipient-name_ed1"} required/>
               </div>
               <div className="form-group text-left mx-3">
                 <label  className="col-form-label">{Tab2.champ2}</label>
-                <input type="text" className="form-control w-75" id="recipient-name2" required/>
+                <input type="text" className="form-control w-75" id="recipient-name_ed2" required/>
               </div>
               <div className="form-group text-left mx-3">
                 <label  className="col-form-label">{Tab2.champ3}</label>
-                <input type="text" className="form-control w-75" id="recipient-name3" required/>
+                <input type="text" className="form-control w-75" id="recipient-name_ed3" required/>
               </div>
               
       

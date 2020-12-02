@@ -9,7 +9,7 @@ import FiltrerCase from'../FiltrerCase.js'
 import ModalApprouver from "../ModalApprouver.js"
 
 function ActualiteAdmin() {
-    const [ActualiteInfo, setActualiteInfo] = useState([{
+    const [ActualiteInfo] = useState([{
         avatar:Avatar,
         Titre:"xxxxxx",
         Date:"20/10/2020",
@@ -37,7 +37,7 @@ function ActualiteAdmin() {
 
         const changeActu =useCallback(
            (Titre,Date) => {
-              if(Titre!=''&& Date!=''){ 
+              if(Titre!==''&& Date!==''){ 
                  setActualiteInfoV2(ActualiteInfoV2.filter(T =>((T.Titre==Titre)&&(T.Date==Date))));
                 
                  }

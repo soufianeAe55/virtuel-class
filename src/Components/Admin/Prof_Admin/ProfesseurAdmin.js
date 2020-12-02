@@ -7,7 +7,7 @@ import Tableau from '../Tableau.js'
 import FiltrerCase from'../FiltrerCase.js'
 function ProfesseurAdmin() {
 
-    const [ProfesseurInfo, setEtudiantsInfo] = useState([{
+    const [ProfesseurInfo] = useState([{
         avatar:Avatar,
         Nom:"Mhb",
         Prenom:"zak",

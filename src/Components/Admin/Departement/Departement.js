@@ -7,7 +7,7 @@ import DepartementMain from './DepartementMain'
 
 
 function Departement() {
-   const [departement, setdepartement] = useState([{
+   const [departement] = useState([{
       nom:"math-info",
       chef :"Aziz Daaif",
       nbFiliere:3,
