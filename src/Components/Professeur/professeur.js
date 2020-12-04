@@ -12,7 +12,7 @@ import AnnonceAdd from './AnnonceAdd'
 import DevoirProf from './DevoirProf'
 import DevoirProfListEtd from './DevoirProfListEtd'
 
-function professeur() {
+function professeur() { 
    return(
       <React.Fragment>
          <SideNav />
@@ -32,6 +32,6 @@ function professeur() {
             </Switch>
          </div>
       </React.Fragment>
-   )}
-
+   )
+}
 export default professeur

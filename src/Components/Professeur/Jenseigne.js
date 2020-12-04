@@ -6,7 +6,7 @@ import arrowUp from './ImageProf/arrowUp.svg'
 function Jenseigne() {
    const DisplayAndHide = (e) => {
       e.target.nextElementSibling.hidden  ?
-      e.target.nextElementSibling.hidden = false  :
+      e.target.nextElementSibling.hidden = false :
       e.target.nextElementSibling.hidden = true 
       // Change the arrow image : 
       e.target.nextElementSibling.hidden   ?

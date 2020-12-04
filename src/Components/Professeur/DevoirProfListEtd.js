@@ -6,8 +6,6 @@ import clock from './ImageProf/clock.svg'
 import File from '../Etudiant/ImageEtd/File.svg'
 import Avatar from '../Dashboard/imgs/Avatar.svg'
 
-
-
 function DevoirProfListEtd() {
    return (
       <React.Fragment>
@@ -28,40 +26,33 @@ function DevoirProfListEtd() {
                </div>
             </div>
          </div>
-      <div className="row justify-content-center cont ">
+      <div className="row justify-content-center cont tableDevoirEtd">
          <table className="table col-12 col-lg-10 col-md-12 col-sm-12 col-xl-10 bg-white">
-         <thead>
-            <tr >
-               <th scope="col"></th>
-               <th scope="col">Nom</th>
-               <th scope="col">Prenom</th>
-               <th scope="col">Fichier</th>
-               <th scope="col">Date de depot</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <th scope="row"><img alt="" src={Avatar} /></th>
-               <td>Mark</td>
-               <td>Otto</td>
-               <td ><img src={File} alt="" /></td>
-               <td>22 SEPT 2020  22:05</td>
+            <thead>
+               <tr >
+                  <th scope="col"></th>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Prenom</th>
+                  <th scope="col">Fichier</th>
+                  <th scope="col">Date de depot</th>
                </tr>
-            <tr>
-            <th scope="row"><img alt="" src={Avatar} /></th>
-            <td>Jacob</td>
-               <td>Thornton</td>
-               <td ><img src={File} alt="" /></td>
-               <td>22 SEPT 2020  22:05</td>
-            </tr>
-            <tr>
-               <th scope="row"><img alt="" src={Avatar} /></th>
-               <td>Larry</td>
-               <td>the Bird</td>
-               <td ><img src={File} alt="" /></td>
-               <td>22 SEPT 2020  22:05</td>
-            </tr>
-         </tbody>
+            </thead>
+            <tbody>
+               <tr>
+                  <th scope="row"><img alt="" src={Avatar} /></th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td ><img src={File} alt="" /></td>
+                  <td>22 SEPT 2020  22:05</td>
+                  </tr>
+               <tr>
+                  <th scope="row"><img alt="" src={Avatar} /></th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td ><img src={File} alt="" /></td>
+                  <td>22 SEPT 2020  22:05</td>
+               </tr>
+            </tbody>
          </table> 
       </div>
       </React.Fragment>

@@ -19,7 +19,6 @@ function SupportRowForClass({Support}) {
          <div className="col-3 d-flex mx-auto my-auto SupportRow__EditImages">
             <img data-toggle="modal" data-target="#DeleteModal" src={Delete} alt="" />
          </div>
-         <ModalEditSupport />
          <ModalDeleteSupport />
       </div>
    )
