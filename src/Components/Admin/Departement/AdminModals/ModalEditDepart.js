@@ -1,7 +1,9 @@
 import React,{useState} from 'react'
 
-function ModalEdit(props) {
-    const [Gererdepart] = useState(props.departement);
+function ModalEdit({departement,depart,verife}) {
+    
+ 
+  
     
     return (
         <div >
@@ -14,32 +16,34 @@ function ModalEdit(props) {
     <div className="modal-dialog modal-dialog-centered" role="document">
       <div className="modal-content">
         <div className="modal-header">
-          <h5 className="modal-title" id="exampleModalLongTitle">{Gererdepart.titre}</h5>
+          <h5 className="modal-title" id="exampleModalLongTitle">{departement.titre}</h5>
           <button type="button" className="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div className="modal-body">
         <div className="row mx-0  p-4">
-        <div className="col-lg-12  "><form >
+        <div className="col-lg-12  ">
+         <form >
         <div className="form-group text-left mx-3">
-                <label className="col-form-label">{Gererdepart.champ1}</label>
-                <input type="text " className="form-control w-75" id={Gererdepart.id}  required/>
+                <label className="col-form-label">{departement.champ1}</label>
+                <input type="text " value={(depart!='')? depart.nom :""} className="form-control w-75" id={departement.id}  required/>
               </div>
               <div className="form-group text-left mx-3">
-                <label  className="col-form-label">{Gererdepart.champ2}</label>
-                <input type="text" className="form-control w-75" id={Gererdepart.id} required/>
+                <label  className="col-form-label">{departement.champ2}</label>
+                <input type="text" value={verife==="Departement"? depart.chef:(verife==="Filiere")?depart.CoordinateurFi:(verife==="Classe")?depart.nbetd:depart.NbHeures}  className="form-control w-75" id={departement.id} required/>
               </div>
               <div className="form-group text-left mx-3">
-                <label  className="col-form-label">{Gererdepart.champ3}</label>
-                <input type="text" className="form-control w-75" id={Gererdepart.id} required/>
+                <label  className="col-form-label">{departement.champ3}</label>
+                <input type="text" value={verife==="Departement"? depart.nbFiliere:(verife==="Filiere")?depart.nbEtd:(verife==="Classe")?depart.Responsable:depart.depart} className="form-control w-75" id={departement.id} required/>
               </div>
               <div className="form-group text-left mx-3">
-              <label  className="col-form-label">{Gererdepart.champ4}</label>
-              <input type="text" className="form-control w-75" id={Gererdepart.id} required/>
+              <label  className="col-form-label">{departement.champ4}</label>
+              <input type="text"  value={verife==="Departement"? depart.nbEtd:(verife==="Filiere" || verife==="Classe")?depart.depart:depart.prof} className="form-control w-75" id={departement.id} required/>
             </div>
         
-        </form></div>
+        </form>
+       </div>
         </div>
         
         </div>

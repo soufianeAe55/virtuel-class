@@ -21,6 +21,10 @@ function ModulesTab({Module,actif}) {
       champ4 :" Professeur",
       
       })
+      const [elementAfficher,setelementAfficher] = useState({});
+      const [Verife] = useState("Module");
+      
+     
     return (
         <div className="d-flex flex-column p-2 mx-1 bg-white tableau ">
         <div className="row"><div className="col-12 mx-0 font-weight-bold nouv-depart"><p className="text-right my-2 mx-1"> {(actif==="actif")? <ModalAdd departement={elementModule} />:
@@ -40,12 +44,13 @@ function ModulesTab({Module,actif}) {
   </thead>
   <tbody>
   {Module.map(Mod =>( <tr key={Mod.id}>
-      <th scope="row " >{Mod.Nom}</th>
+      <th scope="row " >{Mod.nom}</th>
       <td>{Mod.NbHeures}</td>
       <td>{Mod.depart}</td>
       <td>{Mod.prof}</td>
-      <td className="gerer"> {(actif==="actif")? <ModalEdit departement={elementModuleEdit}  />:
-      <p>Gèrer</p>}</td>
+      <td className="gerer mx-0 my-0"  > <div onClick={()=>setelementAfficher(Mod)}>{((actif==="actif") &&(elementAfficher!='') )? <ModalEdit departement={elementModuleEdit} depart={elementAfficher} verife={Verife}/>:
+      <p>Gèrer</p>
+    } </div>  </td>
     </tr>))
    
   }

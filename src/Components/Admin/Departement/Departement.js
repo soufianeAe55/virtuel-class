@@ -52,21 +52,21 @@ const [Filiere] = useState([{
 
 },])
  const [Classes] = useState([{
-   Nom :"Glsid-1", 
+   nom :"Glsid-1", 
    nbetd :35,
    Responsable:"XXXXX",
    depart:"math-info"
 
 
  },{
-   Nom :"Bdcc-1", 
+   nom :"Bdcc-1", 
    nbetd :35,
    Responsable:"XXXXX",
    depart:"math-info"
 
 
  },{
-   Nom :"Gmsi-1", 
+   nom :"Gmsi-1", 
    nbetd :35,
    Responsable:"XXXXX",
    depart:"mecanique"
@@ -78,21 +78,21 @@ const [Filiere] = useState([{
 
 ]) ;
 const [Module] = useState([{
-Nom:"Dev-web",
+nom:"Dev-web",
 NbHeures:25,
 depart:"math-info",
 prof:"DAAIF AZIZ"
 
 },
 {
-   Nom:"XXXXXX",
+   nom:"XXXXXX",
    NbHeures:28,
    depart:"math-info",
    prof:"XXXXXXXX"
    
    },
    {
-      Nom:"XXXXXX",
+      nom:"XXXXXX",
       NbHeures:30,
       depart:"mecanique",
       prof:"XXXXXXXX"

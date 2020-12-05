@@ -1,4 +1,4 @@
-import React ,{useState}from 'react'
+import React ,{useState,useEffect}from 'react'
 import '../../../../styles/Departement.css'
 import ModalAdd from '../AdminModals/ModalAddDepart'
 import ModalEdit from '../AdminModals/ModalEditDepart'
@@ -24,6 +24,12 @@ function Departementtab({departement ,actif}) {
      
       
       })
+      const [elementAfficher,setelementAfficher] = useState({});
+      const [Verife] = useState("Departement");
+      
+     
+    
+    
     return (
         <div className="d-flex flex-column p-2 mx-1 bg-white tableau ">
         <div className="row"><div className="col-12 mx-0 font-weight-bold nouv-depart"><p className="text-right my-2 mx-1">
@@ -46,13 +52,13 @@ function Departementtab({departement ,actif}) {
   </thead>
   <tbody>
   {departement.map(depart =>( <tr key={depart.id}>
-      <th scope="row " >{depart.nom}</th>
+      <th scope="row" >{depart.nom}</th>
       <td>{depart.chef}</td>
       <td>{depart.nbFiliere}</td>
       <td>{depart.nbEtd}</td>
-      <td className="gerer mx-0 my-0"  >  {(actif==="actif")? <ModalEdit departement={elementDepartementEdit}  />:
+      <td className="gerer mx-0 my-0"  > <div onClick={()=>setelementAfficher(depart)}>{((actif==="actif") &&(elementAfficher!='') )? <ModalEdit departement={elementDepartementEdit} depart={elementAfficher} verife={Verife}/>:
       <p>Gèrer</p>
-    } </td>
+    } </div>  </td>
     </tr>))
    
   }

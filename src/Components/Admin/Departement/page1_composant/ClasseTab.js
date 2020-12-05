@@ -21,6 +21,9 @@ function ClasseTab({Classes,actif}) {
       champ4 :" Departement",
       
       })
+      const [elementAfficher,setelementAfficher] = useState({});
+      const [Verife] = useState("Classe");
+      
     return (
         <div className="d-flex flex-column p-2 mx-1 bg-white tableau ">
          <div className="row"><div className="col-12 mx-0 font-weight-bold nouv-depart"><p className="text-right my-2 mx-1"> {(actif==="actif")? <ModalAdd departement={elementClasses} />:
@@ -40,12 +43,13 @@ function ClasseTab({Classes,actif}) {
   </thead>
   <tbody>
   {Classes.map(classe =>( <tr key={classe.id}>
-      <th scope="row " >{classe.Nom}</th>
+      <th scope="row " >{classe.nom}</th>
       <td>{classe.nbetd}</td>
       <td>{classe.Responsable}</td>
       <td>{classe.depart}</td>
-      <td className="gerer">  {(actif==="actif")? <ModalEdit departement={elementClassesEdit}  />:
-      <p>Gèrer</p>} </td>
+      <td className="gerer mx-0 my-0"  > <div onClick={()=>setelementAfficher(classe)}>{((actif==="actif") &&(elementAfficher!='') )? <ModalEdit departement={elementClassesEdit} depart={elementAfficher} verife={Verife}/>:
+      <p>Gèrer</p>
+    } </div>  </td>
     </tr>))
    
   }

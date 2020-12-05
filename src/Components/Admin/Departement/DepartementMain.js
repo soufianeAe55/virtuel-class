@@ -71,8 +71,7 @@ const Appliquer =()=>{
                <div className="row   conterDepart  ">
                <div className="d-flex flex-row mx-3 my-2 filtrer_input">
                <div className="col-12"><p className="">filtrer par nom de departement :</p>
-               <input type="text " className="w-50 " onChange={(e)=>setFiltrerDepart(e.target.value)    
-               }/>
+               <input type="text " className="w-50 " onChange={(e)=>setFiltrerDepart(e.target.value)     }/>
                <button className="btn mx-1" type="submit" onClick={Appliquer} > Appliquer</button></div>
                
                </div>
@@ -102,7 +101,7 @@ const Appliquer =()=>{
                </div>
                </div>
                   <div className ="row mx-0 w-100">
-                  <div className=" col-lg-10 col-md-11 col-12   ">
+                  <div className=" col-lg-10 col-md-12 col-12   ">
                   {
                   (actif1==="actif")?(<Departementtab departement={departv2} actif={actif1}/>) 
                    :(actif2==="actif")?(<FiliereTab Filiere={Filiere} actif={actif2}/>)

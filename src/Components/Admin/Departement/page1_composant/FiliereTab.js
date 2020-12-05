@@ -23,7 +23,8 @@ function Filieretab({Filiere,actif}) {
        
         
         })
-
+        const [elementAfficher,setelementAfficher] = useState({});
+        const [Verife] = useState("Filiere");
     return (
 
         <div className="d-flex flex-column p-2 mx-1 bg-white tableau ">
@@ -47,8 +48,9 @@ function Filieretab({Filiere,actif}) {
       <td>{Fi.CoordinateurFi}</td>
       <td>{Fi.nbEtd}</td>
       <td>{Fi.depart}</td>
-      <td className="gerer">  {(actif==="actif")? <ModalEdit departement={elementFiliereEdit}  />:
-      <p>Gèrer</p>} </td>
+      <td className="gerer mx-0 my-0"  > <div onClick={()=>setelementAfficher(Fi)}>{((actif==="actif") &&(elementAfficher!='') )? <ModalEdit departement={elementFiliereEdit} depart={elementAfficher} verife={Verife}/>:
+      <p>Gèrer</p>
+    } </div>  </td>
     </tr>))
    
   }
