@@ -91,7 +91,7 @@ function Annonce(props){
 					<Menu />
 					<div className="row cont" >
 					<div className="col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 headerAnnonce" >
-							<img src={AnnonceIcon} className="annonceIcon" /> 
+							<img src={AnnonceIcon} className="annonceIcon" alt="" /> 
 							<h1 className="annonceTitle">Annonces  </h1>
 						</div>
 					</div>

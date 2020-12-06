@@ -22,12 +22,14 @@ function DetailModule() {
          <div className="row CardOptions col-10 col-sm-5 col-md-5 col-lg-3 col-xl-3">	
             <img className="OptionsImg col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"  src={Annonces} alt="" />
             <p className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">Voir les annonces de ce module  </p>
-            <Link className=" linkOption col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" to="/annonce">Voir...</Link>
+            <Link className=" linkOption col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" 
+            to="/professeur/Jenseigne/Modules/DetailModule/annonceProf">Voir...</Link>
          </div>
          <div className="row CardOptions col-10 col-sm-5 col-md-5 col-lg-3 col-xl-3">	
             <img className="OptionsImg col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"  src={Devoir} alt="" />
             <p className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">Consulter les devoirs de ce module  </p>
-            <Link className=" linkOption col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" to="/devoirs">Voir...</Link>
+            <Link className=" linkOption col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+            to="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof">Voir...</Link>
          </div>
       
    </div>

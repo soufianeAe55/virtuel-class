@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import UploadFile from '../../Dashboard/imgs/UpLoadFile.svg'
 import {withRouter} from 'react-router-dom'
 import axios from 'axios'
