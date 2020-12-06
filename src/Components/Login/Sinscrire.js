@@ -7,8 +7,9 @@ import nom from './imagesLogin/nom.svg';
 import { Link } from 'react-router-dom';
 
 
+
 function Sinscrire() {
-   const [dropDown, setdropDown] = useState("Etudient");
+   const [dropDown, setdropDown] = useState("Type");
 
 return(
    <div className="container-fluide">
@@ -50,6 +51,7 @@ return(
                   </div>
                   <div className="col-sm mx-2 my-2 p-3 text-center" id="Sinscrire__signup_drop">
                      <select onChange={ e => { setdropDown(e.target.value);} } value={dropDown}  id="Type">
+                         <option value="Type">Type</option>
                         <option value="Etudiant">Etudiant</option>
                         <option value="Professeur">Professeur</option>
                         {console.log(dropDown)}
@@ -57,9 +59,9 @@ return(
                   </div>
                </div>
                <div className="col mx-2 my-2 text-center" id="Sinscrire__signup_drop">
-               <select name="Type" id="Type" value="type">
-               <option value="Prof">Professeur</option>
-               <option value="etd">Etudiant</option>
+                  <select name="Type" id="Type" value="type">
+                  <option value="Prof">Professeur</option>
+                  <option value="etd">Etudiant</option>
                Type
              </select>
                </div>

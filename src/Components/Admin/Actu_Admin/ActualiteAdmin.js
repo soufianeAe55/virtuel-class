@@ -38,7 +38,7 @@ function ActualiteAdmin() {
         const changeActu =useCallback(
            (Titre,Date) => {
               if(Titre!==''&& Date!==''){ 
-                 setActualiteInfoV2(ActualiteInfoV2.filter(T =>((T.Titre==Titre)&&(T.Date==Date))));
+                 setActualiteInfoV2(ActualiteInfoV2.filter(T =>((T.Titre===Titre)&&(T.Date===Date))));
                 
                  }
                  else{
@@ -66,7 +66,7 @@ function ActualiteAdmin() {
         <div className="conter">
         <div className="d-flex flex-row ">
         <div className="p-2 my-2 flex-shrink-1 ">
-        <img src={chapeau}/>
+        <img src={chapeau} alt=""/>
         </div>
         <div className="p-3 w-100 titre_etu">
         <h3>Gestion des Actualites</h3>

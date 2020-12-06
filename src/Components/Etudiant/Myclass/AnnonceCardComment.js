@@ -3,9 +3,10 @@ import {Link} from 'react-router-dom'
 import '../../../styles/Myclass.css'
 import Avatar from '../../Dashboard/imgs/Avatar.svg'
 import Sendco from '../ImageEtd/sendco.svg'
+import moment from 'moment'
 
 
-function AnnonceCard(){
+function AnnonceCard(props){
 
 	return(
 		 
@@ -14,11 +15,10 @@ function AnnonceCard(){
 			<React.Fragment> 
 			 	<div className="AvatarEtu">
 					<img src={Avatar} />
-					<span>Unknow X </span>
-					<p>20 Sept</p>
+					<span>{props.data.userName}</span>
+					<p>{moment(props.data.date).fromNow()}</p>
 				</div>
-				<p className="comment" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce 
-				venenatis tempor mi, in aliquet nibh imperdiet</p>
+				<p className="comment" >{props.data.comment}</p>
 			</React.Fragment>	
 						
 						
