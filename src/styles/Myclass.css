@@ -71,6 +71,10 @@
 	height: 51px;
 	display: flex;
 	margin-bottom: 17px;
+	border-radius: 0px 10px 10px 0px;
+}
+.module:hover{
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .blueLine{
 	background-color: #126AA0;
@@ -545,6 +549,7 @@ color: #126AA0;
 }
 .upload label{
 	display: flex;
+	cursor: all-scroll;
 }
 .uploadConditions{
 	font-family: Montserrat;
@@ -567,4 +572,15 @@ color: #126AA0;
 }
 a {
 	text-decoration: none !important;
+}
+.fileInfo{
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+}
+.fileInfo span{
+	font-weight: 600;
+}
+.AnnulerConf{
+	background-color: #8E7D7D !important;
 }

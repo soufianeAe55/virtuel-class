@@ -12,17 +12,17 @@ exports.Register = (req, res) => {
         firebase.auth().onAuthStateChanged((user) => {
             addUser(req.body,user.uid);
           });
-        
-      
 
       user.user.updateProfile({
         displayName: req.body.type,
+        photoURL: req.body.class
 
       }).then(() => {
         let tokenData={
             userId: user.user.uid,
             userEmail: user.user.email,
-            type: user.user.displayName
+            type: user.user.displayName,
+            class: user.user.phoneNumber
         }  
           res.status(201).json({
             user:user.user,
@@ -66,9 +66,10 @@ exports.Login= (req,res) => {
         let tokenData={
             userId: user.user.uid,
             userEmail: user.user.email,
-            type: user.user.displayName
+            type: user.user.displayName,
+            class: user.user.photoURL
         }  
-        let Token= jwt.sign(tokenData,'RANDOM_TOKEN_SECRET',{ expiresIn: 604800 })
+        let Token= jwt.sign(tokenData,'RANDOM_TOKEN_SECRET',{ expiresIn: '1h' })
         res.status(201).json({
             user:user.user,
             Token
@@ -80,12 +81,10 @@ exports.Login= (req,res) => {
 
 
 }
-//faire un middl for secure routes of each user 
-//in the midl i will verify type of user and jwt token
-//for routes of fornt end i will use localStorage
+
 
 exports.deconnecter = (req,res) => {
- 
+   
   auth.signOut()
   .then(() => {
   

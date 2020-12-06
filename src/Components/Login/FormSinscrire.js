@@ -22,12 +22,14 @@ function FormSinscrire(props) {
    }
    const sendData = (e) => {
       e.preventDefault()
-         let dataUser={name,type,email,password}
+
+         let dataUser={name,type,email,password,class: ''}
+        
          axios.post('http://localhost:8000/api/RegisterEtu',dataUser)
          .then(res => {
-            console.log(res)
+            console.log(res.data)
                localStorage.setItem('token',res.data.Token)
-               props.history.push('/homeEtu')
+               props.history.push('/approuvee')
 
          })
          .catch(err => {

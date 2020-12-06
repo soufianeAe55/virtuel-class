@@ -8,12 +8,11 @@
 .Support__dropdown{
    color:  rgb(18, 106, 160);
    font-weight: bold;
-   margin: 0px 10px;
    outline: none;
    border: 0;
    border-radius: 10px;
    text-align-last: center;
-   padding: 0px 12px;
+   padding: 0px 7px;
 }
 .SupportCard{
    width: 15.5rem;
@@ -116,9 +115,7 @@
    width: 5%;
    border-radius: 50px;
 }
-.svgBack:hover{
-   background-color: lightgray;
-}
+
 
 /* --------------------------------------------------------------------------- */
 .SupportAdd h1{

@@ -13,6 +13,8 @@ const Etudiant = require('./Routes/Etudiants')
                 next();
         })
         .use('/images',express.static(path.join(__dirname,'images')))
+        .use('/devoirs',express.static(path.join(__dirname,'devoirs')))
+        .use('/supports',express.static(path.join(__dirname,'supports')))
         .use('/api',Login)
         .use('/api',Etudiant)
         .use('/',(req,res) => {

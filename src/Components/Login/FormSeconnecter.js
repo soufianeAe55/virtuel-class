@@ -26,10 +26,13 @@ function FormSeconnecter(props) {
       axios.post('http://localhost:8000/api/loginEtu',data)
       .then(res => {
          localStorage.setItem('token',res.data.Token)
-         console.log(res.data.user.displayName)
-         if(res.data.user.displayName== 'Etudiant'){
+         console.log(res.data.user)
+         if(res.data.user.displayName == 'Etudiant' && res.data.user.photoURL != null ){
             props.history.push('/homeEtu')
+         }else{
+            props.history.push('/approuvee')
          }
+         
       })
       .catch(err => {
          console.log(err)

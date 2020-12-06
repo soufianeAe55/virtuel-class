@@ -10,6 +10,8 @@ import home3 from './ImageEtd/home3.svg'
 import jwtdecode from 'jwt-decode'
 
 function HomeEtu(props){
+
+	
 	let data=jwtdecode(localStorage.token)
 	let str=data.userEmail
 	let firstName=str.split('-',1)[0].split('.')[0]
@@ -20,13 +22,17 @@ function HomeEtu(props){
 			let data = jwtdecode(localStorage.token)
 		 if(!data.type == 'Etudiant'){
 				props.history.push('/')
-			}
+		}else if( data.class == null){
+			props.history.push('/approuvee')
+		}
+
 		  }else{
 			props.history.push('/')
 		  }
 		
 		
 	})
+
 	return(
 		 <React.Fragment>
 			<SideNav />
@@ -34,10 +40,10 @@ function HomeEtu(props){
 			<Menu />
 			<div className="row conter" >
 				<div className="row  mx-3  w-100    " id="ligne1">
-					<div className=" mx-0 col-md-12    " id="ligne1_para">
+					<div className=" mx-0 col-md-12    " id="ligne1_para"> 
 						<div className=" mx-0 w-100 bg-white  row rounded">
 							<div className="col-md-7   my-lg-5 my-lg-4 mt-3 p-lg-3 ">
-								<h5 className=" mx-lg-3 mx-1 mb-3 font-weight-bold font-family-montserrat h51 ">Bienvenue chers {firstName} </h5>
+								<h5 className=" mx-lg-3 mx-1 mb-3 font-weight-bold font-family-montserrat h51 ">Bienvenue chers {firstName}  </h5>
 								<p className="mx-lg-3 my-1 mx-1 para1 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  </p>
 							</div>
 						

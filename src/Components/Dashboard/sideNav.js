@@ -37,8 +37,12 @@ function SideNav(props){
 		
 	});
 	const EtudiantNav = () =>{
-		
-		let data= decode(localStorage.token)
+		let data=''
+		if(localStorage.token){
+			 data= decode(localStorage.token)
+		}else{
+			props.history.push('/')
+		}
 		
 		if(data.type== 'Etudiant'){
 		return (

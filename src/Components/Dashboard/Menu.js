@@ -10,12 +10,18 @@ import axios from 'axios'
 
 function Menu(props){
 	
-
+	let firstName=""
+	let lastName=""
+	
+  if(localStorage.token){
 	let data=jwtdecode(localStorage.token)
 	let str=data.userEmail
-	let firstName=str.split('-',1)[0].split('.')[0]
-	let lastName=str.split('-',1)[0].split('.')[1]
-
+	 firstName=str.split('-',1)[0].split('.')[0]
+	 lastName=str.split('-',1)[0].split('.')[1]
+	
+ 	 }else{	
+		props.history.push('/')
+	 }
 	const Deconnexion= () => {
 		axios.get('http://localhost:8000/api/deconnecter')
 		.then(res => {
