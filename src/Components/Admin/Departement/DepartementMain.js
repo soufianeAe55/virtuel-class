@@ -1,10 +1,10 @@
-import React ,{useState,useEffect}from 'react'
-import '../../styles/Departement.css'
+import React ,{useState}from 'react'
+import '../../../styles/Departement.css'
 import Departementtab from './page1_composant/DepartementTab'
 import FiliereTab from './page1_composant/FiliereTab'
 import ClasseTab from './page1_composant/ClasseTab'
 import ModuleTab from './page1_composant/ModulesTab'
-import filtrer from './Admin_Img/filtrer.svg'
+import filtrer from '../Admin_Img/filtrer.svg'
 
 
 function DepartementMain({departement , Filiere ,Classes ,Module} ) {
@@ -12,7 +12,8 @@ function DepartementMain({departement , Filiere ,Classes ,Module} ) {
    const [FiltrerDepart, setFiltrerDepart] = useState('');
    
   const [departv2, setdepartv2] = useState(departement);
-  const [verife, setverife] = useState(false)
+
+
 
   const [actif1, setactif1] = useState("actif")
   const [actif2, setactif2] = useState("")
@@ -46,19 +47,22 @@ function DepartementMain({departement , Filiere ,Classes ,Module} ) {
 
 
 const Appliquer =()=>{
-   console.log(FiltrerDepart);
+   
 
   if(FiltrerDepart!=''){
-   setdepartv2(departement.filter(depart =>(depart.nom==FiltrerDepart)));
-   console.log(FiltrerDepart);}
+   setdepartv2(departement.filter(depart =>(depart.nom===FiltrerDepart)));
+
+   }
    else{
       setdepartv2(departement);
+    
    }
    
  
    
 }
 
+  
 
     return(
         <React.Fragment>
@@ -67,7 +71,8 @@ const Appliquer =()=>{
                <div className="row   conterDepart  ">
                <div className="d-flex flex-row mx-3 my-2 filtrer_input">
                <div className="col-12"><p className="">filtrer par nom de departement :</p>
-               <input type="text " className="w-50 "/>
+               <input type="text " className="w-50 " onChange={(e)=>setFiltrerDepart(e.target.value)    
+               }/>
                <button className="btn mx-1" type="submit" onClick={Appliquer} > Appliquer</button></div>
                
                </div>
@@ -76,7 +81,7 @@ const Appliquer =()=>{
                <div className="col-lg-12 col-md-10 col-12 mx-0 ">
                <div className=" d-flex w-100  departement_header ">
                 <div className=" col-lg-2  entete mx-1 " onClick={handleLinkOne} id={actif1}>
-                <p className="nombre "> {departement.length}</p>
+                <p className="nombre "> {departv2.length}</p>
                 <p>Departement</p>
                 </div>
                 <div className=" col-lg-2  entete mx-1" onClick={handleLinkTwo} id={actif2}>
@@ -99,10 +104,10 @@ const Appliquer =()=>{
                   <div className ="row mx-0 w-100">
                   <div className=" col-lg-10 col-md-11 col-12   ">
                   {
-                  (actif1==="actif")?<Departementtab departement={departv2}/>
-                   :(actif2==="actif")?<FiliereTab Filiere={Filiere}/>
-                   :(actif3==="actif")?<ClasseTab Classes={Classes}/>
-                   :<ModuleTab Module={Module}/>
+                  (actif1==="actif")?(<Departementtab departement={departv2} actif={actif1}/>) 
+                   :(actif2==="actif")?(<FiliereTab Filiere={Filiere} actif={actif2}/>)
+                   :(actif3==="actif")?<ClasseTab Classes={Classes} actif={actif3}/>
+                   :<ModuleTab Module={Module} actif={actif4}/>
                   
 
                   }
@@ -119,14 +124,11 @@ const Appliquer =()=>{
                      </div>
                      <div className=" mx-0 my-3  "> 
                      <p className="nom_depart font-weight-bold">Nom Depart</p>
-                     <input className="w-100 "  type="text" onChange={(e)=>setFiltrerDepart(e.target.value)
+                     <input className="w-100 inpt rounded "  type="text" onChange={(e)=>setFiltrerDepart(e.target.value)
                      
                      }/>
                      </div>
-                     <div className=" mx-0 my-3  "> 
-                     <p className="nom_depart font-weight-bold">Nom De Chef</p>
-                     <input className="w-100 "  type="text"/>
-                     </div>
+                     
                   
                      <div className="  mx-0 my-2  text-right"> 
                      <button className="btn" type="submit" onClick={Appliquer} > Appliquer</button>

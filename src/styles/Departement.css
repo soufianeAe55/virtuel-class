@@ -141,3 +141,50 @@ margin-top: 10px;
 .nom_depart{
     color: #8E7D7D;
 }
+
+.col-form-label{
+    color: #8E7D7D;
+}
+.form-control:invalid {
+    border: 1px solid red;
+  }
+  
+  .form-control:valid {
+    border: 1px solid green;
+  }
+  .inpt{
+    border: 1px solid #8E7D7D;
+    outline: none;
+}
+.btn1{
+    background-color: #D34012;
+}
+/*--------------------------Partie Etudiant---------------------------------*/
+.titre_etu{
+    color: #126AA0;
+}
+.row_table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.btn2{
+    background: #D34012;
+ 
+ }
+ .text-add{
+     color: #126AA0;
+ }
+ .modal-title{
+     color: #126AA0;
+ }
+ .textapp{
+     white-space: normal;
+ }
+ .Departement2{
+     background-color: #F2EDED;
+     height: 51px;
+     display: flex;
+    margin-bottom: 17px;
+    border-radius: 0px 10px 10px 0px;
+ }

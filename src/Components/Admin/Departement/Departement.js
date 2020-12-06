@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import SideNav from '../Dashboard/sideNav'
-import Menu from '../Dashboard/Menu'
+import SideNav from '../../Dashboard/sideNav'
+import Menu from '../../Dashboard/Menu'
 import {Route, Switch} from "react-router-dom"
 // import '../../../styles/SupportEtu.css'
 import DepartementMain from './DepartementMain'
 
+
 function Departement() {
-   const [departement, setdepartement] = useState([{
+   const [departement] = useState([{
       nom:"math-info",
       chef :"Aziz Daaif",
       nbFiliere:3,
@@ -29,7 +30,7 @@ function Departement() {
    },
 
 ]);
-const [Filiere, setFiliere] = useState([{
+const [Filiere] = useState([{
    nom:"Glsid",
    CoordinateurFi :"Qbadou", 
    nbEtd:100,
@@ -110,6 +111,7 @@ prof:"DAAIF AZIZ"
                <Route exact path="/depart"> 
                   <DepartementMain departement={departement} Filiere={Filiere} Classes={Classes} Module={Module}/>
                </Route>
+             
               
             </Switch>
          </div>
