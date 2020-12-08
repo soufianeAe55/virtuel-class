@@ -45,7 +45,7 @@ function SideNav(props){
 			props.history.push('/')
 		}
 		
-		if(data.type== 'Etudiant'){
+		if(data.type === 'Etudiant'){
 		return (
 			<React.Fragment >
 				<li id={homeEtuId}  className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`} >

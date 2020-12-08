@@ -3,7 +3,7 @@ import Editer from './Admin_Img/Editer.svg'
 function ModalEdit({Tab2,verife}) {
     return (
         <div >
-        <img src={Editer} data-toggle="modal" data-target="#examp"/>
+        <img src={Editer} data-toggle="modal" data-target="#examp" alt=""/>
         
     
     

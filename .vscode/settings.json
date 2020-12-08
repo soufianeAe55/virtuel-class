@@ -1,9 +1,0 @@
-{
-<<<<<<< HEAD
-    "git.ignoreLimitWarning": true,
-    "files.autoSave": "off",
-    "workbench.settings.enableNaturalLanguageSearch": false
-=======
-   "compile-hero.disable-compile-files-on-did-save-code": true
->>>>>>> 2aa57d32483092c92c2b8d9f1427383ff5b0590e
-}

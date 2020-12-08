@@ -5,20 +5,33 @@ import arrowUp from './ImageProf/arrowUp.svg'
 
 function Jenseigne() {
    const DisplayAndHide = (e) => {
-      e.target.nextElementSibling.hidden  ?
-      e.target.nextElementSibling.hidden = false :
-      e.target.nextElementSibling.hidden = true 
-      // Change the arrow image : 
-      e.target.nextElementSibling.hidden   ?
-      e.target.childNodes[2].src = arrowDown :
-      e.target.childNodes[2].src = arrowUp
+      // Si on clique sur un element au sein de la div le nextSibling ne sera plus la div a afficher
+      // Dans ce cas je fais le retour a la div parent pour avoir le nextSibling la div a afficher 
+      if(e.nativeEvent.path[1].className === "d-flex col-10 col-lg-8 col-md-8 col-xl-8 col-sm-12 Departement")
+      { 
+         e.nativeEvent.path[1].nextElementSibling.hidden  ?
+         e.nativeEvent.path[1].nextElementSibling.hidden = false :
+         e.nativeEvent.path[1].nextElementSibling.hidden = true 
+
+         e.nativeEvent.path[1].nextElementSibling.hidden   ?
+         e.nativeEvent.path[1].childNodes[2].src = arrowDown :
+         e.nativeEvent.path[1].childNodes[2].src = arrowUp
+      } else {
+         e.target.nextElementSibling.hidden  ?
+         e.target.nextElementSibling.hidden = false :
+         e.target.nextElementSibling.hidden = true 
+
+         e.target.nextElementSibling.hidden   ?
+         e.target.childNodes[2].src = arrowDown :
+         e.target.childNodes[2].src = arrowUp
+      }
    }
    return(
       <div className="row justify-content-center Jenseigne">
          <div className="col-12 mt-5">
-            <h2 className="text-center ">Département / Filiere</h2>
+            <h2 className="text-center mb-5">Département / Filiere</h2>
          </div>
-         <div onClick={DisplayAndHide} className="d-flex col-10 col-lg-8 col-md-8 col-xl-8 col-sm-12 Departement mt-5">
+         <div onClick={DisplayAndHide} className="d-flex col-10 col-lg-8 col-md-8 col-xl-8 col-sm-12 Departement">
             <div className="blueLine"></div>
             <div className="DepartementName">
                Génie Mécanique
