@@ -63,17 +63,29 @@ exports.Login= (req,res) => {
   
     auth.signInWithEmailAndPassword(req.body.email, req.body.password)
     .then(user => {
+        
         let tokenData={
             userId: user.user.uid,
             userEmail: user.user.email,
             type: user.user.displayName,
             class: user.user.photoURL
         }  
-        let Token= jwt.sign(tokenData,'RANDOM_TOKEN_SECRET',{ expiresIn: '1h' })
-        res.status(201).json({
-            user:user.user,
-            Token
-        })
+
+     /*   user.user.updateProfile({
+            photoURL: 'GLSID-2'
+    
+          }).then(() => {*/
+            let Token= jwt.sign(tokenData,'RANDOM_TOKEN_SECRET',{ expiresIn: '1h' })
+            res.status(201).json({
+                user:user.user,
+                Token
+            })
+        /*  })
+          .catch(err => {
+
+          })*/
+
+       
     })
     .catch(err => {
         res.status(401).json({err})

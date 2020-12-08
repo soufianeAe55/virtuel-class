@@ -6,7 +6,7 @@ const FileMiddl=require('../Middlerwares/FileMiddl')
 const FileMiddlSupp=require('../Middlerwares/FileMiddlSupp')
 
 
-Router.get('/getActus',EtuMiddl,Etu.getActus)
+Router.get('/getActus',Etu.getActus)
       .get('/getSemsters',EtuMiddl,Etu.getSems)
       .get('/getModules/:idS',EtuMiddl,Etu.getMods)
       .get('/getAnnonces/:idAn',EtuMiddl,Etu.getAnnonces)

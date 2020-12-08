@@ -15,7 +15,7 @@ function Actualites(props) {
     useEffect(() => {
        
       let data=jwtDecode(localStorage.token)
-      if( data.class == null){
+      if( data.class == null && data.type== 'Etudiant'){
 			props.history.push('/approuvee')
 		}
     

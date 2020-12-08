@@ -19,7 +19,6 @@ function professeur() {
          <div className="sous-app" >
             <Menu />
             <Switch>
-               <Route exact path="/professeur" component={ProfesseurAccueil} /> 
                <Route exact path="/professeur/Jenseigne">
                 <Jenseigne />
                </Route> 

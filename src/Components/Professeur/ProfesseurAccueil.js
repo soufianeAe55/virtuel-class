@@ -4,10 +4,16 @@ import '../../styles/Home.css'
 import welcome from '../Etudiant/ImageEtd/welcome.svg'
 import home2 from '../Etudiant/ImageEtd/home2.svg'
 import home3 from '../Etudiant/ImageEtd/home3.svg'
+import SideNav from '../Dashboard/sideNav'
+import Menu from '../Dashboard/Menu'
 
 function ProfesseurAccueil() {
    const [User] = useState("Zakariaa");
    return (
+     <React.Fragment>
+      <SideNav />
+         <div className="sous-app" >
+            <Menu />
       <div className="row conter" >
       <div className="row  mx-3  w-100" id="ligne1">
          <div className=" mx-0 col-md-12    " id="ligne1_para">
@@ -48,6 +54,8 @@ function ProfesseurAccueil() {
          </div>
       </div>
    </div>
+   </div>
+   </React.Fragment> 
 )
 }
 

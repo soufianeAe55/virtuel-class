@@ -8,6 +8,7 @@ import Support from './imgs/support.svg'
 import Contact  from './imgs/svgContact.svg'
 import Collapse  from './imgs/collapse.svg'
 import MenuTog  from './imgs/menuTog.svg'
+import Teacher  from './imgs/Teacher.svg'
 import decode from "jwt-decode"
  
 function SideNav(props){
@@ -98,8 +99,54 @@ function SideNav(props){
 		  </li>
 			</React.Fragment>
 		)
-		}else{
-			return ;
+		}else if(data.type== 'Professeur'){
+			return (
+				<React.Fragment >
+					<li id={profHome}  className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`} >
+				<NavLink activeClassName="active10"   className="nav-link sideItem" to="/professeurHome">
+					<img id={professeurIconHome}   alt="Responsive image"  className={`Icons img-fluid Hom active11 ${hide?" Icons2": ""}`} src={HomeIcon} />
+					Acceuil
+				</NavLink>
+			  </li>
+	
+			   <li id={actsId} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" className="nav-link sideItem" to="/acts"  >
+					<img id={actsIcon}  alt="Responsive image" className={`Icons img-fluid Actu active11 ${hide?" Icons2": ""}`} src={ActuaIcon} />
+					Actualites
+				</NavLink>
+			  </li>
+	
+			  <li id={profEns} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" id={MyclassIdM} className="nav-link sideItem" to="/professeur/Jenseigne" >
+					<img id={profEnsIcon}  alt="Responsive image" className={`Icons img-fluid Use active11 ${hide?" Icons2": ""}`} src={Teacher} />
+					J'enseigne 
+				</NavLink>
+			  </li>
+			  <li id={contactId}  className={`nav-item ItemEX ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" className="nav-link sideItem" to="/contact">
+					<img id={contactIcon}  alt="Responsive image" className={`Icons img-fluid Conta active11 ${hide?" Icons2": ""}`} src={Contact} />
+					Contact
+				</NavLink>
+			  </li>
+			  <li  className={`nav-item ItemEX ItemNav Collapse ${hide ? "ItemNav2 Collapse2" : ""}`} >
+				  
+				<img id=""  alt="Responsive image" 
+						className={`img-fluid ${hide?" showIcon": "Icons hideIcon"}`}
+						src={Collapse}
+						onClick={()=> { setHide(false)}}
+						 />
+				<Link activeClassName="active10" to="#" className={` ${hide?"nav-link sideItem collapseText hideLink":"nav-link sideItem collapseText"}`}
+				   onClick={()=> { setHide(true)}} >
+				   <img id=""  alt="Responsive image" 
+						className={`img-fluid ${hide?"Icons hideIcon": "Icons"}`}
+						src={Collapse}
+						 />
+				   Hide
+				 </Link>
+	
+			  </li>
+				</React.Fragment>
+			)
 		}
 	} 
 	
@@ -117,7 +164,9 @@ function SideNav(props){
  					   location.pathname.match(/^\/devoirs/) ||
     				   location.pathname.match(/^\/devoirContent/) ? "active-1" : ""; 
 
-    const supportId = location.pathname.match(/^\/support/) ? "active" : "";
+	const supportId = location.pathname.match(/^\/support/) ? "active" : "";
+	const profHome=location.pathname.match(/^\/professeurHome/) ? "active" : "";
+	const profEns=location.pathname.match(/^\/professeur\/Jenseigne/) ? "active" : "";
     const contactId = location.pathname.match(/^\/contact/) ? "active" : "";
     const hideId = location.pathname.match(/^\/contact/) ? "activeicon" : "";
 
@@ -130,7 +179,9 @@ function SideNav(props){
     				    location.pathname.match(/^\/devoirContent/) ? "activeicon" : "";
 
 
-    const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
+	const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
+	const profEnsIcon=location.pathname.match(/^\/professeur\/Jenseigne/) ? "activeicon" : "";
+	const professeurIconHome=location.pathname.match(/^\/professeurHome/) ? "activeicon" : "";
     const contactIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
     const hideIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
 
