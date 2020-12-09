@@ -8,11 +8,11 @@ import ModalApprouver from "./ModalApprouver.js"
 import ModalEdit from "./ModalEdit.js"
 import ModalApprouverProf from './Prof_Admin/ModalApprouverProf'
 import ModalEditProf from './Prof_Admin/ModalEditProf'
-function Tableau({Tab,Tab2,verife}) {
+function Tableau({Tab,Tab2,verife,Data}) {
 
 
 
-
+  const [elementAfficher,setelementAfficher] = useState({});
 
     return (
         <div className="row  mx-0 h-100 row_table">
@@ -57,8 +57,8 @@ function Tableau({Tab,Tab2,verife}) {
             <td>{tab1.DepartNb}</td>
             <td className="mx-4">{tab1.status}</td>  
             <td>{(tab1.status==="non")?
-            (<ModalApprouverProf Tab2={Tab2} verife={verife}/>):(<ModalEditProf Tab2={Tab2}/>)}</td>
-            <td><ModalSupprimer verife={verife}/></td>
+            (<ModalApprouverProf />):(<div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}?<ModalEditProf Tab1={elementAfficher}  />:<p></p>}</div>)}</td>
+            <td><div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}? <ModalSupprimer verife={verife} Tab1={elementAfficher}/>:<p></p>} </div></td>
           
           </tr>
         ))
@@ -71,8 +71,8 @@ function Tableau({Tab,Tab2,verife}) {
             <td>{tab1.Filiere}</td>
             <td className="mx-4">{tab1.status}</td>  
             <td>{(tab1.status==="non")?
-            (<ModalApprouver Tab2={Tab2} verife={verife}/>):(<ModalEdit Tab2={Tab2}/>)}</td>
-            <td><ModalSupprimer verife={verife}/></td>
+            (<ModalApprouver Tab2={Tab2} verife={verife}/>):(<div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}?<ModalEdit Tab1={elementAfficher} Tab2={Tab2} verife={verife} Data={Data}/>:<p></p>}</div>)}</td>
+            <td><div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}? <ModalSupprimer verife={verife} Tab1={elementAfficher}/>:<p></p>} </div></td>
           
           </tr>
         ))
@@ -81,8 +81,8 @@ function Tableau({Tab,Tab2,verife}) {
           <td>{tab1.Titre}</td>
           <td>{tab1.Date}</td>
           <td>{tab1.Description}</td>
-          <td><ModalEdit Tab2={Tab2} verife={verife}/></td>
-          <td><ModalSupprimer verife={verife}/></td>
+          <td><div onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}?<ModalEdit Tab1={elementAfficher} Tab2={Tab2} verife={verife} Data={Data}/>:<p></p>}</div></td>
+          <td><div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}? <ModalSupprimer verife={verife} Tab1={elementAfficher}/>:<p></p>} </div></td>
         </tr>
       ))
       )}

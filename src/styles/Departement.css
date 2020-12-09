@@ -164,7 +164,7 @@ margin-top: 10px;
     color: #126AA0;
 }
 .row_table{
-    display: block;
+    /* display: block; */
     overflow-x: auto;
     white-space: nowrap;
 }
@@ -187,4 +187,20 @@ margin-top: 10px;
      display: flex;
     margin-bottom: 17px;
     border-radius: 0px 10px 10px 0px;
+ }
+ @media screen and (max-width:500px){
+.filtrer_case{
+    visibility: hidden;
+}
+
+
+ }
+ .Support__dropdown_depart{
+    color:  #8E7D7D;
+    font-weight: bold;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    /* text-align-last: center; */
+    padding: 0px 7px;
  }

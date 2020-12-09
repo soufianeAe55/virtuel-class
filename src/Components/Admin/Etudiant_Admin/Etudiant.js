@@ -10,7 +10,7 @@ function Etudiant() {
    
 const [EtudiantsInfo] = useState([{
 avatar:Avatar,
-Nom:"Mhb",
+Nom:"Mahboub",
 Prenom:"zak",
 Classe :"Glsid-2",
 Filiere :"Glsid",
@@ -18,11 +18,11 @@ status :"oui",
 },
 {
    avatar:Avatar,
-   Nom:"ae",
+   Nom:"Aouane",
    Prenom:"mouad",
    Classe :"BDCC-2",
    Filiere :"BDCC",
-   status :"non",
+   status :"oui",
 },
 {
    avatar:Avatar,
@@ -39,7 +39,7 @@ const [EtudiantsInfoV2, setEtudiantsInfoV2] = useState(EtudiantsInfo);
 
 const changeEtu =useCallback(
    (nom,classe,filiere) => {
-      if(nom!=''&& classe!='' && filiere!=''){ 
+      if(nom!='intialise1'&& classe!='intialise2' && filiere!='intialise3'){ 
          setEtudiantsInfoV2(EtudiantsInfoV2.filter(T =>((T.Nom===nom)&&(T.Classe===classe)&&(T.Filiere===filiere))));
         
          }
@@ -77,10 +77,10 @@ const [Etudiantchamp]=useState({
                   <div className="row mx-1 "> 
                   <div className="col-lg-9 col-md-8 col-8 bg-white rounded overflow-x-scroll ">
                 
-                  <Tableau Tab={EtudiantsInfoV2} Tab2={Etudiantchamp}verife={VerifeEtd}/>
+                  <Tableau Tab={EtudiantsInfoV2} Tab2={Etudiantchamp} verife={VerifeEtd} Data={EtudiantsInfo}/>
                   </div>
-                  <div className="col-lg-3 col-md-4 col-4  ">
-                  <FiltrerCase verife={VerifeEtd} func={changeEtu}/>
+                  <div className="col-lg-3 col-md-4 col-4  filtrer_case">
+                  <FiltrerCase verife={VerifeEtd} func={changeEtu} Data={EtudiantsInfo}/>
                   </div>
                   
                   </div>

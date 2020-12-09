@@ -49,7 +49,7 @@ function DepartementMain({departement , Filiere ,Classes ,Module} ) {
 const Appliquer =()=>{
    
 
-  if(FiltrerDepart!=''){
+  if(FiltrerDepart!=''&& FiltrerDepart!="Nom Departement"){
    setdepartv2(departement.filter(depart =>(depart.nom===FiltrerDepart)));
 
    }
@@ -121,11 +121,16 @@ const Appliquer =()=>{
                      <img src={filtrer} className="mx-1"/> 
                      <p className="filtrer-text font-weight-bold">Filtrer</p>
                      </div>
-                     <div className=" mx-0 my-3  "> 
-                     <p className="nom_depart font-weight-bold">Nom Depart</p>
-                     <input className="w-100 inpt rounded "  type="text" onChange={(e)=>setFiltrerDepart(e.target.value)
+                     <div className="row mx-0 my-2 w-100  "> 
                      
-                     }/>
+                     <select className="Support__dropdown_depart my-2  " onChange={(e)=>setFiltrerDepart(e.target.value)}>
+                     <option value="Nom Departement" selected>Nom Depart</option>
+                     {  departement.map(departe =>(<option key={departe.id} value={departe.nom}>{departe.nom}</option>))
+
+
+
+                     }
+                  </select>
                      </div>
                      
                   

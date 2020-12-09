@@ -41,7 +41,7 @@ function ProfesseurAdmin() {
 
         const changeProf =useCallback(
            (nom,classe,filiere) => {
-              if(nom!=''&& classe!='' && filiere!=''){ 
+              if(nom!='intialise1'&& classe!='intialise2' && filiere!='intialise3'){ 
                  setProfesseurInfoV2(ProfesseurInfoV2.filter(T =>((T.Nom==nom)&&(T.Classe==classe)&&(T.Filiere==filiere))));
                 
                  }
@@ -74,7 +74,7 @@ const [Verife]=useState("Professeur");
                   <Tableau Tab={ProfesseurInfoV2} verife={Verife}/>
                   </div>
                   <div className="col-lg-3 col-md-4 col-4  ">
-                  <FiltrerCase  func={changeProf} verife={Verife}/>
+                  <FiltrerCase  func={changeProf} verife={Verife} Data={ProfesseurInfo}/>
                   </div>
                   
                   </div>

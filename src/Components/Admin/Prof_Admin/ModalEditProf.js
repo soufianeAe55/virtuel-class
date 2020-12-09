@@ -2,7 +2,7 @@ import React ,{useState}from 'react'
 import Editer from '../Admin_Img/Editer.svg'
 import arrowDown from '../../Professeur/ImageProf/arrowDown.svg'
 import arrowUp from '../../Professeur/ImageProf/arrowUp.svg'
-function ModalEditProf() {
+function ModalEditProf({Tab1}) {
     const DisplayAndHide = (e) => {
         console.log(e.target)
         if(e.target.nextElementSibling!=null && e.target.childNodes[2]!=undefined){ 

@@ -37,7 +37,7 @@ function ActualiteAdmin() {
 
         const changeActu =useCallback(
            (Titre,Date) => {
-              if(Titre!==''&& Date!==''){ 
+              if(Titre!=='intialise1'&& Date!=='intialise2'){ 
                  setActualiteInfoV2(ActualiteInfoV2.filter(T =>((T.Titre==Titre)&&(T.Date==Date))));
                 
                  }
@@ -76,12 +76,12 @@ function ActualiteAdmin() {
        
         <ModalApprouver Tab2={Actualitechamp} verife={Verife}/>
       
-        <Tableau Tab={ActualiteInfoV2} Tab2={Actualitechamp}verife={Verife}/>
+        <Tableau Tab={ActualiteInfoV2} Tab2={Actualitechamp} verife={Verife} Data={ActualiteInfo}/>
       
         
         </div>
-        <div className="col-lg-3 col-md-4 col-4  ">
-        <FiltrerCase  func={changeActu} verife={Verife}/>
+        <div className="col-lg-3 col-md-4 col-4 ">
+        <FiltrerCase  func={changeActu} verife={Verife} Data={ActualiteInfo}/>
         </div>
         
         </div>

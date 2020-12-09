@@ -1,6 +1,6 @@
 import React from 'react'
 import Editer from './Admin_Img/Editer.svg'
-function ModalEdit({Tab2,verife}) {
+function ModalEdit({Tab1,Tab2,verife,Data}) {
     return (
         <div >
         <img src={Editer} data-toggle="modal" data-target="#examp"/>
@@ -21,16 +21,24 @@ function ModalEdit({Tab2,verife}) {
         <div className="col-lg-12  "><form >
         <div className="form-group text-left mx-3 my-2">
        
-                <label  className="col-form-label">{Tab2.champ1}</label>
-                <input type="text " className="form-control w-75" id={"recipient-name_ed1"} required/>
-              </div>
+                <label  className="col-form-label">{Tab2.champ1} :</label>
+                <select className="Support__dropdown_depart my-2 "  >
+           <option value="intialise1" > { verife==="Etudiant" ? Tab1.Nom:Tab1.Titre}</option>
+           {  Data.map(optio =>(<option key={optio.id} value={verife==="Actualite"?optio.Titre:optio.Nom}>{verife==="Actualite"?optio.Titre:optio.Nom}</option>))}
+        </select></div>
               <div className="form-group text-left mx-3">
-                <label  className="col-form-label">{Tab2.champ2}</label>
-                <input type="text" className="form-control w-75" id="recipient-name_ed2" required/>
-              </div>
+                <label  className="col-form-label">{Tab2.champ2} :</label>
+                <select className="Support__dropdown_depart my-2 "  >
+           <option value="intialise1" > { verife==="Etudiant" ? Tab1.Filiere:Tab1.Date}</option>
+           {  Data.map(optio =>(<option key={optio.id} value={verife==="Actualite"?optio.Date:optio.Filiere}>{verife==="Actualite"?optio.Date:optio.Filiere}</option>))}
+        </select></div>
               <div className="form-group text-left mx-3">
-                <label  className="col-form-label">{Tab2.champ3}</label>
-                <input type="text" className="form-control w-75" id="recipient-name_ed3" required/>
+                <label  className="col-form-label">{Tab2.champ3} :</label>
+                { verife==="Etudiant" ?  <select className="Support__dropdown_depart my-2 "  >
+                <option value="intialise1" > { Tab1.Classe}</option>
+                {  Data.map(optio =>(<option key={optio.id} value={optio.Classe}>{optio.Classe}</option>))}
+             </select>:<input type="text" value={Tab1.Description} className="form-control w-75" id="recipient-name_ed3" required/>}
+                
               </div>
               
       

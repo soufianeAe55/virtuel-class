@@ -1,6 +1,7 @@
 import React from 'react'
 import Supprimer from './Admin_Img/Supprimer.svg'
-function ModalSupprimer({verife}) {
+function ModalSupprimer({verife,Tab1}) {
+  console.log(Tab1);
     return (
 <div><img src={Supprimer} data-toggle="modal" data-target="#exampleModal"/>
 
