@@ -114,3 +114,34 @@
    color: #8E7D7D;
    font-weight: 500;
 }
+
+/* --------------------------------------------------------------------- */
+.addDevoir{
+	color:#126AA0;
+	font-weight: 600;
+	cursor: pointer;
+}
+.addDevoir img{
+	width: 15px;
+	height: 15px;
+}
+
+.ModalAddDevoir textarea,.ModalAddDevoir input{
+   outline: none;
+   color:#8E7D7D;
+   font-weight: bold;
+   background-color: #F4EDED;
+   border: 0;
+}
+.modal-footer button{
+   outline: none;
+}
+.ModalAddDevoir button{
+   background-color: rgb(18, 106, 160);
+   color: white;
+   font-weight: 600;
+   font-size: 1.2em;
+   padding: 10px 20px;
+   border: 0;
+   border-radius: 10px;
+}

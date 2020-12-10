@@ -5,17 +5,18 @@ import arrowUp from './ImageProf/arrowUp.svg'
 
 function Jenseigne() {
    const DisplayAndHide = (e) => {
+      // console.log(e.target.parentNode)
       // Si on clique sur un element au sein de la div le nextSibling ne sera plus la div a afficher
       // Dans ce cas je fais le retour a la div parent pour avoir le nextSibling la div a afficher 
-      if(e.nativeEvent.path[1].className === "d-flex col-10 col-lg-8 col-md-8 col-xl-8 col-sm-12 Departement")
+      if(e.target.parentNode.className === "d-flex col-10 col-lg-8 col-md-8 col-xl-8 col-sm-12 Departement")
       { 
-         e.nativeEvent.path[1].nextElementSibling.hidden  ?
-         e.nativeEvent.path[1].nextElementSibling.hidden = false :
-         e.nativeEvent.path[1].nextElementSibling.hidden = true 
+         e.target.parentNode.nextElementSibling.hidden  ?
+         e.target.parentNode.nextElementSibling.hidden = false :
+         e.target.parentNode.nextElementSibling.hidden = true 
 
-         e.nativeEvent.path[1].nextElementSibling.hidden   ?
-         e.nativeEvent.path[1].childNodes[2].src = arrowDown :
-         e.nativeEvent.path[1].childNodes[2].src = arrowUp
+         e.target.parentNode.nextElementSibling.hidden   ?
+         e.target.parentNode.childNodes[2].src = arrowDown :
+         e.target.parentNode.childNodes[2].src = arrowUp
       } else {
          e.target.nextElementSibling.hidden  ?
          e.target.nextElementSibling.hidden = false :
