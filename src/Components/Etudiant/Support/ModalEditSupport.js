@@ -34,9 +34,9 @@ function ModalEditSupport(props) {
 
          if(localStorage.token) {
             let data = jwtdecode(localStorage.token)
-          if(!data.type == 'Etudiant'){
+          if(!data.type === 'Etudiant'){
                props.history.push('/')
-            }else if( data.class == null){
+            }else if( data.class === null){
    
                props.history.push('/approuvee')
             }
@@ -47,13 +47,13 @@ function ModalEditSupport(props) {
          
          axios.get('http://localhost:8000/api/getModulesForSupp',headers)
             .then(res => {
-               if(res.data.MsgErr == 'TokenExpiredError'){
+               if(res.data.MsgErr === 'TokenExpiredError'){
                   localStorage.removeItem('token')
                   props.history.push('/expire')
                }else if(res.data){
                   setModules(res.data)
                
-               }else if(res.data.MsgErr == 'JustForEtu'){
+               }else if(res.data.MsgErr === 'JustForEtu'){
                   localStorage.removeItem('token')
                   props.history.push('/notallowed')
                }
@@ -67,10 +67,10 @@ function ModalEditSupport(props) {
      
       let {name,value}=e.target
     
-      if(name== 'semstre') setSemstre(value)
-      if(name== 'module') setModule(value)
-      if(name== 'titre') setTitre(value)
-      if(name== 'contenu') setContenu(value)
+      if(name=== 'semstre') setSemstre(value)
+      if(name=== 'module') setModule(value)
+      if(name=== 'titre') setTitre(value)
+      if(name=== 'contenu') setContenu(value)
       
    }
    const updateSupport = (e) => {
@@ -89,7 +89,7 @@ function ModalEditSupport(props) {
       
       axios.put('http://localhost:8000/api/UpdateSupport',form,headers)
 			.then(res => {
-				if(res.data.MsgErr == 'TokenExpiredError'){
+				if(res.data.MsgErr === 'TokenExpiredError'){
 					localStorage.removeItem('token')
 					props.history.push('/expire')
 				}else if(res.data){
@@ -100,7 +100,7 @@ function ModalEditSupport(props) {
                setContenu('')
                 setFile('')
 				
-				}else if(res.data.MsgErr == 'JustForEtu'){
+				}else if(res.data.MsgErr === 'JustForEtu'){
 					localStorage.removeItem('token')
 					props.history.push('/notallowed')
 				}
@@ -125,7 +125,7 @@ function ModalEditSupport(props) {
             <h4 className="modal-title mx-auto px-5 font-weight-bold" id="exampleModalLabel">Modifier un support</h4>
            
             </div>
-            <div className="modal-body  ModalEditSupport">
+            <div className="modal-body ModalEditSupport">
                <div className="d-flex flex-row py-2 justify-content-around ">
                   <select onChange={handleChange} value={semstre} name='semstre' className="col-5 py-3  " required>
                      <option value="Semestre">Semestre</option>

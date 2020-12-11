@@ -21,7 +21,7 @@ function ModalDeleteSupport(props) {
 
       if(localStorage.token) {
          let data = jwtdecode(localStorage.token)
-       if(!data.type == 'Etudiant'){
+       if(!data.type === 'Etudiant'){
             props.history.push('/')
          }else if( data.class == null){
 
@@ -39,13 +39,13 @@ function ModalDeleteSupport(props) {
       
       axios.post('http://localhost:8000/api/deleteSupport',data,headers)
          .then(res => {
-            if(res.data.MsgErr == 'TokenExpiredError'){
+            if(res.data.MsgErr === 'TokenExpiredError'){
                localStorage.removeItem('token')
                props.history.push('/expire')
             }else if(res.data){
               setSucess(true)
             
-            }else if(res.data.MsgErr == 'JustForEtu'){
+            }else if(res.data.MsgErr === 'JustForEtu'){
                localStorage.removeItem('token')
                props.history.push('/notallowed')
             }
