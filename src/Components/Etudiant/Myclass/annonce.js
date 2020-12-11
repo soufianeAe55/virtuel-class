@@ -38,6 +38,11 @@ function Annonce(props){
 		
 		axios.get('http://localhost:8000/api/getAnnonces/'+props.match.params.id,headers)
 			.then(res => {
+				if(res.data.MsgErr == 'JustForEtu'){
+					localStorage.removeItem('token')
+					props.history.push('/notallowed')
+				}
+				
 				if(res.data.MsgErr == 'TokenExpiredError'){
 					localStorage.removeItem('token')
 					props.history.push('/expire')
@@ -46,10 +51,7 @@ function Annonce(props){
 					setAnns(res.data)
 					
 				
-				}else if(res.data.MsgErr == 'JustForEtu'){
-					localStorage.removeItem('token')
-					props.history.push('/notallowed')
-				}
+				} 
 			})
 			.catch(err => {
 				console.log(err)

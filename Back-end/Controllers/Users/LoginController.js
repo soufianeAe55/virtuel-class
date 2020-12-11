@@ -15,14 +15,14 @@ exports.Register = (req, res) => {
 
       user.user.updateProfile({
         displayName: req.body.type,
-        photoURL: req.body.class
+        photoURL: 'prof' //req.body.class
 
       }).then(() => {
         let tokenData={
             userId: user.user.uid,
             userEmail: user.user.email,
             type: user.user.displayName,
-            class: user.user.phoneNumber
+            class: user.user.photoURL
         }  
           res.status(201).json({
             user:user.user,

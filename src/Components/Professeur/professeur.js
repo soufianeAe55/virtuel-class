@@ -11,7 +11,7 @@ import AnnoceProf from './AnnoceProf'
 import AnnonceAdd from './AnnonceAdd'
 import DevoirProf from './DevoirProf'
 import DevoirProfListEtd from './DevoirProfListEtd'
-
+ 
 function professeur() { 
    return(
       <React.Fragment>
@@ -22,11 +22,11 @@ function professeur() {
                <Route exact path="/professeur/Jenseigne">
                 <Jenseigne />
                </Route> 
-               <Route exact path="/professeur/Jenseigne/Modules" component={Modules} /> 
-               <Route exact path="/professeur/Jenseigne/Modules/DetailModule" component={DetailModule} /> 
-               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf" component={AnnoceProf} /> 
-               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/addannonce" component={AnnonceAdd} /> 
-               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof" component={DevoirProf} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/:id" component={Modules} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/:id" component={DetailModule} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/:id" component={AnnoceProf} /> 
+               <Route exact path="/professeur/Jenseigne/addannonce/:id" component={AnnonceAdd} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/devoirprof/:id" component={DevoirProf} /> 
                <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof/devoirproflistetd" component={DevoirProfListEtd} /> 
             </Switch>
          </div>

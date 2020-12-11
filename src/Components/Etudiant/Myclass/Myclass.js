@@ -42,11 +42,13 @@ function Myclass(props){
 				if(res.data.MsgErr == 'TokenExpiredError'){
 					localStorage.removeItem('token')
 					props.history.push('/expire')
-				}else if(res.data){
+				}else if(res.data[0]){
 
 				setNameClass(res.data[0].class)
 				
-				}else if(res.data.MsgErr == 'JustForEtu'){
+				}
+				 if(res.data.MsgErr == 'JustForEtu'){
+					console.log('testff')
 					localStorage.removeItem('token')
 					props.history.push('/notallowed')
 				}

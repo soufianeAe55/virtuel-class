@@ -29,8 +29,8 @@ function FormSeconnecter(props) {
          console.log(res.data.user)
          if(res.data.user.displayName == 'Etudiant' && res.data.user.photoURL != null ){
             props.history.push('/homeEtu')
-         }else if(res.data.user.displayName == 'Professeur' && res.data.user.photoURL == null ){
-            props.history.push('/professeur')
+         }else if(res.data.user.displayName == 'Professeur' && res.data.user.photoURL != null ){
+            props.history.push('/professeurHome')
          }else{
             props.history.push('/approuvee')
          }
