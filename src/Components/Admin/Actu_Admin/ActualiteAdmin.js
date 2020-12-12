@@ -63,30 +63,32 @@ function ActualiteAdmin() {
         <SideNav />
         <div className="sous-app" >
            <Menu />
-        <div className="conter">
-        <div className="d-flex flex-row ">
-        <div className="p-2 my-2 flex-shrink-1 ">
-        <img src={chapeau}/>
-        </div>
-        <div className="p-3 w-100 titre_etu">
-        <h3>Gestion des Actualites</h3>
-        </div></div>
-        <div className="row mx-1 "> 
-        <div className="col-lg-9 col-md-8 col-8 bg-white rounded overflow-x-scroll ">
-       
-        <ModalApprouver Tab2={Actualitechamp} verife={Verife}/>
+           <div className="row conter2  ">
+           <div className="row  mx-0 w-100">
+           <div className="col-lg-8 col-md-10 col-12  ">
+           <div className="d-flex flex-row ">
+           <div className="p-2 my-md-2 flex-shrink-1 titre_img">
+           <img src={chapeau}/>
+           </div>
+           <div className="p-md-3 py-3 w-100">
+           <h3 className=" titre_etu">Gestion des actualites</h3>
+           </div></div>
+           </div>
+           </div>
+           <div className="row  mx-0 w-100" >
+           <div className="col-lg-9 col-md-8 col-12  bg-white">  
+           <ModalApprouver Tab2={Actualitechamp} verife={Verife} Data={ActualiteInfo}/>
       
-        <Tableau Tab={ActualiteInfoV2} Tab2={Actualitechamp} verife={Verife} Data={ActualiteInfo}/>
-      
-        
-        </div>
-        <div className="col-lg-3 col-md-4 col-4 ">
-        <FiltrerCase  func={changeActu} verife={Verife} Data={ActualiteInfo}/>
-        </div>
-        
-        </div>
-        </div>
-        </div>
+           <Tableau Tab={ActualiteInfoV2} Tab2={Actualitechamp} verife={Verife} Data={ActualiteInfo}/>
+         
+           </div>
+           <div className="col-lg-3 col-md-4 col-2  filtrer_case">
+           <FiltrerCase  func={changeActu} verife={Verife} Data={ActualiteInfo}/>
+           </div>
+         
+           </div>
+          
+           </div></div>
         </React.Fragment>
     )
 }

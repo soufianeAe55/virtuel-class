@@ -7,7 +7,7 @@ function FiltrerCase({func,verife,Data}) {
     
     
     return (
-        <div className="row rounded mx-lg- mx-md-1  mx-1  bg-white  h-100 ">
+        <div className="row rounded mx-lg- mx-md-1   bg-white  h-100 ">
         <div className="col-lg-12 col-md-12 d-flex flex-column "> 
            <div className=" d-flex flex-row  mx-1 my-3 ">
            <div className=" flex-shrink-1 mx-0"><img src={filtrer} className="mx-md-1"/> </div> 

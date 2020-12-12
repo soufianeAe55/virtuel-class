@@ -71,7 +71,14 @@ const Appliquer =()=>{
                <div className="row   conterDepart  ">
                <div className="d-flex flex-row mx-3 my-2 filtrer_input">
                <div className="col-12"><p className="">filtrer par nom de departement :</p>
-               <input type="text " className="w-50 " onChange={(e)=>setFiltrerDepart(e.target.value)     }/>
+               <select className="Support__dropdown_depart my-2  " onChange={(e)=>setFiltrerDepart(e.target.value)}>
+               <option value="Nom Departement" selected>Nom Depart</option>
+               {  departement.map(departe =>(<option key={departe.id} value={departe.nom}>{departe.nom}</option>))
+
+
+
+               }
+            </select>
                <button className="btn mx-1" type="submit" onClick={Appliquer} > Appliquer</button></div>
                
                </div>

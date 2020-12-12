@@ -101,7 +101,7 @@ margin-top: 10px;
     }
     
 .filter_case{
-        visibility: hidden;
+        display: none;
 }
 .conterDepart{
     margin: 50px 0px 0px 20px; 
@@ -160,14 +160,22 @@ margin-top: 10px;
     background-color: #D34012;
 }
 /*--------------------------Partie Etudiant---------------------------------*/
-.titre_etu{
+
+ .conter2{
+    margin: 20px 0px 0px 20px;
+ }
+ .titre_etu{
     color: #126AA0;
 }
-.row_table{
-    /* display: block; */
+/* .table{
+    display: block;
     overflow-x: auto;
     white-space: nowrap;
-}
+    width: 100%;
+    max-width: none;
+
+} */
+
 .btn2{
     background: #D34012;
  
@@ -190,11 +198,57 @@ margin-top: 10px;
  }
  @media screen and (max-width:500px){
 .filtrer_case{
-    visibility: hidden;
+    display: none;
+}
+.table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    
+
+}
+.titre_etu{
+    /* padding-top:20px ; */
+    font-size: 1.5em;
+    text-align: center;
+    margin-right: 10px;
+}
+.titre_img{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.row_table{
+    font-size: 0.9em;
+}
+.conter2{
+    position: absolute;
+    width: 90%;
+    margin-top: 20px;
+    margin: 20px 0px 0px 0px;
 }
 
+ }
+
+ @media screen and (min-width:501px)and (max-width:800px){
+    .table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        
+    
+    }
+   
 
  }
+
+
+
+
+
+
+
  .Support__dropdown_depart{
     color:  #8E7D7D;
     font-weight: bold;
@@ -204,3 +258,4 @@ margin-top: 10px;
     /* text-align-last: center; */
     padding: 0px 7px;
  }
+

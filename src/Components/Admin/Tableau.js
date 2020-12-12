@@ -15,9 +15,9 @@ function Tableau({Tab,Tab2,verife,Data}) {
   const [elementAfficher,setelementAfficher] = useState({});
 
     return (
-        <div className="row  mx-0 h-100 row_table">
+        <div className="row  mx-0 h-100  row_table">
         
-        <table className="table table-hover table-borderless my-3  ">
+        <table className="table table-hover  table-borderless my-3  ">
         <thead>
         {(verife==="Professeur")?<tr>
             <th scope="col"> </th>
@@ -57,7 +57,7 @@ function Tableau({Tab,Tab2,verife,Data}) {
             <td>{tab1.DepartNb}</td>
             <td className="mx-4">{tab1.status}</td>  
             <td>{(tab1.status==="non")?
-            (<ModalApprouverProf />):(<div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}?<ModalEditProf Tab1={elementAfficher}  />:<p></p>}</div>)}</td>
+            (<ModalApprouverProf Data={Data}/>):(<div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}?<ModalEditProf Tab1={elementAfficher}  />:<p></p>}</div>)}</td>
             <td><div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}? <ModalSupprimer verife={verife} Tab1={elementAfficher}/>:<p></p>} </div></td>
           
           </tr>
@@ -71,7 +71,7 @@ function Tableau({Tab,Tab2,verife,Data}) {
             <td>{tab1.Filiere}</td>
             <td className="mx-4">{tab1.status}</td>  
             <td>{(tab1.status==="non")?
-            (<ModalApprouver Tab2={Tab2} verife={verife}/>):(<div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}?<ModalEdit Tab1={elementAfficher} Tab2={Tab2} verife={verife} Data={Data}/>:<p></p>}</div>)}</td>
+            (<ModalApprouver Tab2={Tab2} verife={verife} Data={Data}/>):(<div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}?<ModalEdit Tab1={elementAfficher} Tab2={Tab2} verife={verife} Data={Data}/>:<p></p>}</div>)}</td>
             <td><div  onClick={()=>setelementAfficher(tab1)}>{elementAfficher!={}? <ModalSupprimer verife={verife} Tab1={elementAfficher}/>:<p></p>} </div></td>
           
           </tr>

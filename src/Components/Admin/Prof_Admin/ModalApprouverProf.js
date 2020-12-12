@@ -1,6 +1,6 @@
 import React from 'react'
 import Valider from '../Admin_Img/Valider.svg'
-function ModalApprouverProf() {
+function ModalApprouverProf({Data}) {
     return (
         <div >
         
@@ -25,20 +25,31 @@ function ModalApprouverProf() {
     
     <div className="col-lg-12  "><form >
 <div className="d-flex flex-row">    <div className="form-group text-left mx-3">
-            <label  className="col-form-label">La departement : *</label>
-            <input type="text " className="form-control w-100" id={"recipient-name1"} required/>
+          
+            <select className="Support__dropdown_depart my-2 " required >
+                    <option value="departement" selected>departement</option>
+                    {Data.map(optio =>(<option key={optio.id} value={optio.Nom}>{optio.Nom}</option>))}
+                  </select>
           </div>
           <div className="form-group text-left mx-3">
-            <label  className="col-form-label">La filiere : *</label>
-            <input type="text" className="form-control w-100" id="recipient-name2" required/>
+          <select className="Support__dropdown_depart my-2 " required >
+          <option value="filiere" selected>Filiere</option>
+          {Data.map(optio =>(<option key={optio.id} value={optio.Nom}>{optio.Nom}</option>))}
+        </select>
           </div></div>
         <div className="d-flex flex-row"><div className="form-group text-left mx-3">
-            <label  className="col-form-label">Class : *</label>
-            <input type="text" className="form-control w-100" id="recipient-name3" required/>
+            
+            <select className="Support__dropdown_depart my-2 " required >
+            <option value="classe" selected> Classe</option>
+            {Data.map(optio =>(<option key={optio.id} value={optio.Nom}>{optio.Nom}</option>))}
+          </select>
           </div>
-          <div className="form-group text-left mx-3">
-          <label  className="col-form-label">Module : *</label>
-          <input type="text" className="form-control w-100" id="recipient-name3" required/>
+          <div className="form-group text-left mx-5">
+         
+          <select className="Support__dropdown_depart my-2  " required >
+          <option value="module" selected> Module</option>
+          {Data.map(optio =>(<option key={optio.id} value={optio.Nom}>{optio.Nom}</option>))}
+        </select>
         </div></div>
           
           
