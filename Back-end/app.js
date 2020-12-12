@@ -4,6 +4,7 @@ const Login =require('./Routes/Users/Login')
 const body= require('body-parser')
 const path = require('path')
 const Etudiant = require('./Routes/Etudiants')
+const Professeurs = require('./Routes/Professeurs')
 
     app.use(body.json())
         .use((req,res,next)=>{
@@ -17,6 +18,7 @@ const Etudiant = require('./Routes/Etudiants')
         .use('/supports',express.static(path.join(__dirname,'supports')))
         .use('/api',Login)
         .use('/api',Etudiant)
+        .use('/api',Professeurs)
         .use('/',(req,res) => {
                     res.setHeader("Content-Type","text/html")
                     res.status(200)

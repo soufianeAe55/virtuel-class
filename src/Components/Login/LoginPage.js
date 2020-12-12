@@ -14,9 +14,13 @@ function SeConnecter(props) {
      // localStorage.removeItem('token')
       if(localStorage.token) {
         let data = Decode(localStorage.token)
-        if(data.type == 'Etudiant'){
+        if(data.type == 'Etudiant' && data.class !=null){
             props.history.push('/homeEtu')
-        }else{
+        }else  if(data.type == 'Professeur' && data.class !=null){
+
+         props.history.push('/professeurHome')
+
+         }else{
             props.history.push('/')
         }
       }
