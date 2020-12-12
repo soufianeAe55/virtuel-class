@@ -37,13 +37,8 @@ function ActualiteAdmin() {
 
         const changeActu =useCallback(
            (Titre,Date) => {
-<<<<<<< HEAD
               if(Titre!=='intialise1'&& Date!=='intialise2'){ 
                  setActualiteInfoV2(ActualiteInfoV2.filter(T =>((T.Titre==Titre)&&(T.Date==Date))));
-=======
-              if(Titre!==''&& Date!==''){ 
-                 setActualiteInfoV2(ActualiteInfoV2.filter(T =>((T.Titre===Titre)&&(T.Date===Date))));
->>>>>>> c9d631371d372f51f396300a98f24357691f6cf8
                 
                  }
                  else{
@@ -68,7 +63,6 @@ function ActualiteAdmin() {
         <SideNav />
         <div className="sous-app" >
            <Menu />
-<<<<<<< HEAD
            <div className="row conter2  ">
            <div className="row  mx-0 w-100">
            <div className="col-lg-8 col-md-10 col-12  ">
@@ -84,20 +78,6 @@ function ActualiteAdmin() {
            <div className="row  mx-0 w-100" >
            <div className="col-lg-9 col-md-8 col-12  bg-white">  
            <ModalApprouver Tab2={Actualitechamp} verife={Verife} Data={ActualiteInfo}/>
-=======
-        <div className="conter">
-        <div className="d-flex flex-row ">
-        <div className="p-2 my-2 flex-shrink-1 ">
-        <img src={chapeau} alt=""/>
-        </div>
-        <div className="p-3 w-100 titre_etu">
-        <h3>Gestion des Actualites</h3>
-        </div></div>
-        <div className="row mx-1 "> 
-        <div className="col-lg-9 col-md-8 col-8 bg-white rounded overflow-x-scroll ">
-       
-        <ModalApprouver Tab2={Actualitechamp} verife={Verife}/>
->>>>>>> c9d631371d372f51f396300a98f24357691f6cf8
       
            <Tableau Tab={ActualiteInfoV2} Tab2={Actualitechamp} verife={Verife} Data={ActualiteInfo}/>
          
