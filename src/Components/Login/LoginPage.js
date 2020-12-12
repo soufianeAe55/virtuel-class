@@ -1,13 +1,30 @@
-import React , {useState} from 'react'
+import React , {useState, useEffect} from 'react'
 import svgMain from './imagesLogin/svgMain.svg'
 import FormSeconnecter from './FormSeconnecter';
 import FormSinscrire from './FormSinscrire';
 import '../../styles/LoginPage.css'
+import Decode from 'jwt-decode'
 
-function SeConnecter() {
+function SeConnecter(props) {
    const [formSignIn, setformSignIn] = useState(true);
    const [idSeconecter, setidSeconecter] = useState("Seconnecter__signin");
    const [idSinscrire, setidSinscrire] = useState("Seconnecter__signup");
+
+   useEffect(() => {
+     // localStorage.removeItem('token')
+      if(localStorage.token) {
+        let data = Decode(localStorage.token)
+        if(data.type == 'Etudiant' && data.class !=null){
+            props.history.push('/homeEtu')
+        }else  if(data.type == 'Professeur' && data.class !=null){
+
+         props.history.push('/professeurHome')
+
+         }else{
+            props.history.push('/')
+        }
+      }
+   })
 
    const Seconnecter = () => {
       setformSignIn(true);

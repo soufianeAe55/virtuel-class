@@ -8,23 +8,18 @@ import Pagination from './Pagination'
 import photo2 from '../Imageactu/image_98.png'
 
 function Actu1(props){
-    const [posts] = useState(props.posts);
-
+    
 /*----------------------Pour l'affichage de l'actualite et pagination-------------------------*/
 
 const [currentPage, setcurrentPage] = useState(1);
 const [postsPerPage] = useState(4);
 const indexOfLastPost= currentPage * postsPerPage;
 const indexOfFirstPost=indexOfLastPost - postsPerPage;
-const currentPosts = posts.slice(indexOfFirstPost ,indexOfLastPost);
+const currentPosts = props.posts.slice(indexOfFirstPost ,indexOfLastPost);
 const paginate = pageNumber => setcurrentPage(pageNumber);
 /*--------------------------------------------------------------------------------------------*/
 
-
-
-
-
-
+   // if(props.p)
 	return (
  
         <div className="row conter p-4 ">
@@ -47,11 +42,11 @@ const paginate = pageNumber => setcurrentPage(pageNumber);
                          
                          <div className=" d-flex mb-2  " > 
                            
-                        <div key={post.id} className="col-sm-4 col-5  div-image" style={{backgroundImage:"url("+post.image+")",backgroundSize:" 100% 100% " }} >
+                        <div key={post.id} className="col-sm-4 col-5  div-image" style={{backgroundImage:"url(http://localhost:8000/images/Actualites/"+post.image+")",backgroundSize:" 100% 100% " }} >
                             </div>
                             <div key={post.id} className="col-sm-8 col-7 bg-white div-name mx-0   p-1 ">
                                 <h6 className="mx-2 my-2" >{post.name}</h6> 
-                                <p className="mx-2 my-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+                        <p className="mx-2 my-1">{post.contenu}</p>
                             </div>
                             
                         </div>
@@ -67,7 +62,7 @@ const paginate = pageNumber => setcurrentPage(pageNumber);
                 </div>
                 <div className="row   ">
                     <div className ="col-12 align-self-centre my-1  ">
-                        <Pagination  postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>
+                        <Pagination  postsPerPage={postsPerPage} totalPosts={props.posts.length} paginate={paginate}/>
                     </div>
                 </div>
            

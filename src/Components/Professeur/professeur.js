@@ -7,23 +7,30 @@ import ProfesseurAccueil from './ProfesseurAccueil'
 import '../../styles/Prof.css'
 import Modules from './Modules'
 import DetailModule from './DetailModule'
-
-function professeur() {
+import AnnoceProf from './AnnoceProf'
+import AnnonceAdd from './AnnonceAdd'
+import DevoirProf from './DevoirProf'
+import DevoirProfListEtd from './DevoirProfListEtd'
+ 
+function professeur() { 
    return(
       <React.Fragment>
          <SideNav />
          <div className="sous-app" >
             <Menu />
             <Switch>
-               <Route exact path="/professeur" component={ProfesseurAccueil} /> 
                <Route exact path="/professeur/Jenseigne">
                 <Jenseigne />
                </Route> 
-               <Route exact path="/professeur/Jenseigne/Modules" component={Modules} /> 
-               <Route exact path="/professeur/Jenseigne/Modules/DetailModule" component={DetailModule} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/:id" component={Modules} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/:id" component={DetailModule} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/:id" component={AnnoceProf} /> 
+               <Route exact path="/professeur/Jenseigne/addannonce/:id" component={AnnonceAdd} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/devoirprof/:id" component={DevoirProf} /> 
+               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof/devoirproflistetd" component={DevoirProfListEtd} /> 
             </Switch>
          </div>
       </React.Fragment>
-   )}
-
+   )
+}
 export default professeur

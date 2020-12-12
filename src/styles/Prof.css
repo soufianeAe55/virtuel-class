@@ -16,6 +16,7 @@
 }
 .Departement:hover{
    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+   cursor: pointer;
 }
 .DepartementName{
 	align-self: center;
@@ -52,14 +53,10 @@
    border: 1px solid #CBC2C2;
    box-sizing: border-box;
    border-radius: 10px;
-   /* background-color: white; */
-   background: rgb(18,106,160);
-   background: linear-gradient(180deg, rgba(18,106,160,1) 5%, rgba(207,225,236,1) 59%, rgba(255,255,255,1) 81%);
-
+   background-color: white;
 }
 .Modules__carte h2{
-   /* color: #126AA0; */
-   color: white;
+   color: #126AA0;
    font-size: 25px;
    font-weight: 700;
    padding-top: 20px;
@@ -102,4 +99,49 @@
 .linkOption{
  text-align: end;
  font-weight: bold;
+}
+/* ------------------------------------------------------------------- */
+.headerDevoir p{
+   color: #126AA0;
+}
+.headerDevoir{
+   display: flex;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+/* -------------------------------------------------- */
+.tableDevoirEtd td{
+   color: #8E7D7D;
+   font-weight: 500;
+}
+
+/* --------------------------------------------------------------------- */
+.addDevoir{
+	color:#126AA0;
+	font-weight: 600;
+	cursor: pointer;
+}
+.addDevoir img{
+	width: 15px;
+	height: 15px;
+}
+
+.ModalAddDevoir textarea,.ModalAddDevoir input{
+   outline: none;
+   color:#8E7D7D;
+   font-weight: bold;
+   background-color: #F4EDED;
+   border: 0;
+}
+.modal-footer button{
+   outline: none;
+}
+.ModalAddDevoir button{
+   background-color: rgb(18, 106, 160);
+   color: white;
+   font-weight: 600;
+   font-size: 1.2em;
+   padding: 10px 20px;
+   border: 0;
+   border-radius: 10px;
 }

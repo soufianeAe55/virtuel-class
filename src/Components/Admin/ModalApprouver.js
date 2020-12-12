@@ -4,7 +4,7 @@ function ModalApprouver({Tab2,verife,Data}) {
     return (
         <div >
         {verife==="Actualite"?<p data-toggle="modal" data-target="#exampleModalCenter" className="text-right font-weight-bold text-add  mt-4">+ Nouvelle actualite</p>:
-     <img src={Valider} data-toggle="modal" data-target="#exampleModalCenter"/> }
+     <img src={Valider} data-toggle="modal" data-target="#exampleModalCenter" alt=""/> }
     
     
 

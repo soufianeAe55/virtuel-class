@@ -8,6 +8,8 @@ import Support from './imgs/support.svg'
 import Contact  from './imgs/svgContact.svg'
 import Collapse  from './imgs/collapse.svg'
 import MenuTog  from './imgs/menuTog.svg'
+import Teacher  from './imgs/Teacher.svg'
+import decode from "jwt-decode"
  
 function SideNav(props){
 
@@ -30,55 +32,23 @@ function SideNav(props){
 					setHide(false);
 				}
 			}else{
-				setHide(false)
+					setHide(false)
 			}
 		})
 		
 	});
-	/*if(window.innerWidth < 750){
-		setShow(false);
-	}*/
-	
-	const homeEtuId = location.pathname.match(/^\/homeEtu/) ? "active" : "";
-    const actsId = location.pathname.match(/^\/acts/) ? "active" : "";
-    const MyclassId = location.pathname.match(/^\/Myclass/) ||
-    				  location.pathname.match(/^\/ModuleOptions/) ||
-    				  location.pathname.match(/^\/annonce/) ||
-    				  location.pathname.match(/^\/devoirs/) ||
-    				  location.pathname.match(/^\/devoirContent/) ? "active" : "";
-
- 	const MyclassIdM = location.pathname.match(/^\/MyclassModules/) ||
- 					   location.pathname.match(/^\/ModuleOptions/) || 
- 					   location.pathname.match(/^\/annonce/)  || 
- 					   location.pathname.match(/^\/devoirs/) ||
-    				   location.pathname.match(/^\/devoirContent/) ? "active-1" : ""; 
-
-    const supportId = location.pathname.match(/^\/support/) ? "active" : "";
-    const contactId = location.pathname.match(/^\/contact/) ? "active" : "";
-    const hideId = location.pathname.match(/^\/contact/) ? "activeicon" : "";
-
-    const homeIcon = location.pathname.match(/^\/homeEtu/) ? "activeicon" : "";
-    const actsIcon = location.pathname.match(/^\/acts/) ? "activeicon" : "";
-    const MyclassIcon = location.pathname.match(/^\/Myclass/) ||
-    				    location.pathname.match(/^\/ModuleOptions/) ||
-    				    location.pathname.match(/^\/annonce/) ||
-    				    location.pathname.match(/^\/devoirs/) ||
-    				    location.pathname.match(/^\/devoirContent/) ? "activeicon" : "";
-
-
-    const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
-    const contactIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
-    const hideIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
-
-
-	return(
-	<React.Fragment>	
-	<img src={MenuTog} className="respoMenu"  onClick={DisplayMenu} />
-	  <div className={`row Donthide ${show ? "showMenu" : "hideMenu"} ${hide ? "hide" : ""}`} >
-		<ul id="NavId" className="nav flex-column sideNa col-12 col-sm-12 col-md-12 col-lg-12 ">
-		<h2 className={`${show ? "logoHide2" : "logo"} ${hide? "logoHide" : "logo"}`} >My logo </h2>
-		<h2 className={`logo3 ${hide ? "logo2" : "logoHide"}`} ></h2>
-		  <li id={homeEtuId}  className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`} >
+	const EtudiantNav = () =>{
+		let data=''
+		if(localStorage.token){
+			 data= decode(localStorage.token)
+		}else{
+			props.history.push('/')
+		}
+		
+		if(data.type === 'Etudiant'){
+		return (
+			<React.Fragment >
+				<li id={homeEtuId}  className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`} >
 		    <NavLink activeClassName="active10"   className="nav-link sideItem" to="/homeEtu">
 			    <img id={homeIcon}   alt="Responsive image"  className={`Icons img-fluid Hom active11 ${hide?" Icons2": ""}`} src={HomeIcon} />
 			    Home
@@ -127,6 +97,103 @@ function SideNav(props){
 		     </Link>
 
 		  </li>
+			</React.Fragment>
+		)
+		}else if(data.type== 'Professeur'){
+			return (
+				<React.Fragment >
+					<li id={profHome}  className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`} >
+				<NavLink activeClassName="active10"   className="nav-link sideItem" to="/professeurHome">
+					<img id={professeurIconHome}   alt="Responsive image"  className={`Icons img-fluid Hom active11 ${hide?" Icons2": ""}`} src={HomeIcon} />
+					Acceuil
+				</NavLink>
+			  </li>
+	
+			   <li id={actsId} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" className="nav-link sideItem" to="/acts"  >
+					<img id={actsIcon}  alt="Responsive image" className={`Icons img-fluid Actu active11 ${hide?" Icons2": ""}`} src={ActuaIcon} />
+					Actualites
+				</NavLink>
+			  </li>
+	
+			  <li id={profEns} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" id={MyclassIdM} className="nav-link sideItem" to="/professeur/Jenseigne" >
+					<img id={profEnsIcon}  alt="Responsive image" className={`Icons img-fluid Use active11 ${hide?" Icons2": ""}`} src={Teacher} />
+					J'enseigne 
+				</NavLink>
+			  </li>
+			  <li id={contactId}  className={`nav-item ItemEX ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" className="nav-link sideItem" to="/contact">
+					<img id={contactIcon}  alt="Responsive image" className={`Icons img-fluid Conta active11 ${hide?" Icons2": ""}`} src={Contact} />
+					Contact
+				</NavLink>
+			  </li>
+			  <li  className={`nav-item ItemEX ItemNav Collapse ${hide ? "ItemNav2 Collapse2" : ""}`} >
+				  
+				<img id=""  alt="Responsive image" 
+						className={`img-fluid ${hide?" showIcon": "Icons hideIcon"}`}
+						src={Collapse}
+						onClick={()=> { setHide(false)}}
+						 />
+				<Link activeClassName="active10" to="#" className={` ${hide?"nav-link sideItem collapseText hideLink":"nav-link sideItem collapseText"}`}
+				   onClick={()=> { setHide(true)}} >
+				   <img id=""  alt="Responsive image" 
+						className={`img-fluid ${hide?"Icons hideIcon": "Icons"}`}
+						src={Collapse}
+						 />
+				   Hide
+				 </Link>
+	
+			  </li>
+				</React.Fragment>
+			)
+		}
+	} 
+	
+	const homeEtuId = location.pathname.match(/^\/homeEtu/) ? "active" : "";
+    const actsId = location.pathname.match(/^\/acts/) ? "active" : "";
+    const MyclassId = location.pathname.match(/^\/Myclass/) ||
+    				  location.pathname.match(/^\/ModuleOptions/) ||
+    				  location.pathname.match(/^\/annonce/) ||
+    				  location.pathname.match(/^\/devoirs/) ||
+    				  location.pathname.match(/^\/devoirContent/) ? "active" : "";
+
+ 	const MyclassIdM = location.pathname.match(/^\/MyclassModules/) ||
+ 					   location.pathname.match(/^\/ModuleOptions/) || 
+ 					   location.pathname.match(/^\/annonce/)  || 
+ 					   location.pathname.match(/^\/devoirs/) ||
+    				   location.pathname.match(/^\/devoirContent/) ? "active-1" : ""; 
+
+	const supportId = location.pathname.match(/^\/support/) ? "active" : "";
+	const profHome=location.pathname.match(/^\/professeurHome/) ? "active" : "";
+	const profEns=location.pathname.match(/^\/professeur\/Jenseigne/) ? "active" : "";
+    const contactId = location.pathname.match(/^\/contact/) ? "active" : "";
+    const hideId = location.pathname.match(/^\/contact/) ? "activeicon" : "";
+
+    const homeIcon = location.pathname.match(/^\/homeEtu/) ? "activeicon" : "";
+    const actsIcon = location.pathname.match(/^\/acts/) ? "activeicon" : "";
+    const MyclassIcon = location.pathname.match(/^\/Myclass/) ||
+    				    location.pathname.match(/^\/ModuleOptions/) ||
+    				    location.pathname.match(/^\/annonce/) ||
+    				    location.pathname.match(/^\/devoirs/) ||
+    				    location.pathname.match(/^\/devoirContent/) ? "activeicon" : "";
+
+
+	const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
+	const profEnsIcon=location.pathname.match(/^\/professeur\/Jenseigne/) ? "activeicon" : "";
+	const professeurIconHome=location.pathname.match(/^\/professeurHome/) ? "activeicon" : "";
+    const contactIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
+    const hideIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
+
+
+	return(
+	<React.Fragment>	
+	<img src={MenuTog} className="respoMenu"  onClick={DisplayMenu} />
+	  <div className={`row Donthide ${show ? "showMenu" : "hideMenu"} ${hide ? "hide" : ""}`} >
+		<ul id="NavId" className="nav flex-column sideNa col-12 col-sm-12 col-md-12 col-lg-12 ">
+		<h2 className={`${show ? "logoHide2" : "logo"} ${hide? "logoHide" : "logo"}`} >My logo </h2>
+		<h2 className={`logo3 ${hide ? "logo2" : "logoHide"}`} ></h2>
+		  {EtudiantNav()}
 		</ul>
 		</div>
 	</React.Fragment>	
