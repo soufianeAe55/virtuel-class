@@ -33,17 +33,18 @@ function MyclassModule(props){
 		
 		axios.get('http://localhost:8000/api/getModules/'+props.match.params.id,headers)
 			.then(res => {
-				if(res.data.MsgErr == 'TokenExpiredError'){
-					localStorage.removeItem('token')
-					props.history.push('/expire')
-				}else if(res.data){
-
-					setMods(res.data.data)
-				
-				}else if(res.data.MsgErr == 'JustForEtu'){
+				if(res.data.MsgErr == 'JustForEtu'){
 					localStorage.removeItem('token')
 					props.history.push('/notallowed')
 				}
+				if(res.data.MsgErr == 'TokenExpiredError'){
+					localStorage.removeItem('token')
+					props.history.push('/expire')
+				}else if(res.data.data){
+
+					setMods(res.data.data)
+				
+				} 
 			})
 			.catch(err => {
 				console.log(err)

@@ -19,7 +19,7 @@ import DevoirContent from './Components/Etudiant/Myclass/DevoirContent'
 import Etudiant from './Components/Admin/Etudiant_Admin/Etudiant'
 import ProfesseurAdmin from './Components/Admin/Prof_Admin/ProfesseurAdmin'
 import ActualiteAdmin from './Components/Admin/Actu_Admin/ActualiteAdmin'
-
+import ProfesseurAccueil from './Components/Professeur/ProfesseurAccueil'
 
 function App() {
   return ( 
@@ -41,6 +41,7 @@ function App() {
          <Route  path='/contact' component={Contact} />
          <Route  path='/depart'  component={Departement}/>
          <Route  path='/professeur' component={professeur} />
+         <Route  path="/professeurHome" component={ProfesseurAccueil} /> 
          <Route path='/AdminEtudiant' component={Etudiant}/>
          <Route path='/AdminProf' component={ProfesseurAdmin}/>
          <Route path='/AdminActu' component={ActualiteAdmin}/>

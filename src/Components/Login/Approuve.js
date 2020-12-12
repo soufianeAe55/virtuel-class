@@ -9,14 +9,20 @@ function Approuve(props){
 
 		if(localStorage.token) {
             let data = jwtdecode(localStorage.token)
-          
-		   if(data.type != 'Etudiant' /*|| data.type !='prof' */){
-				props.history.push('/')
-			}else if( data.class != null ) {
+            console.log(data)
+           
+            if( data.class != null && data.type == 'Etudiant' ) {
                 props.history.push('/homeEtu')
-            }else if(data.class == 'prof'){
-                //push prof home
+            }else if(data.class != null && data.type == 'Professeur'){
+                props.history.push('/professeurHome')
+            }else{
+                if(data.class != null){
+                localStorage.removeItem('token')
+                props.history.push('/')
+                }
+
             }
+
 		  }else{
 			props.history.push('/')
 		  }

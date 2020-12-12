@@ -41,16 +41,17 @@ function SupportAdd(props) {
 		
 		axios.get('http://localhost:8000/api/getModulesForSupp',headers)
 			.then(res => {
+            if(res.data.MsgErr == 'JustForEtu'){
+					localStorage.removeItem('token')
+					props.history.push('/notallowed')
+				}
 				if(res.data.MsgErr == 'TokenExpiredError'){
 					localStorage.removeItem('token')
 					props.history.push('/expire')
 				}else if(res.data){
 					setModules(res.data)
 				
-				}else if(res.data.MsgErr == 'JustForEtu'){
-					localStorage.removeItem('token')
-					props.history.push('/notallowed')
-				}
+				} 
 			})
 			.catch(err => {
 				console.log(err)

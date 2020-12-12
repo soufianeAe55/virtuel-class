@@ -26,7 +26,7 @@ function DevoirProf() {
             <div className="col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12" >
                   <p className="row float-right h5 addDevoir mb-4" data-toggle="modal" data-target="#exampleModal">
                      <img src={add} alt="" className=" my-auto mr-1"/>
-                     Ajouter un nouveau devoir
+                     Nouveau devoir
                   </p>
                <Link to="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof/devoirproflistetd"
                   className="DevoirLink row col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12"> 

@@ -4,20 +4,20 @@ import Sendco from '../Etudiant/ImageEtd/sendco.svg'
 import AnnonceCardComment from '../Etudiant/Myclass/AnnonceCardComment'
 import Pen from './ImageProf/Pen.svg'
 import Delete from './ImageProf/delete.svg'
-import ModalEditAnnonce from './ModalEditAnnonce'
-import ModalDeleteAnnonce from './ModalDeleteAnnonce'
+import moment from 'moment'
 
 
-function AnnonceProfCard() {
+function AnnonceProfCard(props) {
+  
    return(
    <React.Fragment>
-         <div className="Ann col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+         
          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 AnnoceCard">
             <div className="AvatarProf">
                <img alt="" src={Avatar} />
                <div className="AvatarName">
-               <span>Unknow User </span>
-               <p>20 Sept</p>
+               <span>{props.data.profName}</span>
+               <p>{moment(props.data.date).fromNow()}</p>
             </div>
             <div className="ml-auto mr-3 mt-2">
                <img className="mx-2" data-toggle="modal" data-target="#EditModal" src={Pen} alt="" />
@@ -25,15 +25,13 @@ function AnnonceProfCard() {
             </div>
          </div>
             <div className="AnnonceContent">
-               <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce 
-               venenatis tempor mi, in aliquet nibh imperdiet rhoncus. Praesent
-               rhoncus egestas aliqu
+               <p> {props.data.contenu}
                </p>
             </div>
          </div>
          <div className="Comments col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 AnnoceCard2" >
             <a className="MoreComments">10 commentaires en cours </a>
-            <AnnonceCardComment />
+            
          </div>
       
          <div className="SendComment  col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 AnnoceCard3" >
@@ -44,9 +42,8 @@ function AnnonceProfCard() {
                <button className="SendButtonComment" > <img alt="" src={Sendco} className="SendComment" /> </button>
             </form>
          </div>
-      </div>
-      <ModalDeleteAnnonce />
-      <ModalEditAnnonce />
+      
+      
       </React.Fragment>
    )
 }

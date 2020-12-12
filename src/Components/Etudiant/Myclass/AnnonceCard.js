@@ -113,7 +113,7 @@ function AnnonceCard(props){
 		}
 	}
 	return(
-		 
+		  
 				
 	  			<div className="Ann col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
 							<div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 AnnoceCard">

@@ -66,7 +66,8 @@ function DevoirContent(props){
 						})
 					}
 				
-				}else if(res.data.MsgErr == 'JustForEtu'){
+				} 
+				if(res.data.MsgErr == 'JustForEtu'){
 					localStorage.removeItem('token')
 					props.history.push('/notallowed')
 				}
