@@ -69,7 +69,7 @@ const Appliquer =()=>{
            
           
                <div className="row   conterDepart  ">
-               <div className="d-flex flex-row mx-3 my-2 filtrer_input">
+               <div className="d-flex flex-row mx-3 my-2 filtrer_input ">
                <div className="col-12"><p className="">filtrer par nom de departement :</p>
                <select className="Support__dropdown_depart my-2  " onChange={(e)=>setFiltrerDepart(e.target.value)}>
                <option value="Nom Departement" selected>Nom Depart</option>
@@ -84,7 +84,7 @@ const Appliquer =()=>{
                </div>
               
                <div className ="row   mx-0 w-75 ">
-               <div className="col-lg-12 col-md-10 col-12 mx-0 ">
+               <div className="col-lg-12 col-md-10 col-8 mx-0 ">
                <div className=" d-flex w-100  departement_header ">
                 <div className=" col-lg-2  entete mx-1 " onClick={handleLinkOne} id={actif1}>
                 <p className="nombre "> {departv2.length}</p>
@@ -107,8 +107,8 @@ const Appliquer =()=>{
               
                </div>
                </div>
-                  <div className ="row mx-0 w-100">
-                  <div className=" col-lg-10 col-md-12 col-12   ">
+                  <div className ="row mx-0 w-100 ">
+                  <div className=" col-lg-10 col-md-12 col-9    ">
                   {
                   (actif1==="actif")?(<Departementtab departement={departv2} actif={actif1}/>) 
                    :(actif2==="actif")?(<FiliereTab Filiere={Filiere} actif={actif2}/>)

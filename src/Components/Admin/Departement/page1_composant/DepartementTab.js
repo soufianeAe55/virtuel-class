@@ -32,7 +32,9 @@ function Departementtab({departement ,actif}) {
     
     return (
         <div className="d-flex flex-column p-2 mx-1 bg-white tableau ">
-        <div className="row"><div className="col-12 mx-0 font-weight-bold nouv-depart"><p className="text-right my-2 mx-1">
+        <div className="row">
+        <div className="col-12 mx-0 font-weight-bold nouv-depart">
+        <p className="text-right my-2 mx-1">
         {(actif==="actif")? <ModalAdd departement={elementDepartement}  />:
         <p>+Nouveau Departement</p>
       }
