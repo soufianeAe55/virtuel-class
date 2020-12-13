@@ -180,10 +180,11 @@ exports.setDevior =(req,res) =>{
 }
 exports.deleteDevoir= (req,res) => {
        
-       let path='devoirs/'+req.body.date+'_'+req.body.name     
+            
        let token=req.headers.authorization.split(' ')[1]
 
        jwt.verify(token,'RANDOM_TOKEN_SECRET',(err,dataGlo)=>{
+        let path='devoirs/'+dataGlo.userEmail.split('-')[0]+'_'+req.body.date+'_'+req.body.name
         fs.unlink(path, (error) => {
                 if (error) {
                   console.error(error)

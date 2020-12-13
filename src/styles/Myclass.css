@@ -586,3 +586,32 @@ a {
 .AnnulerConf{
 	background-color: #8E7D7D !important;
 }
+.ModalAddDevoir button {
+    background-color: rgb(197, 209, 217) !important;
+    color:#685252 !important;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 0px !important;
+}
+.limDa{
+	margin-right: 5px;
+	font-size: 15px !important;
+}
+.react-datetime-picker__wrapper {
+   
+    border: none !important;
+}
+.react-datetime-picker__inputGroup__input{
+	background-color: white !important;
+}
+.greenDate{
+	color: green !important;
+}
+.redDate{
+	color: red !important;
+}
+.devoirName{
+	color: #8E7D7D !important;
+}

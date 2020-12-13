@@ -30,7 +30,10 @@ function ModalDeleteSupport(props) {
         }else{
          props.history.push('/')
         }
-       let date=moment(props.support.date).format('DD-MM-YYYY')
+        let dateTest=new Date(props.support.date)
+        let hour=dateTest.getHours()
+        dateTest.setHours(hour-1)
+       let date=moment(dateTest).format('DD-MM-YYYY_h:mm_a')
        let data={
           date,
           fileName: props.support.fileName,

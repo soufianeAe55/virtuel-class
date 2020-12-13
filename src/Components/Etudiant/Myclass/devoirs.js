@@ -76,11 +76,11 @@ function Devoirs(props){
 								
 									{devoirs.length!=0? devoirs.map((devoir,key) => 
 									(<Link key={key} to={"/devoirContent/"+devoir.id} className="DevoirLink row col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12"> 
-										<div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-9" > 
+										<div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" > 
 											<img className="DevoirIcon" src={DevoirsX} />
 											 <p>{devoir.name}</p> 
 										 </div>
-										 <p id="devoirLimite" className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3" >Date limite : {moment(devoir.date.seconds,'s').format('DD MMMM')} </p> 
+										 <p id="devoirLimite" className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" >Date limite : {moment(devoir.date).format('DD MMM YYYY h:mm a')} </p> 
 									 </Link>))
 									 : <h5>il n'y a pas de devoir pour le moment!</h5>} 
 							    

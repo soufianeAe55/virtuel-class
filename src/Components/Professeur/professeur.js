@@ -27,7 +27,7 @@ function professeur() {
                <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/:id" component={AnnoceProf} /> 
                <Route exact path="/professeur/Jenseigne/addannonce/:id" component={AnnonceAdd} /> 
                <Route exact path="/professeur/Jenseigne/Modules/DetailModule/devoirprof/:id" component={DevoirProf} /> 
-               <Route exact path="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof/devoirproflistetd" component={DevoirProfListEtd} /> 
+               <Route exact path="/professeur/Jenseigne/devoirprof/devoirproflistetd/:id" component={DevoirProfListEtd} /> 
             </Switch>
          </div>
       </React.Fragment>
