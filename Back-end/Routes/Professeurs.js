@@ -17,5 +17,7 @@ Router.get('/getFilieres',ProfMiddl,Prof.getFilieres)
       .post('/addDevoirProf',ProfMiddl,Prof.addDevoirProf)
       .get('/getDevoirForProf/:idDev',ProfMiddl,Prof.getDevoirForProf)
       .get('/getDevoirReponses/:idDev',ProfMiddl,Prof.getDevoirReponses)
+      .put('/updateDevoirProf',ProfMiddl,Prof.updateDevoirProf)
+      .post('/deleteDev',ProfMiddl,Prof.deleteDev)
 
 module.exports=Router

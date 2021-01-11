@@ -48,7 +48,10 @@ function ProfesseurAccueil(props) {
             <div className=" mx-0 w-100 bg-white  row rounded">
                <div className="col-md-7   my-lg-5 my-lg-4 mt-3 p-lg-3 ">
                   <h5 className=" mx-lg-3 mx-1 mb-3 font-weight-bold font-family-montserrat h51 ">Bienvenue dans votre espace virtuelle chers professeur {firstName}</h5>
-                  <p className="mx-lg-3 my-1 mx-1 para1 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  </p>
+                  <p className="mx-lg-3 my-1 mx-1 para1 ">
+                  Grâce a Virtual Class platform. vous pouvez gérer et communiquer facilement 
+                  avec vos étudiants, et vous pouvez aussi partager 
+                  vos annonces et vos devoirs et suivre chacun d'entre eux. </p>
                </div>
             
                <div className=" col-md-5  cont-img mb-sm-4 ligne1_img">

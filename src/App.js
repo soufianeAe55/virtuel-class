@@ -15,6 +15,7 @@ import Annonce from './Components/Etudiant/Myclass/annonce'
 import Departement from './Components/Admin/Departement/Departement'
 import professeur from './Components/Professeur/professeur';
 import Devoirs from './Components/Etudiant/Myclass/devoirs'
+import ChatMod from './Components/Etudiant/Myclass/chatMod'
 import DevoirContent from './Components/Etudiant/Myclass/DevoirContent'
 import Etudiant from './Components/Admin/Etudiant_Admin/Etudiant'
 import ProfesseurAdmin from './Components/Admin/Prof_Admin/ProfesseurAdmin'
@@ -35,6 +36,7 @@ function App() {
          <Route  path='/MyclassModules/:id' component={MyclassModules} />
          <Route  path='/ModuleOptions/:id' component={ModuleOptions} />
          <Route  path='/annonce/:id' component={Annonce} />
+         <Route  path='/chat/:id' component={ChatMod} />
          <Route  path='/devoirs/:id' component={Devoirs} />
          <Route  path='/devoirContent/:id' component={DevoirContent} />
          <Route  path='/support' component={Support} />

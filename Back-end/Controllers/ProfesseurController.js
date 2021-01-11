@@ -12,9 +12,13 @@ exports.getFilieres= async (req,res) => {
           
             let docs = await firestore.collection('FiliereProf')
             .where('emailProf','==',User.userEmail).get()
-            let length=Object.keys(docs).length
+            let length=0//Object.keys(docs).length
             let i=0
-             
+            
+            docs.forEach( async (doc) => {
+                length++
+            })
+            length++
               docs.forEach( async (doc) => {
                   
                   let obj=doc.data()
@@ -30,11 +34,16 @@ exports.getFilieres= async (req,res) => {
                     classes.push(objet)
   
                 })
-                
+                i++
                     obj.classes=classes
                     fils.push(obj)
-                    if(i== length-1) res.status(201).json(fils)
-                    i++
+                   // console.log(fils)
+                    console.log(length,i)
+                    if(i== length-1){ 
+                      //  console.log(length,i)
+                        res.status(201).json(fils)
+                    }
+                    console.log(fils)
               })
             
            
@@ -250,3 +259,33 @@ exports.getDevoirReponses = (req,res) => {
             res.status(401).json(err)
     })
 }
+exports.updateDevoirProf= (req,res) => {
+    let dev=req.body
+    console.log(dev)
+    firestore.collection('Devoirs')
+    .doc(dev.id)
+    .update({
+            
+            name: dev.name,
+            contenu: dev.contenu,
+            date: dev.date
+            
+    })
+    .then((answer) => {
+            res.status(201).json({msg: 'mise a jour!'})
+    })
+    .catch(err => {
+            res.status(401).json(err)
+    })
+}
+exports.deleteDev = (req,res) => {
+
+    firestore.collection('Devoirs')
+    .doc(req.body.id).delete()
+    .then(() => {
+         res.status(201).json({msg: 'deleted!'})
+    })
+    .catch(() => {
+     res.status(401).json({msg: 'not deleted!'})
+    })
+ }

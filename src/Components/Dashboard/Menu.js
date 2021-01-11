@@ -57,7 +57,6 @@ function Menu(props){
 		    
 		     <img src={Arrow} className="arrow img-fluid dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt=""/>
 			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			    <a className="dropdown-item" href="#">Profil</a>
 			    <a className="dropdown-item" onClick={Deconnexion} >Deconnxion</a>
 			  </div>
 		      

@@ -174,7 +174,7 @@ function DevoirContent(props){
 								<img src={DevoirsX} className="IconDev" />
 								<div className="NameDev">
 									<h2>{devoir.length >= 0 ?devoir[0].name: null}</h2>
-									<p>Professeur - {devoir.length >= 0 ?moment(devoir[0].date.seconds).format('DD MMMM'): null}</p>
+									<p>{devoir[0].id_prof} - {devoir.length >= 0 ?moment(devoir[0].date.seconds).format('DD MMMM'): null}</p>
 								</div>
 							</div>
 

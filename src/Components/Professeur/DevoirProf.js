@@ -72,7 +72,7 @@ function DevoirProf(props) {
    }
    const sendDATA= (e) => {
       e.preventDefault()
-      
+       
       let getName=data.userEmail.split('-')[0].split('.')
       let nameUser= getName[0]+" "+getName[1]
      // moment(date).format('MMM DD YYYY h:mm:ss a'),

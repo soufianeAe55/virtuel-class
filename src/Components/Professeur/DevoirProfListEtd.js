@@ -5,6 +5,10 @@ import DevoirsX from '../Etudiant/ImageEtd/Group 53.svg'
 import clock from './ImageProf/clock.svg'
 import File from '../Etudiant/ImageEtd/File.svg'
 import Avatar from '../Dashboard/imgs/Avatar.svg'
+import Pen from '../Dashboard/imgs/Pen.svg'
+import Delete from '../Dashboard/imgs/delete.svg'
+import ModalDeleteDevoir from './ModalDeleteDevoir'
+import ModalEditDevoir from './ModalEditDevoir'
 import axios from 'axios'
 import jwtdecode from 'jwt-decode'
 import moment from 'moment'
@@ -83,7 +87,9 @@ function DevoirProfListEtd(props) {
    },[])
 
    return (
+
       <React.Fragment>
+
       <div className="row cont">
          <div className="row col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 headerDevoir" >
             <Link to={"/professeur/Jenseigne/Modules/DetailModule/devoirprof/"+devoir.id_module} className="col-12 col-md-2 p-3 ml-2">
@@ -98,9 +104,14 @@ function DevoirProfListEtd(props) {
                      <img src={clock} alt="" />
                      <p className="my-auto mx-2" >Date limite : {moment(devoir.date).format('DD MMM h:mm a')}</p>              
                   </div>
+                  <div className="col-1 d-flex mx-auto my-auto SupportRow__EditImages">
+                     <img data-toggle="modal" data-target="#EditModal"  src={Pen} alt="" />
+                     <img data-toggle="modal" data-target="#DeleteModal" src={Delete} alt="" />
+               </div>
                </div>
             </div>
          </div>
+      
       <div className="row justify-content-center cont tableDevoirEtd">
          <table className="table col-12 col-lg-10 col-md-12 col-sm-12 col-xl-10 bg-white">
             <thead>
@@ -109,7 +120,7 @@ function DevoirProfListEtd(props) {
                   <th scope="col">Nom</th>
                   <th scope="col">Prenom</th>
                   <th scope="col">Fichier</th>
-                  <th scope="col">Date de depot</th>
+                  <th scope="col" className="row">Date de depot</th>
                </tr>
             </thead>
             <tbody>
@@ -126,6 +137,10 @@ function DevoirProfListEtd(props) {
             </tbody>
          </table> 
       </div>
+
+      <ModalDeleteDevoir devoir={devoir} />
+      <ModalEditDevoir devoir={devoir} />
+
       </React.Fragment>
    )
 }
