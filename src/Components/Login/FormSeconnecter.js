@@ -17,7 +17,7 @@ function FormSeconnecter(props) {
    
         if(name =='email'){
          setEmail(value);
-           if(/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(value)){
+           if(/^[a-zA-Z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(value)){
            
             setValide('Email Accepted!')
            }else{
@@ -66,7 +66,7 @@ function FormSeconnecter(props) {
          console.log(err)
       })
    }else{
-      if(!/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(email)){
+      if(!/^[a-zA-Z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(email)){
       
          setValide('Email Not Accepted!')
         }
