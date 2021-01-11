@@ -80,7 +80,8 @@ server.listen(8000);
       
 
     }
-    io.emit('messagesData',Msgs)
+    soc.broadcast.emit('messagesData',Msgs)
+    soc.emit('messagesData',Msgs)
     next()
   })
 
@@ -92,6 +93,7 @@ server.listen(8000);
       firestore.collection('Messages').add(dataV2)
        
        let Msgs=[]
+
         if(dataV2.mode != 'forContact'){
 
        let data= await firestore.collection('Messages')
@@ -148,7 +150,8 @@ server.listen(8000);
         });
       }
         
-        io.emit('messagesData',Msgs)
+        soc.broadcast.emit('messagesData',Msgs)
+        soc.emit('messagesData',Msgs)
       }
      })
 
