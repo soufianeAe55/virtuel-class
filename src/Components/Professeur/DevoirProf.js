@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import DevoirsX from '../Etudiant/ImageEtd/Group 53.svg'
 import Devoir from '../Etudiant/ImageEtd/Group 44.svg'
@@ -7,11 +7,16 @@ import add from './ImageProf/Add.svg'
 import ModalAddDevoir from './ModalAddDevoir'
 
 function DevoirProf() {
+   const [obj] = useState({
+      nomDevoir : "tec francais",
+      date: "03/08/2019"
+   })
    return (
       <React.Fragment>
       <div className="row cont" >
          <div className="row col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 headerDevoir" >
-            <Link to="/professeur/Jenseigne/Modules/DetailModule/" className="col-12 col-md-2 p-3 ml-2">
+            <Link to="/professeur/Jenseigne/Modules/DetailModule/"
+            className="col-12 col-md-2 p-3 ml-2">
                <img src={backLink} alt="" />
             </Link>
                <div className="row">
@@ -28,17 +33,20 @@ function DevoirProf() {
                      <img src={add} alt="" className=" my-auto mr-1"/>
                      Nouveau devoir
                   </p>
-               <Link to="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof/devoirproflistetd"
-                  className="DevoirLink row col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12"> 
+               <Link to={{
+                  pathname:"/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof/devoirproflistetd",
+                  state:{...obj}
+               }} 
+               className="DevoirLink row col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12"> 
                   <div className="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-8" > 
                      <img className="DevoirIcon" src={DevoirsX} alt=""/>
-                     <p>Nom de devoir </p> 
+                     <p>{obj.nomDevoir} </p> 
                   </div>
-                  <p id="devoirLimite" className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mx-auto mx-md-0" >Date limite : 23 sept</p>
+                  <p id="devoirLimite" className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mx-auto mx-md-0" >Date limite : {obj.date}</p>
                </Link>
             </div>
          </div>
-      <ModalAddDevoir />
+      <ModalAddDevoir  />
       </div>
       </React.Fragment>
 )

@@ -11,12 +11,13 @@ import ModalDeleteDevoir from './ModalDeleteDevoir'
 import ModalEditDevoir from './ModalEditDevoir'
 
 
-function DevoirProfListEtd() {
+function DevoirProfListEtd(props) {
    return (
       <React.Fragment>
       <div className="row cont">
          <div className="row col-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 headerDevoir" >
-            <Link to="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof/" className="col-12 col-md-2 p-3 ml-2">
+            <Link to="/professeur/Jenseigne/Modules/DetailModule/annonceProf/devoirprof/" 
+             className="col-12 col-md-2 p-3 ml-2">
                <img src={backLink} alt="" />
             </Link>
             <div className="row col-12 col-md-10">
@@ -64,7 +65,8 @@ function DevoirProfListEtd() {
             </tbody>
          </table> 
       </div>
-      <ModalDeleteDevoir />
+      {console.log(props.location.state)}
+      <ModalDeleteDevoir devoir={props.location.state} />
       <ModalEditDevoir />
       </React.Fragment>
    )
