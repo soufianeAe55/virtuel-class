@@ -71,7 +71,7 @@ function DetailModule(props) {
          <div className="row CardOptions col-10 col-sm-5 col-md-5 col-lg-3 col-xl-3">	
             <img className="OptionsImg col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"  src={Chat} alt="" />
             <p className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">Consulter le chat de ce module  </p>
-            <Link className=" linkOption col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" to="">Voir...</Link>
+            <Link className=" linkOption col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" to={"/chat/"+props.match.params.id}>Voir...</Link>
          </div>
          <div className="row CardOptions col-10 col-sm-5 col-md-5 col-lg-3 col-xl-3">	
             <img className="OptionsImg col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"  src={Annonces} alt="" />

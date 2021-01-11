@@ -6,18 +6,24 @@ const bcrypt=require('bcrypt')
 const jwt=require('jsonwebtoken')
 
 exports.Register = (req, res) => {
-   
+    console.log(req.body)
+    req.body.email= req.body.email.toLowerCase()
+    console.log(req.body)
     auth.createUserWithEmailAndPassword(req.body.email, req.body.password)
     .then(user => {
-        firebase.auth().onAuthStateChanged((user) => {
-            addUser(req.body,user.uid);
-          });
-
+        
+       
+      firestore.collection('FriendList').add({
+          idUser: user.user.email,
+          idFriend: 'admin.admin-etu@etu.univh2c.ma'
+      }) 
+          
       user.user.updateProfile({
         displayName: req.body.type,
-        photoURL: 'prof' //req.body.class
+        photoURL: req.body.class
 
       }).then(() => {
+        addUser(req.body,user.user.uid);
         let tokenData={
             userId: user.user.uid,
             userEmail: user.user.email,
@@ -40,6 +46,7 @@ exports.Register = (req, res) => {
     })
 
 const addUser = (data,id) =>{
+    console.log('getErrror')
     bcrypt.hash(data.password,10)
     .then(hash => {
         data.password=hash;
@@ -62,29 +69,31 @@ const addUser = (data,id) =>{
 exports.Login= (req,res) => {
   
     auth.signInWithEmailAndPassword(req.body.email, req.body.password)
-    .then(user => {
+    .then( async (user) => {
         
+           // console.log(user.user.email)
+            let docs=await firestore.collection('users')
+            .where('email','==',user.user.email).get()
+            userV2={}
+            
+            docs.forEach( doc => {
+                userV2= doc.data()                 
+            })
+           
         let tokenData={
             userId: user.user.uid,
             userEmail: user.user.email,
             type: user.user.displayName,
-            class: user.user.photoURL
+            class: userV2.class
         }  
 
-     /*   user.user.updateProfile({
-            photoURL: 'GLSID-2'
     
-          }).then(() => {*/
             let Token= jwt.sign(tokenData,'RANDOM_TOKEN_SECRET',{ expiresIn: '1h' })
             res.status(201).json({
                 user:user.user,
                 Token
             })
-        /*  })
-          .catch(err => {
-
-          })*/
-
+      
        
     })
     .catch(err => {

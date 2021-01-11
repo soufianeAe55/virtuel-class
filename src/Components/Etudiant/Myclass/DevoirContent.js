@@ -58,11 +58,16 @@ function DevoirContent(props){
 					if(res.data[1]){
 						setShowUp(false)
 						setToServer(true)
-						console.log(moment(res.data[1].date).format('DD-MM-YYYY'))
+						let dateDev=new Date(res.data[1].date)
+						let day=dateDev.getDate()
+						let hour=dateDev.getHours()
+						//dateDev.setDate(day-1)
+						dateDev.setHours(hour-1)
+						
 						setFileInfo({
 							name: res.data[1].fileName,
 							type:res.data[1].fileType,
-							date: moment(res.data[1].date).format('DD-MM-YYYY')
+							date: moment(dateDev).format('DD-MM-YYYY_h:mm_a')
 						})
 					}
 				
@@ -122,7 +127,7 @@ function DevoirContent(props){
 		setFileInfo({
 			name: e.target.files[0].name,
 			size: e.target.files[0].size,
-			date: moment(new Date()).format('DD-MM-YYYY'),
+			date: moment(new Date()).format('DD-MM-YYYY_h:mm:ss_a'),
 			type
 		})
 		setFile(e.target.files[0])
@@ -132,7 +137,9 @@ function DevoirContent(props){
 	}
 	}
 	const FileDelete= () => {
+
 		let data={...fileInfo,idDev: props.match.params.id}
+		console.log(data)
 		axios.post('http://localhost:8000/api/deleteDevoir',data,headers)
 			.then(res => {
 				if(res.data.MsgErr == 'TokenExpiredError'){
@@ -167,7 +174,7 @@ function DevoirContent(props){
 								<img src={DevoirsX} className="IconDev" />
 								<div className="NameDev">
 									<h2>{devoir.length >= 0 ?devoir[0].name: null}</h2>
-									<p>Professeur - {devoir.length >= 0 ?moment(devoir[0].date.seconds).format('DD MMMM'): null}</p>
+									<p>{devoir[0].id_prof} - {devoir.length >= 0 ?moment(devoir[0].date.seconds).format('DD MMMM'): null}</p>
 								</div>
 							</div>
 

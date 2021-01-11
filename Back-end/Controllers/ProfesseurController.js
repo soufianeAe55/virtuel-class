@@ -12,9 +12,13 @@ exports.getFilieres= async (req,res) => {
           
             let docs = await firestore.collection('FiliereProf')
             .where('emailProf','==',User.userEmail).get()
-            let length=Object.keys(docs).length
+            let length=0//Object.keys(docs).length
             let i=0
-             
+            
+            docs.forEach( async (doc) => {
+                length++
+            })
+            length++
               docs.forEach( async (doc) => {
                   
                   let obj=doc.data()
@@ -30,11 +34,16 @@ exports.getFilieres= async (req,res) => {
                     classes.push(objet)
   
                 })
-                
+                i++
                     obj.classes=classes
                     fils.push(obj)
-                    if(i== length-1) res.status(201).json(fils)
-                    i++
+                   // console.log(fils)
+                    console.log(length,i)
+                    if(i== length-1){ 
+                      //  console.log(length,i)
+                        res.status(201).json(fils)
+                    }
+                    console.log(fils)
               })
             
            
@@ -178,7 +187,7 @@ exports.UpdateAnnonce= (req,res) => {
             res.status(401).json(err)
     })
 }
-    
+
 exports.deleteAnn = (req,res) => {
 
    firestore.collection('Annonces')
@@ -190,3 +199,93 @@ exports.deleteAnn = (req,res) => {
     res.status(401).json({msg: 'not deleted!'})
    })
 }
+
+exports.getDevoirsForProf= (req,res) => {
+
+    firestore.collection('Devoirs')
+    .where('id_module','==',req.params.idMod).get()
+    .then( docs => {
+            let data=[]
+            docs.forEach(doc => {
+                    let obj=doc.data()
+                    obj.id=doc.id
+                    data.push(obj)
+            })
+            res.status(201).json(data)
+    })
+    .catch(err => {
+            res.status(401).json(err)
+    })
+}
+exports.addDevoirProf= (req,res) =>{
+    firestore.collection('Devoirs').add(req.body)
+       .then( ()=> {
+              
+         res.status(201).json({'msg': 'devoir bien ajoutee'})
+       })
+       .catch(err => {
+        res.status(401).json({err})
+       })
+}
+
+exports.getDevoirForProf = (req,res) => {
+    firestore.collection('Devoirs')
+    .doc(req.params.idDev).get()
+    .then( docs => {
+            let data=[]
+            let obj=docs.data()
+            obj.id=docs.id  
+            data.push(obj)
+           
+            res.status(201).json(data)
+    })
+    .catch(err => {
+            res.status(401).json(err)
+    })
+}
+exports.getDevoirReponses = (req,res) => {
+     firestore.collection('DevoirReponse')
+    .where('devoir_id','==',req.params.idDev).get()
+    .then( docs => {
+            let data=[]
+            docs.forEach(doc => {
+                    let obj=doc.data()
+                    obj.id=doc.id
+                    data.push(obj)
+            })
+            res.status(201).json(data)
+    })
+    .catch(err => {
+            res.status(401).json(err)
+    })
+}
+exports.updateDevoirProf= (req,res) => {
+    let dev=req.body
+    console.log(dev)
+    firestore.collection('Devoirs')
+    .doc(dev.id)
+    .update({
+            
+            name: dev.name,
+            contenu: dev.contenu,
+            date: dev.date
+            
+    })
+    .then((answer) => {
+            res.status(201).json({msg: 'mise a jour!'})
+    })
+    .catch(err => {
+            res.status(401).json(err)
+    })
+}
+exports.deleteDev = (req,res) => {
+
+    firestore.collection('Devoirs')
+    .doc(req.body.id).delete()
+    .then(() => {
+         res.status(201).json({msg: 'deleted!'})
+    })
+    .catch(() => {
+     res.status(401).json({msg: 'not deleted!'})
+    })
+ }

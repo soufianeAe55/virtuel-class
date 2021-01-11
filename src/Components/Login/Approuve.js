@@ -1,7 +1,7 @@
-import jwtDecode from 'jwt-decode'
 import React,{useEffect} from 'react'
 import Menu from '../Dashboard/Menu'
 import jwtdecode from 'jwt-decode'
+import axios from 'axios'
 
 
 function Approuve(props){
@@ -28,13 +28,22 @@ function Approuve(props){
 		  }
 		
 		
-	})
+    })
+    const sendData= () => {
+
+        axios.get('http://localhost:8000/api/test')
+        .then(res => {
+            console.log(res)
+        }).catch(err => {
+            
+        })
+    }
     return(
         <React.Fragment>
         <div className="sous-app" >
-            <Menu />
+                <Menu />
             <div className="row cont" >
-                <h1>Votre compte n'est pas approuvee</h1>
+                <h1 onClick={sendData}>Votre compte n'est pas approuvee</h1>
                 <p></p>
             </div>
                 

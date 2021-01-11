@@ -6,9 +6,11 @@ import {Link } from 'react-router-dom'
 import Actu from './Actu'
 import Pagination from './Pagination'
 import photo2 from '../Imageactu/image_98.png'
+import moment from 'moment'
 
 function Actu1(props){
-    
+
+   
 /*----------------------Pour l'affichage de l'actualite et pagination-------------------------*/
 
 const [currentPage, setcurrentPage] = useState(1);
@@ -19,22 +21,32 @@ const currentPosts = props.posts.slice(indexOfFirstPost ,indexOfLastPost);
 const paginate = pageNumber => setcurrentPage(pageNumber);
 /*--------------------------------------------------------------------------------------------*/
 
-   // if(props.p)
+   if(props.posts){
 	return (
  
         <div className="row conter p-4 ">
      
             
         <div className=" row mx-0 w-100  ligne1">
-            <div className="col-md-7 col w-100   ligne1_col1 " >
+
+           {currentPosts.length !=0 ?<div className="col-md-7 col w-100   ligne1_col1 " >
                <h5 className=" actu font-weight-bold  " >Dernières Actualités</h5>
                <h5 className="titre "> Titre du contenu actuelle </h5>
-            </div>
+        </div>:<div className="donut"></div>}
 
             <div className="col-md-5 col my-0">
                 <div className="row   " >
                     <div className="col-12 div-contenu">
-                       {currentPosts.map(post=> (
+                       {currentPosts.map(post=>
+                       
+                      { 
+
+                        let dateTest=new Date(post.date)
+                        let h=dateTest.getUTCHours()
+                        dateTest.setHours(h)
+                        let date=moment(dateTest).format('DD-MM-YYYY-hh:mm')
+                        console.log(date+post.image)
+                        return(
                          <Link to={{
                             pathname:'/acts/acts1',
                             state :{...post}
@@ -52,7 +64,7 @@ const paginate = pageNumber => setcurrentPage(pageNumber);
                         </div>
                         </Link>
                         
-                        ))
+                        )})
                     }
                    
                   
@@ -72,6 +84,11 @@ const paginate = pageNumber => setcurrentPage(pageNumber);
     </div>
  
 )
+    }else{
+        return (
+            <div class="donut"></div>
+        )
+    }
 }
 
 export default Actu1
