@@ -71,8 +71,12 @@ function ChatForm(props){
 					typeUser:userData.type
 				}		
 			}
+
+		socket.emit('message',messageData)	
 		socket.emit('message',messageData)
+
 		setMessage('')
+		
 		socket.on('messagesData',(data) =>{
 			data.sort((a,b) => {
 				a.date=new Date(a.date)
