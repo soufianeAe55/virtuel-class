@@ -1,15 +1,10 @@
 import React from 'react'
-import SideNav from '../Dashboard/sideNav'
-import Menu from '../Dashboard/Menu'
 import '../../styles/homeEtu.css'
 import '../../styles/Chat.css'
 import ChatIcon from './ChatImg/chat.svg'
 import AvatarIcon from '../Dashboard/imgs/Avatar.svg'
 import Actif from './ChatImg/Ellipse 26.svg'
-import Vector from './ChatImg/Vector.svg'
-import Send from './ChatImg/send.svg'
-import Contacts from './ChatImg/Contacts.svg'
-import Drop from './ChatImg/drop.svg'
+
 
 function ChatList(){
 
@@ -30,7 +25,7 @@ function ChatList(){
 								<img className="AvatarIcon" src={AvatarIcon} />
 								<img className="Actif" src={Actif} />
 								<span className="ContactName" >Professeur</span>
-					</div>
+							</div>
 
 						
 

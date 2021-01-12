@@ -2,11 +2,16 @@ import React ,{useState}from 'react'
 import '../../../../styles/Actualite.css'
 import backLink from '../../../Dashboard/imgs/backLink.svg'
 import {Link } from 'react-router-dom'
-
+import moment from 'moment'
 
 function Actu(props) {
   const [post] = useState(props.location.state)
-  //console.log(post)
+  console.log(post)
+  let dateTest=new Date(post.date)
+  let h=dateTest.getUTCHours()
+  dateTest.setHours(h)
+  let date=moment(dateTest).format('DD-MM-YYYY-hh:mm')
+  console.log(date+post.image)
    if(post){
     return (
       
@@ -30,7 +35,7 @@ function Actu(props) {
     )}else{
       return(
         <div>
-          <h1>Not found</h1>
+          <div class="donut"></div>
         </div>
       )
     }

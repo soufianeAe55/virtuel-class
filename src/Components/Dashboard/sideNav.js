@@ -9,7 +9,11 @@ import Contact  from './imgs/svgContact.svg'
 import Collapse  from './imgs/collapse.svg'
 import MenuTog  from './imgs/menuTog.svg'
 import Teacher  from './imgs/Teacher.svg'
+import Etus  from './imgs/etus.svg'
 import decode from "jwt-decode"
+import Logo from './imgs/Logo_app-1.png'
+import LogoHideP from './imgs/Vector.png'
+
  
 function SideNav(props){
 
@@ -147,6 +151,60 @@ function SideNav(props){
 			  </li>
 				</React.Fragment>
 			)
+		}else if(data.type== 'Admin'){
+			return (
+				<React.Fragment >
+	
+			   <li id={AdminActus} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" className="nav-link sideItem" to="/AdminActu"  >
+					<img id={AdminActusIcon}  alt="Responsive image" className={`Icons img-fluid Actu active11 ${hide?" Icons2": ""}`} src={ActuaIcon} />
+					Actualites
+				</NavLink>
+			  </li>
+	
+			  <li id={depart} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" id={MyclassIdM} className="nav-link sideItem" to="/depart" >
+					<img id={departIcon}  alt="Responsive image" className={`Icons img-fluid Use active11 ${hide?" Icons2": ""}`} src={UserIcon} />
+					Departement
+				</NavLink>
+			  </li>
+			  <li id={AdminProf} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" id={MyclassIdM} className="nav-link sideItem" to="/AdminProf" >
+					<img id={AdminProfIcon}  alt="Responsive image" className={`Icons img-fluid Use active11 ${hide?" Icons2": ""}`} src={UserIcon} />
+					Professeurs 
+				</NavLink>
+			  </li>
+			  <li id={AdminEtu} className={`nav-item ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" id={MyclassIdM} className="nav-link sideItem" to="/AdminEtudiant" >
+					<img id={AdminEtuIcon}  alt="Responsive image" className={`Icons img-fluid Use active11 ${hide?" Icons2": ""}`} src={Etus} />
+					Etudiants 
+				</NavLink>
+			  </li>
+			  <li id={contactId}  className={`nav-item ItemEX ItemNav ${hide ? "ItemNav2" : ""}`}  >
+				<NavLink activeClassName="active10" className="nav-link sideItem" to="/contact">
+					<img id={contactIcon}  alt="Responsive image" className={`Icons img-fluid Conta active11 ${hide?" Icons2": ""}`} src={Contact} />
+					Contact
+				</NavLink>
+			  </li>
+			  <li  className={`nav-item ItemEX ItemNav Collapse ${hide ? "ItemNav2 Collapse2" : ""}`} >
+				  
+				<img id=""  alt="Responsive image" 
+						className={`img-fluid ${hide?" showIcon": "Icons hideIcon"}`}
+						src={Collapse}
+						onClick={()=> { setHide(false)}}
+						 />
+				<Link activeClassName="active10" to="#" className={` ${hide?"nav-link sideItem collapseText hideLink":"nav-link sideItem collapseText"}`}
+				   onClick={()=> { setHide(true)}} >
+				   <img id=""  alt="Responsive image" 
+						className={`img-fluid ${hide?"Icons hideIcon": "Icons"}`}
+						src={Collapse}
+						 />
+				   Hide
+				 </Link>
+	
+			  </li>
+				</React.Fragment>
+			)
 		}
 	} 
 	
@@ -167,6 +225,10 @@ function SideNav(props){
 	const supportId = location.pathname.match(/^\/support/) ? "active" : "";
 	const profHome=location.pathname.match(/^\/professeurHome/) ? "active" : "";
 	const profEns=location.pathname.match(/^\/professeur\/Jenseigne/) ? "active" : "";
+	const AdminActus=location.pathname.match(/^\/AdminActu/) ? "active" : "";
+	const depart=location.pathname.match(/^\/depart/) ? "active" : "";
+	const AdminProf= location.pathname.match(/^\/AdminProf/)? "active" : "";
+	const AdminEtu= location.pathname.match(/^\/AdminEtudiant/)	? "active" : "";
     const contactId = location.pathname.match(/^\/contact/) ? "active" : "";
     const hideId = location.pathname.match(/^\/contact/) ? "activeicon" : "";
 
@@ -182,6 +244,12 @@ function SideNav(props){
 	const supportIcon = location.pathname.match(/^\/support/) ? "activeicon" : "";
 	const profEnsIcon=location.pathname.match(/^\/professeur\/Jenseigne/) ? "activeicon" : "";
 	const professeurIconHome=location.pathname.match(/^\/professeurHome/) ? "activeicon" : "";
+
+	const AdminActusIcon=location.pathname.match(/^\/AdminActu/) ? "activeicon" : "";
+	const departIcon=location.pathname.match(/^\/depart/) ? "activeicon" : "";
+	const AdminProfIcon= location.pathname.match(/^\/AdminProf/)? "activeicon" : "";
+	const AdminEtuIcon= location.pathname.match(/^\/AdminEtudiant/)	? "activeicon" : "";
+
     const contactIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
     const hideIcon = location.pathname.match(/^\/contact/) ? "activeicon" : "";
 
@@ -191,8 +259,8 @@ function SideNav(props){
 	<img src={MenuTog} className="respoMenu"  onClick={DisplayMenu} />
 	  <div className={`row Donthide ${show ? "showMenu" : "hideMenu"} ${hide ? "hide" : ""}`} >
 		<ul id="NavId" className="nav flex-column sideNa col-12 col-sm-12 col-md-12 col-lg-12 ">
-		<h2 className={`${show ? "logoHide2" : "logo"} ${hide? "logoHide" : "logo"}`} >My logo </h2>
-		<h2 className={`logo3 ${hide ? "logo2" : "logoHide"}`} ></h2>
+		<h2 className={`${show ? "logoHide2" : "logo"} ${hide? "logoHide" : "logo"}`} ><img className="LogoForDash" src={Logo} /></h2>
+		<h2 className={`logo3 ${hide ? "logo2" : "logoHide"}`} ><img className="LogoForDashP" src={LogoHideP} /> </h2>
 		  {EtudiantNav()}
 		</ul>
 		</div>

@@ -12,48 +12,33 @@ function ModalDeleteDevoir(props) {
    let headers={
       headers : {Authorization: token}
    } 
+   
    useEffect(() => {
       setSucess(false)
-      setError(false)
-   },[showSucess,showError])
-   const deleteSupport= () => {
-    
-
-      if(localStorage.token) {
-         let data = jwtdecode(localStorage.token)
-       if(!data.type === 'Etudiant'){
-            props.history.push('/')
-         }else if( data.class == null){
-
-            props.history.push('/approuvee')
-         }
-        }else{
-         props.history.push('/')
-        }
-       let date=moment(props.support.date).format('DD-MM-YYYY')
-       let data={
-          date,
-          fileName: props.support.fileName,
-          id:props.support.id
-       }
+      setError(false)   
       
-      axios.post('http://localhost:8000/api/deleteSupport',data,headers)
-         .then(res => {
-            if(res.data.MsgErr === 'TokenExpiredError'){
-               localStorage.removeItem('token')
-               props.history.push('/expire')
-            }else if(res.data){
-              setSucess(true)
-            
-            }else if(res.data.MsgErr === 'JustForEtu'){
-               localStorage.removeItem('token')
-               props.history.push('/notallowed')
-            }
-         })
-         .catch(err => {
-            setError(true)
-            console.log(err)
-         })
+   },[props.data])
+
+   const DeleteDev = (e) => {
+
+      axios.post('http://localhost:8000/api/deleteDev',props.devoir,headers)
+      .then(res => {
+         if(res.data.MsgErr == 'TokenExpiredError'){
+            localStorage.removeItem('token')
+            props.history.push('/expire')
+         }else if(res.data){
+           setSucess(true)
+         
+         }else if(res.data.MsgErr == 'JustForEtu'){
+            localStorage.removeItem('token')
+            props.history.push('/notallowed')
+         }
+      })
+      .catch(err => {
+         setError(true)
+         console.log(err)
+      })
+   
    }
 
    return (
@@ -67,17 +52,17 @@ function ModalDeleteDevoir(props) {
                </div>
                <div className="modal-body">
                {showSucess ?<div class="alert alert-success" role="alert">
-               Votre Support ete supprimee avec succès
+               Votre Devoir ete supprimee avec succès
                </div>: null}
                {showError?<div class="alert alert-danger" role="alert">
                Il y a une error, veulliez essayer une autre fois
                </div>:null}
                   <h4 className="text-danger text-center my-4 mx-2">
-                  Voulez vous supprimer ce support de façon permanente ?
+                  Voulez vous supprimer ce Devoir de façon permanente ?
                   </h4>
                </div>
                <div className="modal-footer d-flex flex-row justify-content-around">
-                  <button onClick={deleteSupport} type="button" className="ModalDeleteSupport__btnSupprimer" >Supprimer</button>
+                  <button onClick={DeleteDev} type="button" className="ModalDeleteSupport__btnSupprimer" >Supprimer</button>
                   <button type="button" className="ModalDeleteSupport__btnAnnuler" data-dismiss="modal">
                   Annuler</button>
                </div>

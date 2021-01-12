@@ -16,7 +16,7 @@ function SupportMain(props) {
    const [module,setModule]=useState('')
    let  supports=props.Supports
 
-   let token= 'Bearer '+localStorage.token
+   let token= 'Bearer '+localStorage.token 
 		let headers={
 			headers : {Authorization: token}
 		} 
@@ -133,11 +133,11 @@ function SupportMain(props) {
          </div>
       </div>
       <div className="row p-2 d-flex justify-content-center">
-      {
+      {supports.length !=0?
          supports.map( (Support,key) => (
             <SupportCard key={key} Support={Support} />
          ))
-      }
+      :<h2>Il n'y pas des supports pour le moment</h2>}  
       </div>
    </div>
 )

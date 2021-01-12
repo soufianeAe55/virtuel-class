@@ -4,6 +4,7 @@ import FormSeconnecter from './FormSeconnecter';
 import FormSinscrire from './FormSinscrire';
 import '../../styles/LoginPage.css'
 import Decode from 'jwt-decode'
+import Logo from '../Dashboard/imgs/Logo_app.png'
 
 function SeConnecter(props) {
    const [formSignIn, setformSignIn] = useState(true);
@@ -12,14 +13,20 @@ function SeConnecter(props) {
 
    useEffect(() => {
      // localStorage.removeItem('token')
+    
       if(localStorage.token) {
         let data = Decode(localStorage.token)
+        console.log(data)
         if(data.type == 'Etudiant' && data.class !=null){
             props.history.push('/homeEtu')
         }else  if(data.type == 'Professeur' && data.class !=null){
 
          props.history.push('/professeurHome')
 
+          }else  if(data.type == 'Admin'){
+
+            props.history.push('/AdminActu')
+   
          }else{
             props.history.push('/')
         }
@@ -52,7 +59,10 @@ return(
             </div>
          </div>
          <div className="col-xl-5" id="Seconnecter__carte">
-            <h1 className="text-center text-white m-4 font-weight-bold">MY LOGO</h1>
+            <h1 className="text-center text-white m-4 font-weight-bold"><img 
+            src={Logo}
+            className='LogoForLogin'
+             /></h1>
             <div className="row mt-5 mx-2">
                <button onClick={ Seconnecter } className="col-lg my-2 mx-3 p-3 text-center h4 font-weight-bold"
                 id={idSeconecter}>

@@ -1,4 +1,4 @@
-import React ,{useState}from 'react'
+import React ,{useEffect, useState}from 'react'
 import '../../../styles/Departement.css'
 import Departementtab from './page1_composant/DepartementTab'
 import FiliereTab from './page1_composant/FiliereTab'
@@ -7,13 +7,16 @@ import ModuleTab from './page1_composant/ModulesTab'
 import filtrer from '../Admin_Img/filtrer.svg'
 
 
-function DepartementMain({departement , Filiere ,Classes ,Module} ) {
+
+function DepartementMain({Professeurs,Etudiants,departement , Filiere ,Classes ,Module} ) {
   
    const [FiltrerDepart, setFiltrerDepart] = useState('');
    
-  const [departv2, setdepartv2] = useState(departement);
+  const [departv2, setdepartv2] = useState([]);
 
-
+   useEffect(() =>{
+      setdepartv2(departement)
+   },[departement])
 
   const [actif1, setactif1] = useState("actif")
   const [actif2, setactif2] = useState("")
@@ -49,8 +52,8 @@ function DepartementMain({departement , Filiere ,Classes ,Module} ) {
 const Appliquer =()=>{
    
 
-  if(FiltrerDepart!=''){
-   setdepartv2(departement.filter(depart =>(depart.nom===FiltrerDepart)));
+  if(FiltrerDepart!=''&& FiltrerDepart!="Nom Departement"){
+   setdepartv2(departement.filter(depart =>(depart.name===FiltrerDepart)));
 
    }
    else{
@@ -69,16 +72,22 @@ const Appliquer =()=>{
            
           
                <div className="row   conterDepart  ">
-               <div className="d-flex flex-row mx-3 my-2 filtrer_input">
+               <div className="d-flex flex-row mx-3 my-2 filtrer_input ">
                <div className="col-12"><p className="">filtrer par nom de departement :</p>
-               <input type="text " className="w-50 " onChange={(e)=>setFiltrerDepart(e.target.value)    
-               }/>
+               <select className="Support__dropdown_depart my-2  " onChange={(e)=>setFiltrerDepart(e.target.value)}>
+               <option value="Nom Departement" selected>Nom Depart</option>
+               {  departement.map(departe =>(<option key={departe.id} value={departe.nom}>{departe.nom}</option>))
+
+
+
+               }
+            </select>
                <button className="btn mx-1" type="submit" onClick={Appliquer} > Appliquer</button></div>
                
                </div>
               
                <div className ="row   mx-0 w-75 ">
-               <div className="col-lg-12 col-md-10 col-12 mx-0 ">
+               <div className="col-lg-12 col-md-10 col-8 mx-0 ">
                <div className=" d-flex w-100  departement_header ">
                 <div className=" col-lg-2  entete mx-1 " onClick={handleLinkOne} id={actif1}>
                 <p className="nombre "> {departv2.length}</p>
@@ -101,13 +110,13 @@ const Appliquer =()=>{
               
                </div>
                </div>
-                  <div className ="row mx-0 w-100">
-                  <div className=" col-lg-10 col-md-11 col-12   ">
+                  <div className ="row mx-0 w-100 ">
+                  <div className=" col-lg-10 col-md-12 col-9    ">
                   {
-                  (actif1==="actif")?(<Departementtab departement={departv2} actif={actif1}/>) 
-                   :(actif2==="actif")?(<FiliereTab Filiere={Filiere} actif={actif2}/>)
-                   :(actif3==="actif")?<ClasseTab Classes={Classes} actif={actif3}/>
-                   :<ModuleTab Module={Module} actif={actif4}/>
+                  (actif1==="actif")?(<Departementtab Professeurs={Professeurs} departement={departv2}  Etudiants={Etudiants} Classes={Classes} Filiere={Filiere} actif={actif1}/>) 
+                   :(actif2==="actif")?(<FiliereTab Professeurs={Professeurs} Filiere={Filiere} departement={departv2}  Etudiants={Etudiants} Classes={Classes} Filiere={Filiere} actif={actif2}/>)
+                   :(actif3==="actif")?<ClasseTab Professeurs={Professeurs} Filiere={Filiere} Classes={Classes} Etudiants={Etudiants} actif={actif3}/>
+                   :<ModuleTab Professeurs={Professeurs} Module={Module} Classes={Classes} Etudiants={Etudiants} actif={actif4}/>
                   
 
                   }
@@ -122,11 +131,16 @@ const Appliquer =()=>{
                      <img src={filtrer} className="mx-1"/> 
                      <p className="filtrer-text font-weight-bold">Filtrer</p>
                      </div>
-                     <div className=" mx-0 my-3  "> 
-                     <p className="nom_depart font-weight-bold">Nom Depart</p>
-                     <input className="w-100 inpt rounded "  type="text" onChange={(e)=>setFiltrerDepart(e.target.value)
+                     <div className="row mx-0 my-2 w-100  "> 
                      
-                     }/>
+                     <select className="Support__dropdown_depart my-2  " onChange={(e)=>setFiltrerDepart(e.target.value)}>
+                     <option value="Nom Departement" selected>Nom Depart</option>
+                     {  departement.map(departe =>(<option key={departe.id} value={departe.name}>{departe.name}</option>))
+
+
+
+                     }
+                  </select>
                      </div>
                      
                   
