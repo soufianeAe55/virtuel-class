@@ -200,39 +200,38 @@ function ModalApprouverProf(props) {
            Il y a une error, veulliez essayer une autre fois
          </div>:null}
       <form onSubmit={sendData} >
-        <div className="d-flex flex-row">    <div className="form-group text-left mx-3">
+           <div className="form-group text-left mx-0">
           
-            <select name='depts' value={depts} onChange={ChangeData} className="Support__dropdown_depart my-2 " required >
-                    <option value='' selected>departement</option>
+            <select name='depts' value={depts} onChange={ChangeData} className="Support__dropdown_depart_2 my-2 " required >
+                    <option value='' selected>Departement</option>
                     {deptsV2.map(optio =>(<option key={optio.id} value={optio.id}>{optio.name}</option>))}
                   </select>
           </div>
 
-          <div className="form-group text-left mx-3">
-          <select name='fils' value={fils} onChange={ChangeData} className="Support__dropdown_depart my-2 " required >
+          <div className="form-group text-left mx-0">
+          <select name='fils' value={fils} onChange={ChangeData} className="Support__dropdown_depart_2 my-2 " required >
           <option value='' selected>Filiere</option>
           {filsV2.map(optio =>(<option key={optio.id} value={optio.id}>{optio.name}</option>))}
         </select>
           </div>
-          </div>
+         
 
-
-        <div className="d-flex flex-row"><div className="form-group text-left mx-3">
+        <div className="form-group text-left mx-0">
             
-            <select name='classe' value={classe} onChange={ChangeData} className="Support__dropdown_depart my-2 " required >
+            <select name='classe' value={classe} onChange={ChangeData} className="Support__dropdown_depart_2 my-2 " required >
             <option value='' selected> Classe</option>
             {classeV2.map(optio =>(<option key={optio.id} value={optio.name}>{optio.name}</option>))}
           </select>
           </div>
 
 
-          <div className="form-group text-left mx-5">
+          <div className="form-group text-left mx-0">
          
-          <select name='module' value={module} onChange={ChangeData} className="Support__dropdown_depart my-2  " required >
+          <select name='module' value={module} onChange={ChangeData} className="Support__dropdown_depart_2 my-2  " required >
           <option value="module" selected> Module</option>
           {moduleV2.map(optio =>(<option key={optio.id} value={optio.id}>{optio.name}</option>))}
         </select>
-        </div></div>
+        </div>
           
           
         <div className="modal-footer">
