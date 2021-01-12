@@ -215,15 +215,15 @@ function ModalApprouver(props) {
           {props.verife==="Actualite"?" Votre actualite ajouté":null} { props.mode=='approuve'? "Etudiant approuvée ": 'La classe modifiée '} avec succès
          </div>: null}
          {showError?<div class="alert alert-danger" role="alert">
-           Il y a une error, veulliez essayer une autre fois
+           Il y a une error, veuillez essayer une autre fois
          </div>:null}
     <div className="row mx-0  px-2"><h5 className="mx-0 my-2">Veuillez ajouter {props.verife==="Actualite"?"l'actualite ici :":"l 'étudiant a son class :"}</h5>
     <div className="col-lg-12  ">
       <form onSubmit={sendData} >
-        <div className="form-group text-left ">
+        <div className="form-group text-left my-2">
 
-        <label  className="col-form-label font-weight-bold">{props.Tab2.champ1}</label>
-        {props.verife==="Actualite"?<input name='titre' value={titre} onChange={ChangeData} type="text" className="form-control w-75" id="recipient-name_ed3" required  /> :
+       
+        {props.verife==="Actualite"? <div><label  className="col-form-label font-weight-bold">Titre:</label><input name='titre' value={titre} onChange={ChangeData} type="text" className="form-control w-75" id="recipient-name_ed3" required  /></div> :
               
            <select className="Support__dropdown_depart my-2 " name='depts' value={depts} onChange={ChangeData} required >
               <option value='' >{props.Tab2.champ1}</option>
@@ -232,8 +232,8 @@ function ModalApprouver(props) {
       
     </div>
           { props.verife==="Etudiant" ?
-                <div className="form-group text-left mx-3">
-                  <label  className="col-form-label">{props.Tab2.champ2} </label>
+                <div className="form-group text-left my-3 ">
+                  
               
                   <select className="Support__dropdown_depart my-2 " name='fils' value={fils} onChange={ChangeData} required>
                     <option value="" > { props.verife==="Etudiant" ? props.Tab2.champ2:props.Tab1.Date}</option>
@@ -241,13 +241,13 @@ function ModalApprouver(props) {
                   </select>
               </div>  :null}
 
-               <div className="form-group text-left mx-3">
-               { props.verife==="Etudiant" ? <label  className="col-form-label">{props.Tab2.champ3} :</label>: null}
-            { props.verife==="Etudiant" ? <div className="form-group text-left ">  
+               <div className="form-group text-left ">
+              
+            { props.verife==="Etudiant" ? <div className="form-group text-left my-3">  
             <select className="Support__dropdown_depart my-2 "  name='classe' value={classe} onChange={ChangeData} required >
             <option value='' >{props.Tab2.champ3}</option>
             { classeV2.map(optio =>(<option key={optio.id} value={optio.id}>{optio.name}</option>))}
-         </select> </div>: <div className="form-group text-left mx-2">   <label  className="col-form-label font-weight-bold">{props.Tab2.champ3}</label><textarea name='contenu' value={contenu} onChange={ChangeData} className="form-control w-75" id="recipient-name_ed3" required> </textarea> </div>}
+         </select> </div>: <div className="form-group text-left mx-0">   <label  className="col-form-label font-weight-bold">{props.Tab2.champ3}</label><textarea name='contenu' value={contenu} onChange={ChangeData} className="form-control w-75" id="recipient-name_ed3" required> </textarea> </div>}
          </div>
          
          {props.verife==="Actualite"? <div className="form-group text-left ">
