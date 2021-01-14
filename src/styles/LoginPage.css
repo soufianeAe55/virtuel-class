@@ -1,6 +1,13 @@
+.buttons{
+   padding:15px  ;
+}
+
+.page_acc{
+   overflow-y: hidden;
+}
 #Seconnecter__carte{
    background-color: rgb(18, 106, 160);
-   padding-top: 80px;
+   padding-top: 65px;
 }
 #Seconnecter__signin{
    background-color: white;
@@ -81,6 +88,7 @@
    border: 2px solid white;
    border-radius: 35px;
    background-color: white;
+   
 }
 
 #Type{
@@ -94,9 +102,28 @@
    text-align-last: center;
 }
 /* ------------------------------------------------------------------ */
+
 @media screen and (max-width: 767px) {
-   #SeConnecter__image{
+   .welcome{
       display: none;
    }
+   #Seconnecter__carte img{
+      width: 80%;
+      height: 100%;
+   }
+   
 }   
-
+#Sinscrire__Nom img{
+width: 90%;
+}
+#Sinscrire__Nom{
+padding: 0px;
+}
+#Sinscrire__form__email img,#Sinscrire__form__password img{
+   width: 85%;
+   height: 85%;
+}
+#SeConnecter__form__email img,#SeConnecter__form__password img{
+   width: 85%;
+   height: 85%;
+}

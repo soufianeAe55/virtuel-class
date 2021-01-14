@@ -2,7 +2,8 @@ import React ,{ useState,useEffect } from 'react';
 import {withRouter} from 'react-router-dom'
 import nom from './imagesLogin/nom.svg';
 import axios from 'axios'
-
+import email_img from './imagesLogin/email_img.svg'
+import password_img from './imagesLogin/password_img.svg'
 
 function FormSinscrire(props) {
    const [name, setName] = useState('');
@@ -70,7 +71,7 @@ function FormSinscrire(props) {
 
    return (
       <form className="d-flex flex-column mt-3 mx-2" id="Sinscrire__form" onSubmit={sendData} >
-      <div className="row my-3 mx-2">
+      <div className="row my-2 mx-2">
          <div className="col mx-2 my-2 text-center" id="Sinscrire__signup_drop">
             <div className="d-flex  p-1  bg-white rounded-pill" id="Sinscrire__Nom">
                <div className="mt-2 flex-fill">
@@ -90,21 +91,21 @@ function FormSinscrire(props) {
             </select>
          </div>
       </div>
-         <div className="d-flex p-3 m-3 bg-white rounded-pill" id="Sinscrire__form__email">
+         <div className="d-flex p-2 mx-3 my-3 bg-white rounded-pill" id="Sinscrire__form__email">
             <div className="py-1 px-3 flex-shrink-1">
-               <img src={email} alt="" />
+               <img src={email_img} alt="" />
             </div>
-            <div className="p-1 w-100">
-               <input className="h5" onChange={getValues} type="text" placeholder="Adresse e-mail" name="email" value={email} />
+            <div className="py-2 px-1 w-100">
+               <input className="" onChange={getValues} type="text" placeholder="Adresse e-mail" name="email" value={email} />
             </div>
          </div>
          <span style={{color: 'orange',marginLeft: '40px'}}>{valide}</span>
-      <div className="d-flex p-3 m-3 bg-white rounded-pill" id="Sinscrire__form__password">
+      <div className="d-flex p-2 mx-3 my-2  bg-white rounded-pill" id="Sinscrire__form__password">
          <div className="py-1 px-3 flex-shrink-1">
-            <img src={password} alt="" />
+            <img src={password_img} alt="" />
          </div>
-         <div className="p-1 w-100">
-            <input className="h5" type="password" placeholder="Mot de passe" onChange={getValues} name="password" value={password} />
+         <div className="py-2 px-1 w-100">
+            <input className="" type="password" placeholder="Mot de passe" onChange={getValues} name="password" value={password} />
          </div>
       </div>
       <span style={{color: 'orange',marginLeft: '40px'}}>{validePass}</span>

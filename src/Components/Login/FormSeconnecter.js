@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from 'react';
 import {withRouter} from 'react-router-dom'
 import axios from 'axios'
-
+import email_img from './imagesLogin/email_img.svg'
+import password_img from './imagesLogin/password_img.svg'
 
 function FormSeconnecter(props) {
 
@@ -78,23 +79,23 @@ function FormSeconnecter(props) {
 
    return (
       <form className="d-flex flex-column my-3 mx-2" id="SeConnecter__form" onSubmit={sendData} >
-         <div className="d-flex p-3 m-3 bg-white rounded-pill" id="SeConnecter__form__email">
+         <div className="d-flex p-2 m-3 bg-white rounded-pill" id="SeConnecter__form__email">
             <div className=" py-1 px-3 flex-shrink-1">
-               <img src={email} alt="" />
+               <img src={email_img} alt="" />
             </div>
-            <div className="p-1 w-100">
-               <input className="h5" type="text" placeholder="Adresse e-mail" onChange={getValues} name="email" value={email} />
+            <div className="py-2 px-1 w-100">
+               <input className="" type="text" placeholder="Adresse e-mail" onChange={getValues} name="email" value={email} />
                
             </div>
           
          </div>
          <span style={{color: 'orange',marginLeft: '40px'}}>{valide}</span>
-         <div className="d-flex p-3 m-3 bg-white rounded-pill" id="SeConnecter__form__password">
+         <div className="d-flex p-2 m-3 bg-white rounded-pill" id="SeConnecter__form__password">
             <div className="py-1 px-3 flex-shrink-1">
-               <img src={password} alt="" />
+               <img src={password_img} alt="" />
             </div>
-            <div className="p-1 w-100">
-               <input className="h5" type="password" placeholder="Mot de passe" onChange={getValues} name="password" value={password} />
+            <div className="py-2 px-1 w-100">
+               <input className="" type="password" placeholder="Mot de passe" onChange={getValues} name="password" value={password} />
             </div>
          </div>
          <span style={{color: 'orange',marginLeft: '40px'}}>{validePass}</span>
@@ -103,7 +104,7 @@ function FormSeconnecter(props) {
                <h5 className="px-3 text-white"></h5>
             </a>
          </div>
-         <div className="d-flex justify-content-center p-3 mx-3 my-1  ">
+         <div className="d-flex justify-content-center px-3 py-1 mx-3   ">
             <input id="Seconnecter__signin" className="font-weight-bold w-75 mx-3 p-3 h5" type="submit" value="Se connecter"/>
          </div>
       </form>

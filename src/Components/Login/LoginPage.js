@@ -49,8 +49,8 @@ function SeConnecter(props) {
    }
 
 return(
-      <div className="row vw-100 vh-100">
-         <div className="col-xl-7 bg-white">
+      <div className="row vw-100 vh-100 page_acc">
+         <div className="col-xl-7  bg-white welcome">
             <div className="d-flex flex-column">
                <div className="SeConnecter_bienvenue">
                   <p>Bienvenue dans votre<br/>Classe virtuelle</p>
@@ -63,12 +63,12 @@ return(
             src={Logo}
             className='LogoForLogin'
              /></h1>
-            <div className="row mt-5 mx-2">
-               <button onClick={ Seconnecter } className="col-lg my-2 mx-3 p-3 text-center h4 font-weight-bold"
+            <div className="row mt-4 mx-2">
+               <button onClick={ Seconnecter } className="col-lg my-2 mx-3   text-center h5 font-weight-bold buttons"
                 id={idSeconecter}>
                   Se connecter
                </button>
-               <button onClick={ Sinscrire } className="col-lg my-2 mx-3 p-3 text-center h4 font-weight-bold"
+               <button onClick={ Sinscrire } className="col-lg my-2 mx-3  text-center h5 font-weight-bold buttons"
                 id={idSinscrire} >
                   S'inscrire
                </button>
