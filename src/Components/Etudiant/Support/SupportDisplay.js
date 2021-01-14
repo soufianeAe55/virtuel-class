@@ -22,7 +22,7 @@ function SupportDisplay(props) {
             <h2 className=" mt-0">{props.location.state.titre}</h2>
             <p className="nomPrenom">{firstName} {lastName}</p>
             <h4>{"Module : "+props.location.state.module+' '+props.location.state.semstre}</h4>
-            <p>
+            <p className="mb-5">
             <h3>Description</h3>
             {props.location.state.contenu}
             </p>

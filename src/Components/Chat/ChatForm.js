@@ -72,8 +72,12 @@ function ChatForm(props){
 				}		
 			}
 
+<<<<<<< HEAD
+		socket.emit('message',messageData)
+=======
 		socket.emit('message',messageData)	
 		// socket.emit('message',messageData)
+>>>>>>> 6e18275516f335d34c9379bcbd42c0428057ae70
 
 		setMessage('')
 		

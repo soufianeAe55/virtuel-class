@@ -65,32 +65,32 @@ function ModalEditDevoir(props) {
    return (
 
       <form onSubmit={sendDATA} className="modal fade ModalAddDevoir" id="EditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div className="modal-dialog">
-         <div className="modal-content">
-            <div className="modal-header">
-               <h4 className="modal-title mx-auto px-5 font-weight-bold" id="exampleModalLabel">
-               Modifier ce devoir</h4>
-            </div>
-            {showSucess ?<div class="alert alert-success" role="alert">
-                  Votre devoir mise a jour avec succès
-                  </div>: null}
-            {showError?<div class="alert alert-danger" role="alert">
-                  Il y a une error, veulliez essayer une autre fois
-               </div>:null}
-            <div className="modal-body ">
-               <input value={titre} onChange={ChangeData} name="titre" className="col-12 px-3 py-3" type="text" placeholder="Nouveau titre du devoir" required/>
-               <div className="row d-flex flex-column flex-md-row col-12 mt-2">
-                  <h5 className="my-auto mx-auto mx-md-0 limDa">Date limite :</h5>
-                  <DateTimePicker value={date} onChange={setDate}  name="date" />
+         <div className="modal-dialog">
+            <div className="modal-content">
+               <div className="modal-header">
+                  <h4 className="modal-title mx-auto px-5 font-weight-bold" id="exampleModalLabel">
+                  Modifier ce devoir</h4>
                </div>
-               <textarea value={contenu} onChange={ChangeData} name="contenu" className="col-12 mt-2 px-3 py-3" placeholder="Nouvelle description" required></textarea>
-            </div>
-            <div className="modal-footer">
-               <button type="submit" className="mx-auto">Save changes</button>
+               {showSucess ?<div class="alert alert-success" role="alert">
+                     Votre devoir mise a jour avec succès
+                     </div>: null}
+               {showError?<div class="alert alert-danger" role="alert">
+                     Il y a une error, veulliez essayer une autre fois
+                  </div>:null}
+               <div className="modal-body ">
+                  <input value={titre} onChange={ChangeData} name="titre" className="col-12 px-3 py-3" type="text" placeholder="Nouveau titre du devoir" required/>
+                  <div className="row d-flex flex-column flex-md-row col-12 mt-2">
+                     <h5 className="my-auto mx-auto mx-md-0 limDa">Date limite :</h5>
+                     <DateTimePicker value={date} onChange={setDate}  name="date" />
+                  </div>
+                  <textarea value={contenu} onChange={ChangeData} name="contenu" className="col-12 mt-2 px-3 py-3" placeholder="Nouvelle description" required></textarea>
+               </div>
+               <div className="modal-footer">
+                  <button type="submit" className="mx-auto">Save changes</button>
+               </div>
             </div>
          </div>
-      </div>
-   </form>
+      </form>
    )
 }
 
