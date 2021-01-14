@@ -18,10 +18,12 @@ server.listen(8000);
   app.post('/api/sendPics',ChatFileMidll,async (req,res,next)=>{
   
     let Msgs=[]
+    if(req.body.type=='image' || req.body.type=='docx' ||req.body.type=='pdf' )
+    firestore.collection('Messages').add(req.body)
+    
     if(req.body.mode != 'forContact'){
 
-     if(req.body.type=='image' || req.body.type=='docx' ||req.body.type=='pdf' )
-    firestore.collection('Messages').add(req.body)
+     
     let data= await firestore.collection('Messages')
       .where('idMod','==',req.body.idMod)
       .get()

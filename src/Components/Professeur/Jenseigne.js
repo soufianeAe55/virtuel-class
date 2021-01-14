@@ -92,7 +92,7 @@ function Jenseigne(props) {
            <div className="DepartementName">
             { filiere.FiliereName}
            </div>
-           <img src={arrowDown} className="ml-auto"  alt="" />
+           <img src={arrowDown} className="FilProfss ml-auto"  alt="" />
         </div>	
         
         <div className="Filiere col-6 col-md-5 col-lg-5" hidden>

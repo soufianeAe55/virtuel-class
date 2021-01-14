@@ -41,10 +41,8 @@ const paginate = pageNumber => setcurrentPage(pageNumber);
                        
                       { 
 
-                        let dateTest=new Date(post.date)
-                        let h=dateTest.getUTCHours()
-                        dateTest.setHours(h)
-                        let date=moment(dateTest).format('DD-MM-YYYY-hh:mm')
+                        let dateTest=new Date(post.date).getTime()
+                        let date=moment(dateTest).subtract(1,'hours').format('DD-MM-YYYY-hh:mm:ss')
                         console.log(date+post.image)
                         return(
                          <Link to={{
@@ -54,11 +52,11 @@ const paginate = pageNumber => setcurrentPage(pageNumber);
                          
                          <div className=" d-flex mb-2  " > 
                            
-                        <div key={post.id} className="col-sm-4 col-5  div-image" style={{backgroundImage:"url(http://localhost:8000/images/Actualites/"+post.image+")",backgroundSize:" 100% 100% " }} >
+                        <div key={post.id} className="col-sm-4 col-5  div-image" style={{backgroundImage:"url(http://localhost:8000/images/Actualites/"+date+"_"+post.image+")",backgroundSize:" 100% 100% " }} >
                             </div>
                             <div key={post.id} className="col-sm-8 col-7 bg-white div-name mx-0   p-1 ">
                                 <h6 className="mx-2 my-2" >{post.name}</h6> 
-                        <p className="mx-2 my-1">{post.contenu}</p>
+                        <p className="mx-2 my-1">{post.contenu.slice(0,52)+' . . .'}</p>
                             </div>
                             
                         </div>

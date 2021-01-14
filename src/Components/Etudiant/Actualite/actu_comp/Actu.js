@@ -6,12 +6,10 @@ import moment from 'moment'
 
 function Actu(props) {
   const [post] = useState(props.location.state)
-  console.log(post)
-  let dateTest=new Date(post.date)
-  let h=dateTest.getUTCHours()
-  dateTest.setHours(h)
-  let date=moment(dateTest).format('DD-MM-YYYY-hh:mm')
-  console.log(date+post.image)
+
+  let dateTest=new Date(post.date).getTime()
+  let date=moment(dateTest).subtract(1,'hours').format('DD-MM-YYYY-hh:mm:ss')
+  
    if(post){
     return (
       
@@ -21,7 +19,7 @@ function Actu(props) {
      </Link>
      </div>
         <div className ="row rowActu  mx-2  ">
-        <div className =" col-md-4 col-12 rounded-left imageActu" style={{backgroundImage:"url(http://localhost:8000/images/Actualites/"+post.image+")",backgroundSize:"100% 100%" }}>
+        <div className =" col-md-4 col-12 rounded-left imageActu" style={{backgroundImage:"url(http://localhost:8000/images/Actualites/"+date+"_"+post.image+")",backgroundSize:"100% 100%" }}>
           
           </div>
           <div className =" col-md-8 col-12 bg-white p-4 rounded-right actu_left">

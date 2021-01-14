@@ -116,7 +116,7 @@ function Tableau({Tab,Tab2,verife,Data,Data1,Data2,Data3,classProf,filiereProf,d
           
           <td>{tab1.data.name}</td>
           <td>{moment(tab1.data.date).format('DD-MM-YYYY hh:mm:ss a')}</td>
-          <td>{tab1.data.contenu}</td>
+          <td>{tab1.data.contenu.slice(0,60)+' . . .'}</td>
           <td><div onClick={()=>setelementAfficher(tab1)}> <img src={Editer} data-toggle="modal" data-target="#examp"/></div></td>
           <td><div onClick={()=>setelementAfficher(tab1)}><img src={Supprimer} data-toggle="modal" data-target="#exampleModal"/> </div></td>
         </tr>

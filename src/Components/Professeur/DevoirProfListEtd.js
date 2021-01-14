@@ -96,7 +96,7 @@ function DevoirProfListEtd(props) {
                <img src={backLink} alt="" />
             </Link>
                <div className="row col-12 col-lg-10">
-                  <div className="row">
+                  <div className="devName44 row">
                      <img src={DevoirsX} className="devoirIcon mx-auto mx-md-0" alt=""/> 
                      <h1 className="devoirTitle text-center">{devoir.name}</h1>
                   </div>

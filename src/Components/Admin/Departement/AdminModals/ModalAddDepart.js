@@ -131,7 +131,7 @@ function ModalAdd(props) {
             name:nameDept,
             NbHeures: aliasDept,
             className: idDept,
-            Semstre_id: chefDept,
+            Semster_id: chefDept,
             emailProf: 'none'
           }
           

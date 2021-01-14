@@ -10,6 +10,7 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, callback) => {
     const name = file.originalname
+    console.log(file)
     let da=new Date(req.body.date).getTime()
     callback(null,moment(da).format('DD-MM-YYYY-hh:mm:ss')+'_'+name);
   }

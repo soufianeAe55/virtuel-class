@@ -72,8 +72,9 @@ function ChatForm(props){
 				}		
 			}
 
-		
+
 		socket.emit('message',messageData)
+
 
 		setMessage('')
 

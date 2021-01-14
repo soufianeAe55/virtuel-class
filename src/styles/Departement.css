@@ -255,8 +255,22 @@ margin-top: 10px;
     font-weight: bold;
     outline: none;
     border: 0;
-    border-radius: 10px;
+    width:90%;
+    /* border-radius: 10px;  */
     /* text-align-last: center; */
-    padding: 0px 7px;
+    /* padding: 0px 7px; */
+    
  }
 
+
+ .Support__dropdown_depart_2{
+    color:  #8E7D7D;
+    font-weight: bold;
+    outline: none;
+    border: 0;
+    width:70%;
+    /* border-radius: 10px;  */
+    /* text-align-last: center; */
+    /* padding: 0px 7px; */
+    
+ }

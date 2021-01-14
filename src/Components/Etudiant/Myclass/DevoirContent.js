@@ -161,7 +161,7 @@ function DevoirContent(props){
 			
 	}
   if(devoir[0]){
-	 
+	 let Da= new Date(devoir[0].date)
 	return(
 		 <React.Fragment>
 			
@@ -174,12 +174,12 @@ function DevoirContent(props){
 								<img src={DevoirsX} className="IconDev" />
 								<div className="NameDev">
 									<h2>{devoir.length >= 0 ?devoir[0].name: null}</h2>
-									<p>{devoir[0].id_prof} - {devoir.length >= 0 ?moment(devoir[0].date.seconds).format('DD MMMM'): null}</p>
+									<p>{devoir[0].id_prof} - {devoir.length >= 0 ?moment(Da).format('DD MMMM'): null}</p>
 								</div>
 							</div>
 
 							<div className="LimiteDev align-self-center col-12 col-sm-12 col-md-3 col-lg-3 col-lx-3">
-									<img src={Time} /> <p>Date limite : {devoir.length >= 0 ?moment(devoir[0].date.seconds).format('DD MMMM'):null}</p>
+									<img src={Time} /> <p>Date limite : {devoir.length >= 0 ?moment(Da).format('DD MMMM'):null}</p>
 							</div>
 							<div className="ContentDev align-self-center col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12">
 									<p>{devoir.length >= 0 ?devoir[0].contenu: null}
